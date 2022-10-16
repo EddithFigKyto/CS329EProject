@@ -14,6 +14,7 @@
 		A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A58476A128FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld */; };
 		A58476A528FC665A007AC1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58476A428FC665A007AC1E7 /* Assets.xcassets */; };
 		A58476A828FC665A007AC1E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */; };
+		A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A58476A428FC665A007AC1E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58476A728FC665A007AC1E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58476A928FC665A007AC1E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookbookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				A584769A28FC665A007AC1E7 /* SceneDelegate.swift */,
 				A584769C28FC665A007AC1E7 /* ViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A928FC665A007AC1E7 /* Info.plist */,
@@ -145,6 +148,7 @@
 				A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */,
 				A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */,
 				A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */,
+				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
