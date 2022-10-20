@@ -481,7 +481,7 @@
         <scene sceneID="H1j-SA-lHh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nop-Vk-YHe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Personal Settings" id="E8A-h2-IT7"/>
+                    <tabBarItem key="tabBarItem" title="Personal Settings" image="person.fill" catalog="system" selectedImage="person.fill" id="E8A-h2-IT7"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Q29-LG-Zsb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U8Z-qF-jFY">
@@ -519,6 +519,7 @@
     </scenes>
     <resources>
         <image name="banner1" width="667" height="213"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profileFiller2" width="956" height="952"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
