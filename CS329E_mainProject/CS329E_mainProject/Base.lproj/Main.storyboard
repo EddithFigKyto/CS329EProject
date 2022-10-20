@@ -404,7 +404,7 @@
         <scene sceneID="qrP-St-VyP">
             <objects>
                 <tabBarController id="Kxc-Af-0DV" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ITw-9w-7gw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="book.fill" catalog="system" id="ITw-9w-7gw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,7 +501,7 @@
         <scene sceneID="FXt-qn-gXk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fG4-Vx-bms" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Cookbook" id="9Q3-z9-GO9"/>
+                    <tabBarItem key="tabBarItem" title="My Cookbook" image="book.fill" catalog="system" selectedImage="book.fill" id="9Q3-z9-GO9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tog-DL-Yqh">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -519,6 +519,7 @@
     </scenes>
     <resources>
         <image name="banner1" width="667" height="213"/>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="profileFiller2" width="956" height="952"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
