@@ -26,9 +26,9 @@ class UserSettingsViewController: UIViewController, changeNameProtocol{
     @IBOutlet weak var personalInformationLabel: UIButton!
     @IBOutlet weak var dietFiltersLabel: UIButton!
     @IBOutlet weak var notificationsLabel: UIButton!
-    @IBOutlet weak var manageFriendsLabel: UIButton!
+    @IBOutlet weak var customizationLabel: UIButton!
     @IBOutlet weak var privacyPolicyButton: UIButton!
-    
+    @IBOutlet weak var logOutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,9 @@ class UserSettingsViewController: UIViewController, changeNameProtocol{
         personalInformationLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         dietFiltersLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         notificationsLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        manageFriendsLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        customizationLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         privacyPolicyButton.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        logOutButton.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
         
     }
     

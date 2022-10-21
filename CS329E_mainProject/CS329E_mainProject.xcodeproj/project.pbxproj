@@ -20,6 +20,7 @@
 		A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */; };
 		A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */; };
 		A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */; };
+		AE30C90A290342DC004586FC /* CustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30C909290342DC004586FC /* CustomizationViewController.swift */; };
 		AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */; };
 		AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F528FF5B380075EBF6 /* DietViewController.swift */; };
 		AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */; };
@@ -41,6 +42,7 @@
 		A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
 		A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookSearchViewController.swift; sourceTree = "<group>"; };
 		A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookCategoryViewController.swift; sourceTree = "<group>"; };
+		AE30C909290342DC004586FC /* CustomizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationViewController.swift; sourceTree = "<group>"; };
 		AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		AE3794F528FF5B380075EBF6 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		A584768C28FC665A007AC1E7 = {
 			isa = PBXGroup;
 			children = (
+				AE30C909290342DC004586FC /* CustomizationViewController.swift */,
 				A584769728FC665A007AC1E7 /* CS329E_mainProject */,
 				A584769628FC665A007AC1E7 /* Products */,
 			);
@@ -186,6 +189,7 @@
 			files = (
 				A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */,
 				A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */,
+				AE30C90A290342DC004586FC /* CustomizationViewController.swift in Sources */,
 				A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */,
 				A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */,
 				A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */,

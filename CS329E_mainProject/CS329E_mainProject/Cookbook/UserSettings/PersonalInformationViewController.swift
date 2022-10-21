@@ -20,7 +20,7 @@ class PersonalInformationViewController: UIViewController{
     
     @IBOutlet weak var emailEditor: UIButton!
     
-    @IBOutlet weak var phoneNumberEditor: UIButton!
+    @IBOutlet weak var profilePictureEditor: UIButton!
     
     @IBOutlet weak var editMessageLabel: UILabel!
     
@@ -40,8 +40,8 @@ class PersonalInformationViewController: UIViewController{
         emailEditor.setTitle("Email: ???", for: .normal)
         emailEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         
-        phoneNumberEditor.setTitle("Phone Number: (512)123-4567", for: .normal)
-        phoneNumberEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        profilePictureEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         
         
     }
