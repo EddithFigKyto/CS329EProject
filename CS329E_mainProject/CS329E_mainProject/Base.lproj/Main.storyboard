@@ -279,8 +279,17 @@
                                     <constraint firstAttribute="height" constant="80" id="R5x-R0-rau"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
-                                <rect key="frame" x="152.66666666666666" y="677" width="85" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-7c-ALG">
+                                <rect key="frame" x="16" y="677" width="358" height="35"/>
+                                <color key="tintColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Profile Picture  &gt;"/>
+                                <connections>
+                                    <action selector="profilePictureChange:" destination="vd4-iX-ohg" eventType="touchUpInside" id="qtu-Zr-zL5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
+                                <rect key="frame" x="153" y="751" width="85" height="35"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -290,13 +299,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JL1-Uz-ZSZ" firstAttribute="leading" secondItem="PJ0-z1-6YO" secondAttribute="leading" constant="16" id="4dI-U9-chZ"/>
+                            <constraint firstItem="bDB-7c-ALG" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="25" id="7qE-mv-TVB"/>
                             <constraint firstItem="PJ0-z1-6YO" firstAttribute="trailing" secondItem="JL1-Uz-ZSZ" secondAttribute="trailing" constant="16" id="9Wi-RH-Bue"/>
                             <constraint firstItem="32M-XM-TVe" firstAttribute="trailing" secondItem="4VD-ON-YBK" secondAttribute="trailing" id="Bm7-ve-0rO"/>
                             <constraint firstItem="32M-XM-TVe" firstAttribute="top" secondItem="4VD-ON-YBK" secondAttribute="bottom" constant="20" id="C3f-q6-eOQ"/>
+                            <constraint firstItem="giX-BB-Bw4" firstAttribute="top" secondItem="bDB-7c-ALG" secondAttribute="bottom" constant="25" id="H1k-Jm-7YS"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="top" secondItem="JL1-Uz-ZSZ" secondAttribute="bottom" constant="20" id="KcG-aW-9HM"/>
                             <constraint firstItem="yqA-ew-j3z" firstAttribute="top" secondItem="Za7-sU-m96" secondAttribute="bottom" constant="30" id="LUn-Hs-heb"/>
                             <constraint firstItem="arr-Yw-sME" firstAttribute="top" secondItem="PJ0-z1-6YO" secondAttribute="top" id="Pvj-SM-ktn"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="leading" secondItem="JL1-Uz-ZSZ" secondAttribute="leading" id="RJK-l6-AkY"/>
+                            <constraint firstItem="bDB-7c-ALG" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="20" id="T2f-SI-ezX"/>
                             <constraint firstItem="arr-Yw-sME" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="T9r-9y-tug"/>
                             <constraint firstItem="C7E-5R-1NA" firstAttribute="trailing" secondItem="32M-XM-TVe" secondAttribute="trailing" id="Usa-1a-s6V"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="top" secondItem="C7E-5R-1NA" secondAttribute="bottom" constant="20" id="Vaq-Um-ZBT"/>
@@ -324,11 +336,12 @@
                         <outlet property="notificationsLabel" destination="32M-XM-TVe" id="i08-zh-Dsj"/>
                         <outlet property="personalInformationLabel" destination="JL1-Uz-ZSZ" id="XIt-qp-tkM"/>
                         <outlet property="privacyPolicyButton" destination="mHS-WD-EtK" id="boq-5d-Y5l"/>
+                        <outlet property="profilePicture" destination="Za7-sU-m96" id="JYh-hT-edE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euA-qC-4XU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="-1335"/>
+            <point key="canvasLocation" x="4260" y="-1335.0710900473932"/>
         </scene>
         <!--Customization View Controller-->
         <scene sceneID="Hvl-N7-zKa">

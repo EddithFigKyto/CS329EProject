@@ -16,7 +16,7 @@ protocol changeNameProtocol{
     func changeName(newName:String)
 }
 
-class UserSettingsViewController: UIViewController, changeNameProtocol{
+class UserSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, changeNameProtocol{
     
     //variable to store the user's name
     public var name = "Kyto"
@@ -63,7 +63,24 @@ class UserSettingsViewController: UIViewController, changeNameProtocol{
         self.viewDidLoad()
     }
 
+    //
     @IBAction func profilePictureChange(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            profilePicture.image = image
+        }
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
     
     
