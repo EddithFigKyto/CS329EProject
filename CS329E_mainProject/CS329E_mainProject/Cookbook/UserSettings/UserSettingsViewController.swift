@@ -22,6 +22,7 @@ class UserSettingsViewController: UIViewController, changeNameProtocol{
     public var name = "Kyto"
     
     //Outlets for labels and buttons on the VC
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personalInformationLabel: UIButton!
     @IBOutlet weak var dietFiltersLabel: UIButton!
@@ -62,6 +63,8 @@ class UserSettingsViewController: UIViewController, changeNameProtocol{
         self.viewDidLoad()
     }
 
+    @IBAction func profilePictureChange(_ sender: Any) {
+    }
     
     
 }
