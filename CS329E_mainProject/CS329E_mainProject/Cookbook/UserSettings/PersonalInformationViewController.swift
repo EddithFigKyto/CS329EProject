@@ -13,6 +13,7 @@ class PersonalInformationViewController: UIViewController{
     
     var delegate:UIViewController!
     var currentName:String = ""
+    var currentBirthday:String = "07/17/1999"
     
     @IBOutlet weak var nameEditor: UIButton!
     
@@ -34,7 +35,7 @@ class PersonalInformationViewController: UIViewController{
         nameEditor.setTitle("Name : \(currentName)", for: .normal)
         nameEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         
-        birthdayEditor.setTitle("Birthday: 07/17/1999", for: .normal)
+        birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
         birthdayEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
         
         emailEditor.setTitle("Email: ???", for: .normal)
@@ -79,6 +80,34 @@ class PersonalInformationViewController: UIViewController{
     }
     
     
+    @IBAction func birthdayButtonPressed(_ sender: Any) {
+        
+        let controller = UIAlertController(
+            title: "Edit Birthday:",
+            message: "Enter Your Birthday : MM/DD/YYYY",
+            preferredStyle: .alert)
+        controller.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel))
+        controller.addTextField(configurationHandler: {
+            (textField:UITextField!) in
+            textField.placeholder = "Enter Birthday"
+        })
+        controller.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: {
+                (paramAction:UIAlertAction!) in
+                if let textFieldArray = controller.textFields {
+                    let textFields = textFieldArray as [UITextField]
+                    let enteredText = textFields[0].text
+                    self.currentBirthday = enteredText!
+                    self.viewDidLoad()
+                    
+                }
+            }))
+        present(controller, animated: true)
+    }
     
     
     

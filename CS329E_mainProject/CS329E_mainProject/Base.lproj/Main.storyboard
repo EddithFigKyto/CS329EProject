@@ -482,6 +482,9 @@
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Birthday"/>
+                                <connections>
+                                    <action selector="birthdayButtonPressed:" destination="VQE-bg-tNz" eventType="touchUpInside" id="i1v-1L-2sN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-dU-fjq">
                                 <rect key="frame" x="16" y="547" width="358" height="35"/>
