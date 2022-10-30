@@ -588,6 +588,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Create account"/>
                                 <connections>
                                     <action selector="createAccountPressed:" destination="FQT-6I-1mK" eventType="touchUpInside" id="TQ9-Ta-EFs"/>
+                                    <segue destination="b2d-BR-rk0" kind="presentation" identifier="createAccountSegue" modalPresentationStyle="fullScreen" id="aJR-XY-TxP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-zX-ALZ">
