@@ -39,12 +39,12 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         nameLabel.font = UIFont(name:"Avenir Next", size:22)
         
         //Change font of all buttons to Avenir Next, size 18
-        personalInformationLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        dietFiltersLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        notificationsLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        customizationLabel.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        privacyPolicyButton.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
-        logOutButton.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
+        dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
+        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
+        customizationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
+        privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
+        logOutButton.configuration?.attributedTitle?.font = UIFont(name: "Avenir Next", size: 18)
         
     }
     

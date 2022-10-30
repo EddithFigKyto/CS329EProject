@@ -1,13 +1,13 @@
 //
-//  CustomizationViewController.swift
+//  FontPickerViewController.swift
 //  CS329E_mainProject
 //
-//  Created by Eddith Figueroa on 10/21/22.
+//  Created by Eddith Figueroa on 10/30/22.
 //
 
 import UIKit
 
-class CustomizationViewController: UIViewController {
+class FontPickerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
