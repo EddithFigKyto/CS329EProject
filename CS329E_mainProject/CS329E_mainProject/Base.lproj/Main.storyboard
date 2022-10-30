@@ -673,6 +673,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create account"/>
+                                <connections>
+                                    <action selector="create2pressed:" destination="b2d-BR-rk0" eventType="touchUpInside" id="0jI-iy-1iJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1U-Is-Xog">
                                 <rect key="frame" x="16" y="255" width="52" height="21"/>
@@ -685,6 +688,12 @@
                         <viewLayoutGuide key="safeArea" id="Ihu-ci-1xw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmTF2" destination="pte-Lk-raZ" id="maz-ol-luq"/>
+                        <outlet property="emailTF2" destination="7na-LT-05V" id="GNx-g9-NpX"/>
+                        <outlet property="passwordTF2" destination="OgG-Nx-sK4" id="6F2-ib-t77"/>
+                        <outlet property="userTF2" destination="qnG-pu-ehy" id="ss1-mg-Is1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOf-Vc-YHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
