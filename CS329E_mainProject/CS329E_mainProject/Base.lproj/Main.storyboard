@@ -401,6 +401,9 @@
                                 <rect key="frame" x="12.666666666666657" y="426" width="365" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Font?"/>
+                                <connections>
+                                    <segue destination="i7x-if-zqM" kind="show" identifier="fontPickerSegues" id="kf4-qS-aqO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7dT-bQ-uRM"/>
@@ -421,6 +424,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4t6-2q-U2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5063" y="-982"/>
+        </scene>
+        <!--Font Picker View Controller-->
+        <scene sceneID="pQ8-eW-NxG">
+            <objects>
+                <viewController id="i7x-if-zqM" customClass="FontPickerViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cuy-4l-6w1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wki-e4-6Ol"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IjN-h0-DeJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4d-OC-D7k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5837" y="-994"/>
         </scene>
         <!--Diet View Controller-->
         <scene sceneID="oA2-oU-qbu">
