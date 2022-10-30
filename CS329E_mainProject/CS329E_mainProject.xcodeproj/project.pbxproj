@@ -10,6 +10,7 @@
 		82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E8A290EEF0900837CD3 /* loginViewController.swift */; };
 		82507E8D290EF19D00837CD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */; };
 		82507E90290EF1F800837CD3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 82507E8F290EF1F800837CD3 /* FirebaseAuth */; };
+		82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E93290EF3E800837CD3 /* signUpViewController.swift */; };
 		A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769828FC665A007AC1E7 /* AppDelegate.swift */; };
 		A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769A28FC665A007AC1E7 /* SceneDelegate.swift */; };
 		A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769C28FC665A007AC1E7 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		82507E8A290EEF0900837CD3 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		82507E93290EF3E800837CD3 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		A584769528FC665A007AC1E7 /* CS329E_mainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS329E_mainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584769828FC665A007AC1E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A584769A28FC665A007AC1E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A584769A28FC665A007AC1E7 /* SceneDelegate.swift */,
 				A584769C28FC665A007AC1E7 /* ViewController.swift */,
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
+				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 				A59CFB3E2900DAF600FB3B05 /* customRecipeViewController.swift in Sources */,
 				A59CFB402900DD9900FB3B05 /* allCookbookRecipesViewController.swift in Sources */,
 				AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */,
+				82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */,
 				A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */,
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
