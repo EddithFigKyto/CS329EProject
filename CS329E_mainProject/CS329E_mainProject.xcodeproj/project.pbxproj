@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E8A290EEF0900837CD3 /* loginViewController.swift */; };
 		A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769828FC665A007AC1E7 /* AppDelegate.swift */; };
 		A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769A28FC665A007AC1E7 /* SceneDelegate.swift */; };
 		A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769C28FC665A007AC1E7 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82507E8A290EEF0900837CD3 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		A584769528FC665A007AC1E7 /* CS329E_mainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS329E_mainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584769828FC665A007AC1E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A584769A28FC665A007AC1E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				A584769A28FC665A007AC1E7 /* SceneDelegate.swift */,
 				A584769C28FC665A007AC1E7 /* ViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A928FC665A007AC1E7 /* Info.plist */,
@@ -201,6 +204,7 @@
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
+				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
