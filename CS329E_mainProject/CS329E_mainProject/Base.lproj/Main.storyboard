@@ -113,10 +113,6 @@
                                     <segue destination="jgt-El-phc" kind="show" identifier="cookbookCategoriesSegue" id="bMk-6o-6B2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="bcy-QD-rBh">
-                                <rect key="frame" x="45" y="91" width="300" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-bm-f69">
                                 <rect key="frame" x="16" y="513" width="358" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -272,13 +268,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy Policy  &gt;"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="arr-Yw-sME">
-                                <rect key="frame" x="45" y="91" width="300" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="MVZ-fI-DCR"/>
-                                    <constraint firstAttribute="height" constant="80" id="R5x-R0-rau"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-7c-ALG">
                                 <rect key="frame" x="16" y="677" width="358" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
@@ -294,6 +283,13 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="arr-Yw-sME">
+                                <rect key="frame" x="63" y="77" width="257" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="MVZ-fI-DCR"/>
+                                    <constraint firstAttribute="height" constant="80" id="R5x-R0-rau"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PJ0-z1-6YO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -582,10 +578,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="0lo-JS-aNd">
-                                <rect key="frame" x="36" y="76" width="300" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Neg-jd-Quu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -594,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjH-VI-oqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5066.1538461538457" y="1047.8672985781991"/>
+            <point key="canvasLocation" x="5326" y="1216"/>
         </scene>
         <!--Randomize View Controller-->
         <scene sceneID="3xg-at-kFl">
