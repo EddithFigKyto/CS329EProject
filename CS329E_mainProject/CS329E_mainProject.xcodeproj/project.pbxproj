@@ -29,6 +29,7 @@
 		AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */; };
 		AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F528FF5B380075EBF6 /* DietViewController.swift */; };
 		AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */; };
+		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		AE3794F528FF5B380075EBF6 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
 				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A928FC665A007AC1E7 /* Info.plist */,
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */,
+				F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */,
 				A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */,
 				AE30C90A290342DC004586FC /* CustomizationViewController.swift in Sources */,
 				A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */,
