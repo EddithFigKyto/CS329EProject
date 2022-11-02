@@ -20,21 +20,12 @@ class CookbookViewController: UIViewController {
     
     
     func addNavBarImage() {
-        let navController = navigationController!
-
-        let image = UIImage(named: "banner1") //Your logo url here
-        let imageView = UIImageView(image: image)
-
-        let bannerWidth = navController.navigationBar.frame.size.width
-        let bannerHeight = navController.navigationBar.frame.size.height
-
-        let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
-        let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
-
-        imageView.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
-        imageView.contentMode = .scaleAspectFit
-
-        navigationItem.titleView = imageView
-        }
+        
+        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
+    }
 
 }

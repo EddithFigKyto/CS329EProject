@@ -18,6 +18,8 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addNavBarImage()
+        
         favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
 
@@ -32,6 +34,15 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, U
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         cell.textLabel?.text = favorites[row]
         return cell
+    }
+    
+    func addNavBarImage() {
+        
+        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
 
 }

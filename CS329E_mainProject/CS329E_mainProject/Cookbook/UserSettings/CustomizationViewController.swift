@@ -18,6 +18,8 @@ class CustomizationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addNavBarImage()
+        
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         
@@ -27,6 +29,15 @@ class CustomizationViewController: UIViewController {
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         
+    }
+    
+    func addNavBarImage() {
+        
+        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
     
 }

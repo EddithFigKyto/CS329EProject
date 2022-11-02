@@ -34,6 +34,8 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addNavBarImage()
+        
         //Set greeting to user's name and change font to Avenir Next, size 22
         nameLabel.text = "Hello \(name)!"
         nameLabel.font = UIFont(name: fontSet, size:22)
@@ -81,6 +83,15 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func addNavBarImage() {
+        
+        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
     
     
