@@ -454,6 +454,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0w6-Tb-ESJ">
                                 <rect key="frame" x="41" y="428" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="AmericanTypewriterNext:" destination="i7x-if-zqM" eventType="valueChanged" id="8Uj-Sn-6wq"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="American Typewriter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcJ-KX-TBI">
                                 <rect key="frame" x="137" y="438" width="158" height="21"/>
@@ -465,6 +468,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pSE-uo-ygI">
                                 <rect key="frame" x="41" y="499" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="MenloRegularPicked:" destination="i7x-if-zqM" eventType="valueChanged" id="nnh-Ll-8Es"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menlo-Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-gj-3Hp">
                                 <rect key="frame" x="142" y="496" width="113" height="21"/>
@@ -476,6 +482,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-zE-Qib">
                                 <rect key="frame" x="41" y="583" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="PapyrusPicked:" destination="i7x-if-zqM" eventType="valueChanged" id="ZNV-qb-Y3B"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Papyrus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBc-vg-MlA">
                                 <rect key="frame" x="142" y="583" width="62" height="21"/>
@@ -487,6 +496,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tZ5-Hd-sSt">
                                 <rect key="frame" x="41" y="356" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="AvenirNextPicked:" destination="i7x-if-zqM" eventType="valueChanged" id="lev-4e-GwK"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wki-e4-6Ol"/>
@@ -499,13 +511,13 @@
                     <navigationItem key="navigationItem" id="IjN-h0-DeJ"/>
                     <connections>
                         <outlet property="AmericanTypewriterLabel" destination="zcJ-KX-TBI" id="OGG-tw-ed1"/>
-                        <outlet property="AmericanTypewriterSwitch" destination="0w6-Tb-ESJ" id="ldb-AT-sWf"/>
+                        <outlet property="AmericanTypewriterSwitch" destination="0w6-Tb-ESJ" id="hWb-8m-SxY"/>
                         <outlet property="AvenirNextLabel" destination="ymK-r5-ySq" id="EHv-Y6-m71"/>
-                        <outlet property="AvenirNextSwitch" destination="tZ5-Hd-sSt" id="xcb-bA-XiU"/>
+                        <outlet property="AvenirNextSwitch" destination="tZ5-Hd-sSt" id="KvO-P3-BVv"/>
                         <outlet property="MenloRegularLabel" destination="b2Z-gj-3Hp" id="ayN-9m-voh"/>
-                        <outlet property="MenloRegularSwitch" destination="pSE-uo-ygI" id="rRr-Gx-Lmk"/>
+                        <outlet property="MenloRegularSwitch" destination="pSE-uo-ygI" id="cxG-zv-5HK"/>
                         <outlet property="PapyrusLabel" destination="pBc-vg-MlA" id="jVc-N7-16g"/>
-                        <outlet property="PapyrusSwitch" destination="gAh-zE-Qib" id="juT-td-JwT"/>
+                        <outlet property="PapyrusSwitch" destination="gAh-zE-Qib" id="hxP-D7-eTK"/>
                         <outlet property="fontDisplay" destination="P9U-XN-d7H" id="nHm-ip-Bc6"/>
                     </connections>
                 </viewController>

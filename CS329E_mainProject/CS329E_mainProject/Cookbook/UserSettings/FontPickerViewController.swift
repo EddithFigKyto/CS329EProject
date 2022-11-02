@@ -42,13 +42,73 @@ class FontPickerViewController: UIViewController {
         MenloRegularLabel.font = UIFont(name: "Menlo-Regular", size: 18)
         PapyrusLabel.font = UIFont(name: "Papyrus", size: 18)
         
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        fontDisplay.font = UIFont(name: fontSet, size: 18)
+        
+        let index = font.firstIndex(of: fontSet)
+        AvenirNextSwitch.setOn(0 == index, animated: true)
+        AmericanTypewriterSwitch.setOn(1 == index, animated: true)
+        MenloRegularSwitch.setOn(2 == index, animated: true)
+        PapyrusSwitch.setOn(3 == index, animated: true)
+        
+    }
+    
+    
+    @IBAction func AvenirNextPicked(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            fontSet = font[0]
+            AmericanTypewriterSwitch.setOn(false, animated: true)
+            MenloRegularSwitch.setOn(false, animated: true)
+            PapyrusSwitch.setOn(false, animated: true)
+            viewWillAppear(true)
+        }
+    }
+    
+    
+    @IBAction func AmericanTypewriterPicked(_ sender: UISwitch) {
+        if sender.isOn == true{
+            fontSet = font[1]
+            AvenirNextSwitch.setOn(false, animated: true)
+            MenloRegularSwitch.setOn(false, animated: true)
+            PapyrusSwitch.setOn(false, animated: true)
+            viewWillAppear(true)
+        }
+    }
+    
+    
+    @IBAction func MenloRegularPicked(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            fontSet = font[2]
+            AvenirNextSwitch.setOn(false, animated: true)
+            AmericanTypewriterSwitch.setOn(false, animated: true)
+            PapyrusSwitch.setOn(false, animated: true)
+            viewWillAppear(true)
+        }
+    }
+    
+    
+    @IBAction func PapyrusPicked(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            fontSet = font[3]
+            AvenirNextSwitch.setOn(false, animated: true)
+            AmericanTypewriterSwitch.setOn(false, animated: true)
+            MenloRegularSwitch.setOn(false, animated: true)
+            viewWillAppear(true)
+        }
+    }
+    
+}
+    
+    
+    
+    
+    
 
     
 
-}
