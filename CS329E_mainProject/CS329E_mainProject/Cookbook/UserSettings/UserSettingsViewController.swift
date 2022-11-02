@@ -36,15 +36,15 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         
         //Set greeting to user's name and change font to Avenir Next, size 22
         nameLabel.text = "Hello \(name)!"
-        nameLabel.font = UIFont(name:"Avenir Next", size:22)
+        nameLabel.font = UIFont(name: fontSet, size:22)
         
         //Change font of all buttons to Avenir Next, size 18
-        personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
-        dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
-        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
-        customizationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
-        privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
-        logOutButton.configuration?.attributedTitle?.font = UIFont(name: "Avenir Next", size: 18)
+        personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        customizationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         
     }
     

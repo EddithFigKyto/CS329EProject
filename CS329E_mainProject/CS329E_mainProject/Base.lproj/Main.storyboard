@@ -421,6 +421,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vgi-lQ-TIE"/>
+                    <connections>
+                        <outlet property="ColorSchemeLabel" destination="sGR-cW-ICR" id="6jJ-oK-D9s"/>
+                        <outlet property="FontButtonLabel" destination="ifJ-ws-64C" id="Zfj-K2-RDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4t6-2q-U2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
