@@ -31,7 +31,7 @@ class CookbookViewController: UIViewController {
         let bannerX = bannerWidth / 2 - (image?.size.width)! / 2
         let bannerY = bannerHeight / 2 - (image?.size.height)! / 2
 
-        imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
+        imageView.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         imageView.contentMode = .scaleAspectFit
 
         navigationItem.titleView = imageView

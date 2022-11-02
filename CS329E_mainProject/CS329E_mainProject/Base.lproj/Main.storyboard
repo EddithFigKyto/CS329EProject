@@ -172,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="3881.5384615384614" y="1709.7156398104264"/>
         </scene>
-        <!--View Controller-->
+        <!--Grocery List-->
         <scene sceneID="KHf-Ih-8K5">
             <objects>
                 <viewController id="Rvg-aq-1ZU" sceneMemberID="viewController">
@@ -200,6 +200,7 @@
                         <viewLayoutGuide key="safeArea" id="Tb4-kb-pb6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Grocery List" image="list.bullet" catalog="system" selectedImage="list.bullet" id="7QQ-t2-nML"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -837,6 +838,8 @@
                     <connections>
                         <segue destination="fG4-Vx-bms" kind="relationship" relationship="viewControllers" id="ARP-qc-BU1"/>
                         <segue destination="nop-Vk-YHe" kind="relationship" relationship="viewControllers" destinationCreationSelector="Personal Settings" id="Auk-b0-CN1"/>
+                        <segue destination="Rvg-aq-1ZU" kind="relationship" relationship="viewControllers" id="vLT-cW-Nhj"/>
+                        <segue destination="M39-hY-Ew0" kind="relationship" relationship="viewControllers" id="SbU-do-vfN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htu-H3-vPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -892,6 +895,7 @@
                         <viewLayoutGuide key="safeArea" id="S0n-Eh-t1C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gt0-ZY-lL8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-Cv-GJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -936,10 +940,10 @@
             </objects>
             <point key="canvasLocation" x="3330.7692307692305" y="866.5876777251184"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="jal-ml-RZe">
             <objects>
-                <viewController id="M39-hY-Ew0" customClass="ViewController" customModule="Najia_s_Recipe_Contribution" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="M39-hY-Ew0" customClass="ViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3oH-Me-4Pl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -991,6 +995,7 @@
                             <constraint firstItem="gLi-f8-8vH" firstAttribute="top" secondItem="FDD-Ay-d5A" secondAttribute="top" id="xfq-Ok-B0Z"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="sQo-FI-Jv6"/>
                     <connections>
                         <outlet property="tableView" destination="gLi-f8-8vH" id="F13-i4-cOG"/>
                     </connections>
@@ -1003,6 +1008,8 @@
     <resources>
         <image name="banner1" width="667" height="213"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="list.bullet" catalog="system" width="128" height="87"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="profileFiller2" width="956" height="952"/>
         <systemColor name="systemBackgroundColor">
