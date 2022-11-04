@@ -49,7 +49,7 @@ class Recipe{
     }
     
     enum dishType{
-        case main, dessert, side, salad, sauce
+        case main, dessert, side, salad, sauce, drinks
     }
     enum diet{
         case vegetarian, vegan, gluten_free, sugar_free, lactose_free, nut_free, none
