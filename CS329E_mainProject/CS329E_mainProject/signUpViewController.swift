@@ -11,9 +11,15 @@ import FirebaseAuth
 class signUpViewController: UIViewController {
 
     @IBOutlet weak var userTF2: UITextField!
-    @IBOutlet var emailTF2: UIView!
+ 
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet var VC: UIView!
+    @IBOutlet weak var emailTF2: UITextField!
     @IBOutlet weak var passwordTF2: UITextField!
     @IBOutlet weak var confirmTF2: UITextField!
+    
+    var delegate: UIViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavBarImage()
@@ -22,6 +28,15 @@ class signUpViewController: UIViewController {
     }
     
     @IBAction func create2pressed(_ sender: Any) {
+        Auth.auth().createUser(withEmail: emailTF2.text!, password: passwordTF2.text!) { [self]
+            authResult, error in
+            if let error = error as NSError? {
+                self.statusLabel.text = "\(error.localizedDescription)"
+            }
+            else {
+                self.statusLabel.text = ""
+            }
+        }
     }
     
     func addNavBarImage() {
