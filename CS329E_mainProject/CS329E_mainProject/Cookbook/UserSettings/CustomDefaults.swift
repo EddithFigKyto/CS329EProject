@@ -9,9 +9,7 @@ import Foundation
 
 class CustomDefaults{
     
-    let userCustomizations = UserDefaults.standard
-    
-    func setUp(){
+   public let userCustomizations = UserDefaults.standard
         
         //keys for defaults
         let uNameKey = "user name"
@@ -22,11 +20,27 @@ class CustomDefaults{
         let name = "Jane Doe"
         let birthday = "07/17/1999"
         let font = "Avenir Next"
+    
+    func setUp()
+    {
+        userCustomizations.set(name, forKey: uNameKey)
+        userCustomizations.set(birthday, forKey: uBirthdayKey)
+        userCustomizations.set(font, forKey: uFontKey)
+    }
         
+    func setName(newName:String)
+    {
+        userCustomizations.set(newName, forKey: uNameKey)
     }
     
+    func setBirthday(newBirthday:String)
+    {
+        userCustomizations.set(newBirthday, forKey: uBirthdayKey)
+    }
     
-    
-    
+    func setFont(newFont:String)
+    {
+        userCustomizations.set(newFont, forKey: uFontKey)
+    }
     
 }
