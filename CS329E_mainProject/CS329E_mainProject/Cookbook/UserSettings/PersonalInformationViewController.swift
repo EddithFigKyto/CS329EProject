@@ -12,7 +12,7 @@ class PersonalInformationViewController: UIViewController{
     @IBOutlet weak var pageTitle: UILabel!
     
     var delegate:UIViewController!
-    var currentName:String = ""
+    var currentName:String = "" //HERE 
     var currentBirthday:String = "07/17/1999"
     
     @IBOutlet weak var nameEditor: UIButton!
@@ -113,8 +113,8 @@ class PersonalInformationViewController: UIViewController{
     
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView

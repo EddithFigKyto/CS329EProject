@@ -43,4 +43,19 @@ class CustomDefaults{
         userCustomizations.set(newFont, forKey: uFontKey)
     }
     
+    func getName(newName:String) -> String
+    {
+        return userCustomizations.string(forKey: uNameKey)!
+    }
+    
+    func getBirthday(newBirthday:String) -> String
+    {
+        return userCustomizations.string(forKey: uBirthdayKey)!
+    }
+    
+    func getFont(newFont:String) -> String
+    {
+        return userCustomizations.string(forKey: uFontKey)!
+    }
+    
 }
