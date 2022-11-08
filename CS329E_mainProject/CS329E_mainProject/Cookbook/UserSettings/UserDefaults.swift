@@ -11,6 +11,12 @@ import UIKit
 class UserDefaults{
     
     
+    func setUpDefaults(){
+        let userCustomizations = UserDefaults.standard
+    }
+    
+    //let userCustomizations = UserDefaults.standard
+    
     
     
     
