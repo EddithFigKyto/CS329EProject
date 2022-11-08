@@ -30,6 +30,7 @@
 		AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */; };
 		AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F528FF5B380075EBF6 /* DietViewController.swift */; };
 		AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */; };
+		AE5679C4291AD5B800E72A21 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5679C3291AD5B800E72A21 /* UserDefaults.swift */; };
 		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		AE3794F528FF5B380075EBF6 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		AE5679C3291AD5B800E72A21 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 		AE2957B62900486400FFDBB0 /* UserSettings */ = {
 			isa = PBXGroup;
 			children = (
+				AE5679C3291AD5B800E72A21 /* UserDefaults.swift */,
 				AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */,
 				AE3794F528FF5B380075EBF6 /* DietViewController.swift */,
 				AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */,
@@ -230,6 +233,7 @@
 				A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */,
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
+				AE5679C4291AD5B800E72A21 /* UserDefaults.swift in Sources */,
 				AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,

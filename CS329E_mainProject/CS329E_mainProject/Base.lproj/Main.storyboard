@@ -642,7 +642,7 @@
         <scene sceneID="cBa-Y6-cbt">
             <objects>
                 <viewController id="FQT-6I-1mK" customClass="loginViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="4Hz-I9-acq">
+                    <view key="view" contentMode="scaleToFill" id="4Hz-I9-acq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -692,8 +692,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Be-erc">
-                                <rect key="frame" x="48" y="667.66666666666663" width="295" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Be-erc">
+                                <rect key="frame" x="193" y="667.66666666666663" width="150" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="k7Z-BF-VSK"/>
                                 </constraints>
@@ -727,7 +727,7 @@
         <scene sceneID="V06-no-KZU">
             <objects>
                 <viewController id="b2d-BR-rk0" customClass="signUpViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7na-LT-05V">
+                    <view key="view" contentMode="scaleToFill" id="7na-LT-05V">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -776,7 +776,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiw-Cc-m3G">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiw-Cc-m3G">
                                 <rect key="frame" x="124.66666666666669" y="532.66666666666663" width="141" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create account"/>
@@ -791,7 +791,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM8-rj-sYt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM8-rj-sYt">
                                 <rect key="frame" x="81" y="613" width="228" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="m8J-tX-qOL"/>
@@ -867,7 +867,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjH-VI-oqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5326" y="1216"/>
+            <point key="canvasLocation" x="6388" y="1411"/>
         </scene>
         <!--Randomize View Controller-->
         <scene sceneID="3xg-at-kFl">
@@ -995,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vp5-M8-Bir" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="283" y="883"/>
+            <point key="canvasLocation" x="2466" y="925"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mca-Ic-MId">
