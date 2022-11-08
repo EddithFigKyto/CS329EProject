@@ -21,6 +21,8 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     //variable to store the user's name
     public var name = "Kyto"
     
+    public let userSettings = CustomDefaults()
+    
     //Outlets for labels and buttons on the VC
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -47,6 +49,8 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         customizationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+        
+        userSettings.setUp()
         
     }
     
@@ -87,8 +91,8 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
