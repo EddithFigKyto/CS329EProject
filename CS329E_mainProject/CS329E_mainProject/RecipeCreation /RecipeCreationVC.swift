@@ -11,8 +11,7 @@ class RecipeCreationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        textView.editable = false
-        // Do any additional setup after loading the view.
+
     }
     
     // title, time

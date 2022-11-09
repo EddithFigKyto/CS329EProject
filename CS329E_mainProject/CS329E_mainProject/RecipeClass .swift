@@ -17,24 +17,25 @@ class Recipe{
     var ingredients: [String] = []
     var description: [String] = [] //my bad
     var stepList: [String] = []
-    var servingSize: Int = 0
+    var servingSize: String = ""
     var cuisine: String = ""
     var dietaryRestr: diet
     var dish: dishType
-    var time: Int = 0 //in min
-    var image: UIImage
+    var time: String //in min
+    //var image: UIImage
     var tags: [String] = []
     
     init(creator: String,
          title: String,
          ingredients: [String],
-         servingSize: Int,
+         servingSize: String,
          cuisine: String,
          description: [String],
          dietaryRestriction: diet,
          dish: dishType,
-         time: Int,
-         image: UIImage) {
+         time: String//,
+         //image: UIImage
+    ) {
         
         self.creator = creator
         self.title = title
@@ -45,14 +46,28 @@ class Recipe{
         self.dietaryRestr = dietaryRestriction
         self.dish = dish
         self.time = time
-        self.image = image
+        //self.image = image
     }
     
-    enum dishType{
-        case main, dessert, side, salad, sauce, drinks
+    enum dishType: String{
+        case main = "Main",
+             dessert = "Dessert",
+             side = "Side",
+             salad = "Salad",
+             sauce = "Sauce",
+             drinks = "Drinks",
+             unselected = ""
+     
     }
-    enum diet{
-        case vegetarian, vegan, gluten_free, sugar_free, lactose_free, nut_free, none
+    enum diet: String {
+        case vegetarian = "Vegetarian",
+             vegan = "Vegan",
+             gluten_free = "Gluten Free",
+             sugar_free = "Sugar Free",
+             lactose_free = "Lactose Free",
+             nut_free = "Nut Free",
+             none = "",
+             halal = "Halal"
     }
     func addStep(step: String) {
         self.stepList.append(step)

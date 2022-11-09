@@ -31,11 +31,13 @@
 		AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F528FF5B380075EBF6 /* DietViewController.swift */; };
 		AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */; };
 		AE5679C6291AD8A400E72A21 /* CustomDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5679C5291AD8A400E72A21 /* CustomDefaults.swift */; };
+		F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */; };
 		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
 		F4F92618291B9161009E13B7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92617291B9161009E13B7 /* HomeVC.swift */; };
 		F4F9261A291B918E009E13B7 /* RecipeCreationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */; };
 		F4F9261C291B976B009E13B7 /* CS329E_mainProject in Resources */ = {isa = PBXBuildFile; fileRef = F4F9261B291B976B009E13B7 /* CS329E_mainProject */; };
 		F4F9261E291B9793009E13B7 /* MeasurementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9261D291B9793009E13B7 /* MeasurementVC.swift */; };
+		F4F92620291C2D51009E13B7 /* RecipeCreationVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,11 +66,13 @@
 		AE3794F528FF5B380075EBF6 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
 		AE5679C5291AD8A400E72A21 /* CustomDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDefaults.swift; sourceTree = "<group>"; };
+		F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreateViewController.swift; sourceTree = "<group>"; };
 		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
 		F4F92617291B9161009E13B7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreationVC.swift; sourceTree = "<group>"; };
-		F4F9261B291B976B009E13B7 /* CS329E_mainProject */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CS329E_mainProject; sourceTree = "<group>"; };
+		F4F9261B291B976B009E13B7 /* CS329E_mainProject */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CS329E_mainProject; sourceTree = "<group>"; };
 		F4F9261D291B9793009E13B7 /* MeasurementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementVC.swift; sourceTree = "<group>"; };
+		F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreationVC2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		A584769728FC665A007AC1E7 /* CS329E_mainProject */ = {
 			isa = PBXGroup;
 			children = (
+				F436D586291C2F5A0088BA02 /* RecipeCreation  */,
 				A59CFB452900DEDF00FB3B05 /* Cookbook */,
 				A584769828FC665A007AC1E7 /* AppDelegate.swift */,
 				A584769A28FC665A007AC1E7 /* SceneDelegate.swift */,
@@ -109,9 +114,7 @@
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
 				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
-				F4F9261D291B9793009E13B7 /* MeasurementVC.swift */,
 				F4F9261B291B976B009E13B7 /* CS329E_mainProject */,
-				F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */,
 				F4F92617291B9161009E13B7 /* HomeVC.swift */,
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
@@ -149,6 +152,17 @@
 				AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */,
 			);
 			path = UserSettings;
+			sourceTree = "<group>";
+		};
+		F436D586291C2F5A0088BA02 /* RecipeCreation  */ = {
+			isa = PBXGroup;
+			children = (
+				F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */,
+				F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */,
+				F4F9261D291B9793009E13B7 /* MeasurementVC.swift */,
+				F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */,
+			);
+			path = "RecipeCreation ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,7 @@
 			files = (
 				A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */,
 				F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */,
+				F4F92620291C2D51009E13B7 /* RecipeCreationVC2.swift in Sources */,
 				F4F9261E291B9793009E13B7 /* MeasurementVC.swift in Sources */,
 				A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */,
 				F4F9261A291B918E009E13B7 /* RecipeCreationVC.swift in Sources */,
@@ -251,6 +266,7 @@
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 				AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */,
+				F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
 			);
