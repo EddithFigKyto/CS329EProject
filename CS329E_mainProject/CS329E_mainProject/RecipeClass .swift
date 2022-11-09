@@ -15,7 +15,7 @@ class Recipe{
     var creator: String = ""
     var title: String = ""
     var ingredients: [String] = []
-    var description: [String] = []
+    var description: [String] = [] //my bad
     var stepList: [String] = []
     var servingSize: Int = 0
     var cuisine: String = ""
