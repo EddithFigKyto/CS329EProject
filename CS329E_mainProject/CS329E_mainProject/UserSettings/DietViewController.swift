@@ -52,21 +52,44 @@ class DietViewController: UIViewController {
     }
     
     
+    @IBAction func vegetarianPressed(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+        }
+        
+    }
+    
+    @IBAction func veganPressed(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+        }
+    }
     
     
+    @IBAction func glutenFreePressed(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+        }
+    }
     
     
+    @IBAction func nutFreePressed(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+        }
+    }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func halalPressed(_ sender: UISwitch) {
+        
+        if sender.isOn == true{
+            
+        }
+    }
     
     
     
