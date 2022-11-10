@@ -11,6 +11,19 @@ class DietViewController: UIViewController {
 
     @IBOutlet weak var pageTitle: UILabel!
     
+    /*
+          vegetarian = "Vegetarian",
+          vegan = "Vegan",
+          gluten_free = "Gluten Free",
+          sugar_free = "Sugar Free",
+          lactose_free = "Lactose Free",
+          nut_free = "Nut Free",
+          none = "",
+          halal = "Halal"
+     */
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
