@@ -35,7 +35,6 @@
 		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
 		F4F92618291B9161009E13B7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92617291B9161009E13B7 /* HomeVC.swift */; };
 		F4F9261A291B918E009E13B7 /* RecipeCreationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */; };
-		F4F9261C291B976B009E13B7 /* CS329E_mainProject in Resources */ = {isa = PBXBuildFile; fileRef = F4F9261B291B976B009E13B7 /* CS329E_mainProject */; };
 		F4F9261E291B9793009E13B7 /* MeasurementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9261D291B9793009E13B7 /* MeasurementVC.swift */; };
 		F4F92620291C2D51009E13B7 /* RecipeCreationVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +69,6 @@
 		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
 		F4F92617291B9161009E13B7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreationVC.swift; sourceTree = "<group>"; };
-		F4F9261B291B976B009E13B7 /* CS329E_mainProject */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CS329E_mainProject; sourceTree = "<group>"; };
 		F4F9261D291B9793009E13B7 /* MeasurementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementVC.swift; sourceTree = "<group>"; };
 		F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreationVC2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,7 +112,6 @@
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
 				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
-				F4F9261B291B976B009E13B7 /* CS329E_mainProject */,
 				F4F92617291B9161009E13B7 /* HomeVC.swift */,
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
@@ -230,7 +227,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58476A828FC665A007AC1E7 /* LaunchScreen.storyboard in Resources */,
-				F4F9261C291B976B009E13B7 /* CS329E_mainProject in Resources */,
 				82507E8D290EF19D00837CD3 /* GoogleService-Info.plist in Resources */,
 				A58476A528FC665A007AC1E7 /* Assets.xcassets in Resources */,
 				A58476A028FC665A007AC1E7 /* Main.storyboard in Resources */,
