@@ -104,6 +104,7 @@
 		A584769728FC665A007AC1E7 /* CS329E_mainProject */ = {
 			isa = PBXGroup;
 			children = (
+				AE2957B62900486400FFDBB0 /* UserSettings */,
 				F436D586291C2F5A0088BA02 /* RecipeCreation  */,
 				A59CFB452900DEDF00FB3B05 /* Cookbook */,
 				A584769828FC665A007AC1E7 /* AppDelegate.swift */,
@@ -133,7 +134,6 @@
 				A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */,
 				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */,
-				AE2957B62900486400FFDBB0 /* UserSettings */,
 			);
 			path = Cookbook;
 			sourceTree = "<group>";
