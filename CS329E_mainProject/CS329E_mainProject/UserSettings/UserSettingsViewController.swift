@@ -54,6 +54,20 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        //Set greeting to user's name and change font to Avenir Next, size 22
+        nameLabel.text = "Hello \(name)!"
+        nameLabel.font = UIFont(name: fontSet, size:22)
+        
+        //Change font of all buttons to fontSet, size 18
+        personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        customizationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+    }
+    
     //when segue to personal information VC is triggered, send over self as delegate and name as currentName
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == personalInformationSegueIdentifier,

@@ -14,6 +14,7 @@ class PersonalInformationViewController: UIViewController{
     var delegate:UIViewController!
     var currentName:String = "" //HERE 
     var currentBirthday:String = "07/17/1999"
+    var currentEmail:String = "princesspeach2002@aol.com"
     
     @IBOutlet weak var nameEditor: UIButton!
     
@@ -30,22 +31,41 @@ class PersonalInformationViewController: UIViewController{
         
         addNavBarImage()
         
-        pageTitle.font = UIFont(name: "Avenir Next", size: 22)
+        pageTitle.font = UIFont(name: fontSet, size: 22)
         
-        editMessageLabel.font = UIFont(name: "Avenir Next", size: 18)
+        editMessageLabel.font = UIFont(name: fontSet, size: 18)
         
         nameEditor.setTitle("Name : \(currentName)", for: .normal)
-        nameEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        nameEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
         
         birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
-        birthdayEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        birthdayEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
         
-        emailEditor.setTitle("Email: ???", for: .normal)
-        emailEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        emailEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
         
         profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.titleLabel?.font = UIFont(name:"Avenir Next", size:18)
+        profilePictureEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        pageTitle.font = UIFont(name: fontSet, size: 22)
+        
+        editMessageLabel.font = UIFont(name: fontSet, size: 18)
+        
+        nameEditor.setTitle("Name : \(currentName)", for: .normal)
+        nameEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        
+        birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+        birthdayEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        
+        emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        emailEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        
+        profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        profilePictureEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
         
     }
     
@@ -70,7 +90,7 @@ class PersonalInformationViewController: UIViewController{
                     let textFields = textFieldArray as [UITextField]
                     let enteredText = textFields[0].text
                     self.currentName = enteredText!
-                    self.viewDidLoad()
+                    self.viewWillAppear(true)
                     
                     let otherVC = self.delegate as! changeNameProtocol
                     otherVC.changeName(newName: self.currentName)
@@ -104,7 +124,7 @@ class PersonalInformationViewController: UIViewController{
                     let textFields = textFieldArray as [UITextField]
                     let enteredText = textFields[0].text
                     self.currentBirthday = enteredText!
-                    self.viewDidLoad()
+                    self.viewWillAppear(true)
                     
                 }
             }))
