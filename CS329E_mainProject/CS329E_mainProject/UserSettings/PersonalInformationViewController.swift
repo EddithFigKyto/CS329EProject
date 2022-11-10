@@ -26,6 +26,11 @@ class PersonalInformationViewController: UIViewController{
     
     @IBOutlet weak var editMessageLabel: UILabel!
     
+
+   
+    @IBOutlet weak var fontSetLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,17 +41,16 @@ class PersonalInformationViewController: UIViewController{
         editMessageLabel.font = UIFont(name: fontSet, size: 18)
         
         nameEditor.setTitle("Name : \(currentName)", for: .normal)
-        nameEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
+        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
         birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
-        birthdayEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
+        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
         emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
-        emailEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
+        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
         profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.titleLabel?.font = UIFont(name: fontSet, size:18)
-        
+        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
     }
     
@@ -56,16 +60,17 @@ class PersonalInformationViewController: UIViewController{
         editMessageLabel.font = UIFont(name: fontSet, size: 18)
         
         nameEditor.setTitle("Name : \(currentName)", for: .normal)
-        nameEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        nameEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         
         birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
-        birthdayEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         
         emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
-        emailEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        emailEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         
         profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        
         
     }
     
@@ -90,7 +95,7 @@ class PersonalInformationViewController: UIViewController{
                     let textFields = textFieldArray as [UITextField]
                     let enteredText = textFields[0].text
                     self.currentName = enteredText!
-                    self.viewWillAppear(true)
+                    self.viewDidLoad()
                     
                     let otherVC = self.delegate as! changeNameProtocol
                     otherVC.changeName(newName: self.currentName)
@@ -124,7 +129,7 @@ class PersonalInformationViewController: UIViewController{
                     let textFields = textFieldArray as [UITextField]
                     let enteredText = textFields[0].text
                     self.currentBirthday = enteredText!
-                    self.viewWillAppear(true)
+                    self.viewDidLoad()
                     
                 }
             }))
