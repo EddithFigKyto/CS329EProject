@@ -26,9 +26,6 @@ class PersonalInformationViewController: UIViewController{
     
     @IBOutlet weak var editMessageLabel: UILabel!
     
-
-   
-    @IBOutlet weak var fontSetLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -70,7 +67,6 @@ class PersonalInformationViewController: UIViewController{
         
         profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
-        
         
     }
     
