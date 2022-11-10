@@ -477,10 +477,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-W6-zoe">
-                                <rect key="frame" x="45" y="465" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAa-Xj-c5i">
                                 <rect key="frame" x="51" y="525" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -532,6 +528,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bI4-W6-zoe">
+                                <rect key="frame" x="45" y="470" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wMh-2v-26h"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -544,7 +544,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="fOC-Wd-5l4"/>
                     <connections>
+                        <outlet property="dietTitleLabel" destination="8fA-Ap-kgi" id="wyQ-iV-b0b"/>
+                        <outlet property="glutenFreeLabel" destination="w9v-Hf-bA0" id="GZz-VT-laN"/>
+                        <outlet property="glutenFreeSwitch" destination="Out-hH-wau" id="2Oq-GB-K67"/>
+                        <outlet property="halalLabel" destination="Suk-cV-1XP" id="qTf-Bp-7Hn"/>
+                        <outlet property="halalSwitch" destination="yQo-Xi-Spn" id="Ik2-I9-bge"/>
+                        <outlet property="nutFreeLabel" destination="EvQ-zI-Eyz" id="kJS-F8-vLG"/>
+                        <outlet property="nutFreeSwitch" destination="Jnz-i8-40F" id="hXJ-zz-HUN"/>
                         <outlet property="pageTitle" destination="8fA-Ap-kgi" id="iPM-f9-uv0"/>
+                        <outlet property="preferencesLabel" destination="aHn-nz-6l5" id="hZO-Gt-JMq"/>
+                        <outlet property="veganLabel" destination="omp-Yy-6UD" id="RrY-wg-sqV"/>
+                        <outlet property="veganSwitch" destination="xAa-Xj-c5i" id="yiZ-Z2-Kts"/>
+                        <outlet property="vegetarianLabel" destination="8Tr-Wq-XVN" id="eQJ-Ls-MyH"/>
+                        <outlet property="vegetarianSwitch" destination="bI4-W6-zoe" id="hV8-CC-Jgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GT-Gf-Zv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

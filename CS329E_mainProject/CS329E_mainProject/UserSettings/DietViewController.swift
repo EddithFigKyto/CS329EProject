@@ -23,14 +23,52 @@ class DietViewController: UIViewController {
      */
     
     
+    @IBOutlet weak var dietTitleLabel: UILabel!
+    @IBOutlet weak var preferencesLabel: UILabel!
+    
+    @IBOutlet weak var vegetarianLabel: UILabel!
+    @IBOutlet weak var vegetarianSwitch: UISwitch!
+    
+    @IBOutlet weak var veganLabel: UILabel!
+    @IBOutlet weak var veganSwitch: UISwitch!
+    
+    @IBOutlet weak var glutenFreeLabel: UILabel!
+    @IBOutlet weak var glutenFreeSwitch: UISwitch!
+   
+    @IBOutlet weak var nutFreeSwitch: UISwitch!
+    @IBOutlet weak var nutFreeLabel: UILabel!
+    
+    @IBOutlet weak var halalLabel: UILabel!
+    @IBOutlet weak var halalSwitch: UISwitch!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addNavBarImage()
         
-        pageTitle.font = UIFont(name: "Avenir Next", size: 22)
+        pageTitle.font = UIFont(name: fontSet, size: 22)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     func addNavBarImage() {
         
