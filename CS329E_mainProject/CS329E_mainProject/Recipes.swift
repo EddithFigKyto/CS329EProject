@@ -7,6 +7,11 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseFirestore
+
+
+
 
 /*
 var recipe1 = Recipe(creator: "Liquor.com", title: "Tequila Sunrise", ingredients: ["2 ounces blanco tequila", "4 ounces orange juice, freshly squeezed", "1/4 ounce grenadine", "Garnish: orange slice", "Garnish: cherry"], servingSize: 1, cuisine: "Drinks", description: ["The Tequila Sunrise cocktail, with its bright striations of color, evokes a summer sunrise. This classic drink has only three ingredients—tequila, grenadine and orange juice—and is served unmixed to preserve the color of each layer."], dietaryRestriction: Recipe.diet.vegan, dish: Recipe.dishType.drinks, time: 5, image: UIImage(named: "tequila_sunrise")!)
