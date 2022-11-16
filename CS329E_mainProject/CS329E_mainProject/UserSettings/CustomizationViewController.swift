@@ -14,6 +14,7 @@ class CustomizationViewController: UIViewController {
     
     @IBOutlet weak var FontButtonLabel: UIButton!
     
+    @IBOutlet weak var NotificationSettingsButtonLabel: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +23,14 @@ class CustomizationViewController: UIViewController {
         
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         
     }
     

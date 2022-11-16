@@ -49,6 +49,30 @@ class DietViewController: UIViewController {
         addNavBarImage()
         
         pageTitle.font = UIFont(name: fontSet, size: 22)
+        
+        dietTitleLabel.font = UIFont(name: fontSet, size: 18)
+        preferencesLabel.font = UIFont(name: fontSet, size: 18)
+        vegetarianLabel.font = UIFont(name: fontSet, size: 18)
+        veganLabel.font = UIFont(name: fontSet, size: 18)
+        glutenFreeLabel.font = UIFont(name: fontSet, size: 18)
+        nutFreeLabel.font = UIFont(name: fontSet, size: 18)
+        halalLabel.font = UIFont(name: fontSet, size: 18)
+        
+        
+        //personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        pageTitle.font = UIFont(name: fontSet, size: 22)
+        dietTitleLabel.font = UIFont(name: fontSet, size: 18)
+        preferencesLabel.font = UIFont(name: fontSet, size: 18)
+        vegetarianLabel.font = UIFont(name: fontSet, size: 18)
+        veganLabel.font = UIFont(name: fontSet, size: 18)
+        glutenFreeLabel.font = UIFont(name: fontSet, size: 18)
+        nutFreeLabel.font = UIFont(name: fontSet, size: 18)
+        halalLabel.font = UIFont(name: fontSet, size: 18)
+        
     }
     
     

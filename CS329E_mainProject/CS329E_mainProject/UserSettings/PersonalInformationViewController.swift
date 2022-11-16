@@ -60,6 +60,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         nameEditor.setTitle("Name : \(currentName)", for: .normal)
         nameEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //nameEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
         
         birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
