@@ -28,7 +28,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personalInformationLabel: UIButton!
     @IBOutlet weak var dietFiltersLabel: UIButton!
-    @IBOutlet weak var notificationsLabel: UIButton!
+    //@IBOutlet weak var notificationsLabel: UIButton!
     @IBOutlet weak var customizationLabel: UIButton!
     @IBOutlet weak var privacyPolicyButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
@@ -45,7 +45,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         //Change font of all buttons to Avenir Next, size 18
         personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
-        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         customizationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
@@ -62,7 +62,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         //Change font of all buttons to fontSet, size 18
         personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         dietFiltersLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
-        notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //notificationsLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         customizationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
         logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)

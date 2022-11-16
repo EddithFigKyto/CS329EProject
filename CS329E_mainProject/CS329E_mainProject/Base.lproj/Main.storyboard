@@ -213,8 +213,8 @@
                                     <segue destination="ygx-Hv-5wh" kind="show" identifier="dietFiltersSegue" id="EQS-Pt-FVi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7E-5R-1NA">
-                                <rect key="frame" x="16" y="557" width="358" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7E-5R-1NA">
+                                <rect key="frame" x="16" y="502" width="358" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Customization  &gt;"/>
@@ -222,13 +222,13 @@
                                     <segue destination="Qeu-ZU-rST" kind="show" id="Yr5-K3-Ykb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-WD-EtK">
-                                <rect key="frame" x="16" y="612" width="358" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-WD-EtK">
+                                <rect key="frame" x="16" y="557" width="358" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy Policy  &gt;"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
                                 <rect key="frame" x="153" y="751" width="85" height="35"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
@@ -239,8 +239,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JL1-Uz-ZSZ" firstAttribute="leading" secondItem="PJ0-z1-6YO" secondAttribute="leading" constant="16" id="4dI-U9-chZ"/>
+                            <constraint firstItem="C7E-5R-1NA" firstAttribute="trailing" secondItem="4VD-ON-YBK" secondAttribute="trailing" id="6Zv-4Q-qtc"/>
                             <constraint firstItem="PJ0-z1-6YO" firstAttribute="trailing" secondItem="JL1-Uz-ZSZ" secondAttribute="trailing" constant="16" id="9Wi-RH-Bue"/>
+                            <constraint firstItem="C7E-5R-1NA" firstAttribute="top" secondItem="4VD-ON-YBK" secondAttribute="bottom" constant="20" id="AXP-Aq-LbI"/>
                             <constraint firstItem="Za7-sU-m96" firstAttribute="top" secondItem="PJ0-z1-6YO" secondAttribute="top" constant="100" id="Dmi-r9-op0"/>
+                            <constraint firstItem="C7E-5R-1NA" firstAttribute="leading" secondItem="4VD-ON-YBK" secondAttribute="leading" id="KF5-v9-Ak0"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="top" secondItem="JL1-Uz-ZSZ" secondAttribute="bottom" constant="20" id="KcG-aW-9HM"/>
                             <constraint firstItem="yqA-ew-j3z" firstAttribute="top" secondItem="Za7-sU-m96" secondAttribute="bottom" constant="30" id="LUn-Hs-heb"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="leading" secondItem="JL1-Uz-ZSZ" secondAttribute="leading" id="RJK-l6-AkY"/>
@@ -663,7 +666,7 @@
         <scene sceneID="cBa-Y6-cbt">
             <objects>
                 <viewController id="FQT-6I-1mK" customClass="loginViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="4Hz-I9-acq">
+                    <view key="view" contentMode="scaleToFill" id="4Hz-I9-acq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -713,7 +716,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Be-erc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Be-erc">
                                 <rect key="frame" x="193" y="667.66666666666663" width="150" height="20.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="k7Z-BF-VSK"/>
