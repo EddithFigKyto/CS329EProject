@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PersonalInformationViewController: UIViewController{
+class PersonalInformationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var pageTitle: UILabel!
     
@@ -25,6 +25,8 @@ class PersonalInformationViewController: UIViewController{
     @IBOutlet weak var profilePictureEditor: UIButton!
     
     @IBOutlet weak var editMessageLabel: UILabel!
+    
+    @IBOutlet weak var profilePicture: UIImageView!
     
     
     
@@ -131,6 +133,26 @@ class PersonalInformationViewController: UIViewController{
             }))
         present(controller, animated: true)
     }
+    
+    @IBAction func profilePictureChange(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            profilePicture.image = image
+        }
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     
     func addNavBarImage() {
         

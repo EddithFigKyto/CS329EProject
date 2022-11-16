@@ -24,7 +24,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     public let userSettings = CustomDefaults()
     
     //Outlets for labels and buttons on the VC
-    @IBOutlet weak var profilePicture: UIImageView!
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personalInformationLabel: UIButton!
     @IBOutlet weak var dietFiltersLabel: UIButton!
@@ -81,26 +81,6 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     func changeName(newName: String) {
         name = newName
         self.viewDidLoad()
-    }
-
-    //
-    @IBAction func profilePictureChange(_ sender: Any) {
-        let vc = UIImagePickerController()
-        vc.sourceType = .photoLibrary
-        vc.delegate = self
-        vc.allowsEditing = true
-        present(vc, animated: true)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
-            profilePicture.image = image
-        }
-        
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
     }
     
     func addNavBarImage() {

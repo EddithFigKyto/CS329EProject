@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class Recipe{
+class Recipe {
     var saves: Int = 0
     var creator: String = ""
     var title: String = ""
