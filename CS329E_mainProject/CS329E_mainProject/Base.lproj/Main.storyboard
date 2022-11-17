@@ -677,10 +677,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="679-KL-bfA"/>
                     <connections>
+                        <outlet property="backUpLabel" destination="bX9-3F-2rY" id="YpJ-kO-rFO"/>
                         <outlet property="birthdayEditor" destination="hZB-ex-opy" id="vF9-R5-PJG"/>
+                        <outlet property="birthdayLabel" destination="1Hr-LE-ccn" id="lsS-W1-Fiw"/>
                         <outlet property="editMessageLabel" destination="hyv-J2-0t2" id="rZC-Y0-O4Q"/>
                         <outlet property="emailEditor" destination="3Ua-dU-fjq" id="EXQ-JO-3ha"/>
+                        <outlet property="emailLabel" destination="ULL-CA-qGc" id="qGU-e1-QLm"/>
                         <outlet property="nameEditor" destination="CR7-CL-V1D" id="rRZ-lg-NnE"/>
+                        <outlet property="nameLabel" destination="pr2-vR-aFV" id="nRj-UT-mEh"/>
                         <outlet property="pageTitle" destination="a1g-oX-Gmf" id="nQA-Ww-mdj"/>
                         <outlet property="profilePicture" destination="kfb-5D-v61" id="tv3-Bt-t3I"/>
                         <outlet property="profilePictureEditor" destination="gpd-xj-Nf4" id="hAD-xC-0Bn"/>

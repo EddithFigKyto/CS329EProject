@@ -16,19 +16,20 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     var currentBirthday:String = "07/17/1999"
     var currentEmail:String = "princesspeach2002@aol.com"
     
+    
+    //potentially not needed
     @IBOutlet weak var nameEditor: UIButton!
-    
     @IBOutlet weak var birthdayEditor: UIButton!
-    
     @IBOutlet weak var emailEditor: UIButton!
-    
     @IBOutlet weak var profilePictureEditor: UIButton!
-    
     @IBOutlet weak var editMessageLabel: UILabel!
-    
     @IBOutlet weak var profilePicture: UIImageView!
     
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var backUpLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,16 +40,18 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         editMessageLabel.font = UIFont(name: fontSet, size: 18)
         
-        nameEditor.setTitle("Name : \(currentName)", for: .normal)
+        nameLabel.text = currentName
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+        //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+        birthdayLabel.text = currentBirthday
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        emailLabel.text = currentEmail
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
     }
@@ -58,18 +61,19 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         editMessageLabel.font = UIFont(name: fontSet, size: 18)
         
-        nameEditor.setTitle("Name : \(currentName)", for: .normal)
-        nameEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
-        //nameEditor.titleLabel?.font = UIFont(name:fontSet, size:18)
+        nameLabel.text = currentName
+        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
-        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+        birthdayLabel.text = currentBirthday
+        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
-        emailEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        emailLabel.text = currentEmail
+        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
-        profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
+        //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
         
     }
     
