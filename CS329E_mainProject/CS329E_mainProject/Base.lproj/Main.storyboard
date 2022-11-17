@@ -365,7 +365,7 @@
                                 <rect key="frame" x="41" y="428" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="AmericanTypewriterNext:" destination="i7x-if-zqM" eventType="valueChanged" id="8Uj-Sn-6wq"/>
+                                    <action selector="AmericanTypewriterPicked:" destination="i7x-if-zqM" eventType="valueChanged" id="7Gl-ZK-N2w"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="American Typewriter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcJ-KX-TBI">
