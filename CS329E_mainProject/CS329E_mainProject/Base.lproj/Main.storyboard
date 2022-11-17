@@ -586,7 +586,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR7-CL-V1D">
-                                <rect key="frame" x="16" y="427" width="358" height="35"/>
+                                <rect key="frame" x="16" y="427" width="130.66666666666666" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Name"/>
@@ -595,7 +595,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-ex-opy">
-                                <rect key="frame" x="16" y="482" width="358" height="35"/>
+                                <rect key="frame" x="16" y="482" width="130.66666666666666" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Birthday"/>
@@ -604,7 +604,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-dU-fjq">
-                                <rect key="frame" x="16" y="537" width="358" height="35"/>
+                                <rect key="frame" x="16" y="537" width="130.66666666666666" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Email"/>
@@ -616,7 +616,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xj-Nf4">
-                                <rect key="frame" x="16" y="587" width="358" height="35"/>
+                                <rect key="frame" x="16" y="587" width="130.66666666666666" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Profile Picture"/>
@@ -624,13 +624,40 @@
                                     <action selector="profilePictureChange:" destination="VQE-bg-tNz" eventType="touchUpInside" id="gng-on-AaZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr2-vR-aFV">
+                                <rect key="frame" x="231" y="434" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-LE-ccn">
+                                <rect key="frame" x="253" y="496" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULL-CA-qGc">
+                                <rect key="frame" x="275" y="544" width="79" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ummm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX9-3F-2rY">
+                                <rect key="frame" x="284" y="601" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wmJ-9b-WQR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kfb-5D-v61" firstAttribute="top" secondItem="wmJ-9b-WQR" secondAttribute="top" constant="100" id="0dQ-2O-QMb"/>
                             <constraint firstItem="hyv-J2-0t2" firstAttribute="leading" secondItem="CR7-CL-V1D" secondAttribute="leading" id="679-qm-DTP"/>
-                            <constraint firstItem="wmJ-9b-WQR" firstAttribute="trailing" secondItem="CR7-CL-V1D" secondAttribute="trailing" constant="16" id="69O-sU-gHd"/>
                             <constraint firstItem="3Ua-dU-fjq" firstAttribute="trailing" secondItem="hZB-ex-opy" secondAttribute="trailing" id="AQy-Ah-2Dm"/>
                             <constraint firstItem="hZB-ex-opy" firstAttribute="leading" secondItem="CR7-CL-V1D" secondAttribute="leading" id="B4a-AL-gAp"/>
                             <constraint firstItem="3Ua-dU-fjq" firstAttribute="leading" secondItem="hZB-ex-opy" secondAttribute="leading" id="Ive-Od-LOg"/>
