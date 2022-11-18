@@ -26,6 +26,7 @@
 		A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */; };
 		A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */; };
 		A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEE7E92915829D00ECB92E /* Recipes.swift */; };
+		AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */; };
 		AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */; };
 		AE30C90A290342DC004586FC /* CustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30C909290342DC004586FC /* CustomizationViewController.swift */; };
 		AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */; };
@@ -61,6 +62,7 @@
 		A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookSearchViewController.swift; sourceTree = "<group>"; };
 		A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookCategoryViewController.swift; sourceTree = "<group>"; };
 		A5DEE7E92915829D00ECB92E /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeViewController.swift; sourceTree = "<group>"; };
 		AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
 		AE30C909290342DC004586FC /* CustomizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationViewController.swift; sourceTree = "<group>"; };
 		AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				AE5679C5291AD8A400E72A21 /* CustomDefaults.swift */,
+				AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */,
 				AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */,
 				AE3794F528FF5B380075EBF6 /* DietViewController.swift */,
 				AE3794F328FF5B1A0075EBF6 /* PersonalInformationViewController.swift */,
@@ -285,6 +288,7 @@
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 				AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */,
+				AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */,
 				F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
