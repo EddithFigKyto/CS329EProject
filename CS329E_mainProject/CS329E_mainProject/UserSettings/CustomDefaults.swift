@@ -15,11 +15,13 @@ class CustomDefaults{
         let uNameKey = "user name"
         let uBirthdayKey = "birthday"
         let uFontKey = "font"
+        let uDietKey = "diet"
         
         //values for associated keys
         let name = "Jane Doe"
         let birthday = "07/17/1999"
         let font = "Avenir Next"
+        let diet = ["none"]
     
     func setUp()
     {
@@ -43,19 +45,28 @@ class CustomDefaults{
         userCustomizations.set(newFont, forKey: uFontKey)
     }
     
-    func getName(newName:String) -> String
+    func setDiet(dietChoices:[String])
+    {
+        userCustomizations.set(diet, forKey: uDietKey)
+    }
+    
+    func getName() -> String
     {
         return userCustomizations.string(forKey: uNameKey)!
     }
     
-    func getBirthday(newBirthday:String) -> String
+    func getBirthday() -> String
     {
         return userCustomizations.string(forKey: uBirthdayKey)!
     }
     
-    func getFont(newFont:String) -> String
+    func getFont() -> String
     {
         return userCustomizations.string(forKey: uFontKey)!
     }
     
+    func getDiet() -> [String]
+    {
+        return (userCustomizations.array(forKey: uDietKey) as? [String])!
+    }
 }
