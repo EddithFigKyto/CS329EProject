@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="of8-f3-RU7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="1039"/>
+            <point key="canvasLocation" x="2556.9230769230767" y="1038.6255924170616"/>
         </scene>
         <!--Cookbook Search View Controller-->
         <scene sceneID="Ntd-6Q-qe4">
@@ -172,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nVG-tW-eBz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="863"/>
+            <point key="canvasLocation" x="3756.9230769230767" y="862.32227488151659"/>
         </scene>
         <!--User Settings View Controller-->
         <scene sceneID="byT-fS-h1f">
@@ -1050,7 +1050,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjH-VI-oqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="1582"/>
+            <point key="canvasLocation" x="3756.9230769230767" y="1581.7535545023695"/>
         </scene>
         <!--Randomize View Controller-->
         <scene sceneID="3xg-at-kFl">
@@ -1311,7 +1311,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifT-7E-FO5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="1039"/>
+            <point key="canvasLocation" x="1630.7692307692307" y="1038.6255924170616"/>
         </scene>
         <!--Recipe CreationVC-->
         <scene sceneID="noz-Wd-fap">
@@ -1378,7 +1378,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PjK-5R-zzC">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -1392,10 +1392,11 @@
                             <constraint firstItem="PjK-5R-zzC" firstAttribute="leading" secondItem="l4i-Qo-ulJ" secondAttribute="leading" id="yJQ-Nb-esn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5pp-qH-an2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmC-YG-AgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1414" y="1113"/>
+            <point key="canvasLocation" x="-486.15384615384613" y="1112.5592417061612"/>
         </scene>
         <!--Home-->
         <scene sceneID="jal-ml-RZe">
@@ -1509,6 +1510,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next: Add Measurements "/>
+                                <connections>
+                                    <segue destination="zRp-92-PKw" kind="show" identifier="MeasurementSeg" id="ct4-Wo-3hM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIu-w7-CBx">
                                 <rect key="frame" x="83" y="286" width="12" height="21"/>
@@ -1521,10 +1525,11 @@
                         <viewLayoutGuide key="safeArea" id="CfW-If-YbI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tXe-aO-WFY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBX-rW-HW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2143" y="1100"/>
+            <point key="canvasLocation" x="-1213.8461538461538" y="1099.7630331753553"/>
         </scene>
         <!--Recipe Create View Controller-->
         <scene sceneID="np3-Nn-Kku">
@@ -1563,12 +1568,14 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Next: Ingedients "/>
                                 <connections>
                                     <action selector="nextButton:" destination="w8h-rY-cFY" eventType="touchUpInside" id="Xcg-9Q-qjs"/>
+                                    <segue destination="osJ-2A-3ou" kind="show" identifier="NextIngredient" id="Ja2-o7-jwz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N4d-9f-q4z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZxZ-SW-7R7"/>
                     <connections>
                         <outlet property="nextName" destination="9T7-N5-s2X" id="PI8-5e-0lP"/>
                         <outlet property="textfield" destination="fk3-Fl-Mf5" id="XdJ-II-td7"/>
@@ -1577,7 +1584,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAx-lB-nH9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2983" y="1100"/>
+            <point key="canvasLocation" x="-2053.8461538461538" y="1099.7630331753553"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1X6-XT-1hB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V7p-vX-d5q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rs3-nz-1Fl">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w8h-rY-cFY" kind="relationship" relationship="rootViewController" id="3Su-Kn-bku"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwJ-0w-Anp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2983.0769230769229" y="1099.7630331753553"/>
         </scene>
     </scenes>
     <resources>

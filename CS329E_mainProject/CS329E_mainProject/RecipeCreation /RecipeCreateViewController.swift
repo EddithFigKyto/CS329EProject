@@ -13,8 +13,7 @@ var nextList = ["Next: Cook Time", "Next: Serving Size", "Next: Description"]
 var indexVC = 0
 var creatingRecipe = Recipe(creator: "", title: "", ingredients: [], servingSize: "", cuisine: "", description: [], dietaryRestriction: .none, dish: .unselected, time: "")
 
-//, image: UIImage(named: "") ?? "")
-//need none image
+
 
 class RecipeCreateViewController: UIViewController {
 
@@ -30,6 +29,20 @@ class RecipeCreateViewController: UIViewController {
             //segue here
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if indexVC == 2{
+            if segue.identifier == "NextIngredient", //comma implies sequencing
+               let nextVC = segue.destination as? RecipeCreationVC2{ //pointer to 2nd VC
+                nextVC.delegate = self
+            }
+            
+            
+        }
+
+    }
+    
+    
     @IBAction func savePressed(_ sender: Any) {
         if indexVC == 0{
             creatingRecipe.title =  textfield.text!
@@ -43,10 +56,12 @@ class RecipeCreateViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         indexVC = 0
-
+        titleName.text = titleList[indexVC]
+        nextName.setTitle(nextList[indexVC], for: .normal)
         
     }
     
