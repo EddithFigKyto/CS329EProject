@@ -10,10 +10,13 @@ import UIKit
 class RecipeCreationVC2: UIViewController {
     var delegate: UIViewController!
     
+    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var recipeTitle: UILabel! //need to send recipe title from previous VC (maybe make a list of variables or dictionary situation)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //textView.editable = false
+        textView.isEditable = false
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MeasurementSeg", //comma implies sequencing

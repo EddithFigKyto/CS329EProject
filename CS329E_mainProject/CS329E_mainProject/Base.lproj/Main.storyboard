@@ -1396,7 +1396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JmC-YG-AgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-486.15384615384613" y="1112.5592417061612"/>
+            <point key="canvasLocation" x="-422" y="1099"/>
         </scene>
         <!--Home-->
         <scene sceneID="jal-ml-RZe">
@@ -1526,6 +1526,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="tXe-aO-WFY"/>
+                    <connections>
+                        <outlet property="recipeTitle" destination="MUz-ei-cS0" id="EcA-l2-W9J"/>
+                        <outlet property="textView" destination="ijA-Ps-TUJ" id="WAx-H1-ff7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBX-rW-HW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
