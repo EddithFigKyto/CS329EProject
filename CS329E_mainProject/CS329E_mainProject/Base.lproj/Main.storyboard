@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -219,7 +219,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Customization  &gt;"/>
                                 <connections>
-                                    <segue destination="Qeu-ZU-rST" kind="show" id="Yr5-K3-Ykb"/>
+                                    <segue destination="Qeu-ZU-rST" kind="show" identifier="customizationSegue" id="Yr5-K3-Ykb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHS-WD-EtK">
@@ -267,6 +267,7 @@
                         <outlet property="nameLabel" destination="yqA-ew-j3z" id="REb-qu-Ns2"/>
                         <outlet property="personalInformationLabel" destination="JL1-Uz-ZSZ" id="XIt-qp-tkM"/>
                         <outlet property="privacyPolicyButton" destination="mHS-WD-EtK" id="boq-5d-Y5l"/>
+                        <outlet property="profilePicture" destination="Za7-sU-m96" id="E1e-MJ-1mF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euA-qC-4XU" sceneMemberID="firstResponder"/>
@@ -357,6 +358,7 @@
                         <outlet property="ColorSchemeLabel" destination="sGR-cW-ICR" id="6jJ-oK-D9s"/>
                         <outlet property="FontButtonLabel" destination="ifJ-ws-64C" id="Zfj-K2-RDe"/>
                         <outlet property="NotificationSettingsButtonLabel" destination="mKU-vx-yXg" id="Omi-Ud-BZD"/>
+                        <outlet property="profilePicture" destination="kAi-qL-sUQ" id="y4e-xH-JiK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4t6-2q-U2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -668,6 +670,7 @@
                         <outlet property="nutFreeSwitch" destination="Jnz-i8-40F" id="hXJ-zz-HUN"/>
                         <outlet property="pageTitle" destination="8fA-Ap-kgi" id="iPM-f9-uv0"/>
                         <outlet property="preferencesLabel" destination="aHn-nz-6l5" id="hZO-Gt-JMq"/>
+                        <outlet property="profilePicture" destination="8lW-eT-kQC" id="VCe-Xs-jbn"/>
                         <outlet property="veganLabel" destination="omp-Yy-6UD" id="RrY-wg-sqV"/>
                         <outlet property="veganSwitch" destination="xAa-Xj-c5i" id="yiZ-Z2-Kts"/>
                         <outlet property="vegetarianLabel" destination="8Tr-Wq-XVN" id="eQJ-Ls-MyH"/>

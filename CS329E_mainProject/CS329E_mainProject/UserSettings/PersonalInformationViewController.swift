@@ -25,6 +25,9 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var editMessageLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    // this variable hold an optional UIImage to set profilePicture if changed
+    var picture: UIImage?
+    
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
@@ -35,6 +38,9 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         super.viewDidLoad()
         
         addNavBarImage()
+        
+        // profile picture is always set to user settings profile picture - reflects any changes made by user
+        profilePicture.image = picture
         
         pageTitle.font = UIFont(name: fontSet, size: 22)
         
@@ -139,6 +145,8 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         present(controller, animated: true)
     }
     
+    
+    // button which allows the user to chnage thier profile picture from their local gallery
     @IBAction func profilePictureChange(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
@@ -147,18 +155,28 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         present(vc, animated: true)
     }
     
+    
+    // triggers the profile picture image view change to the selected photo from the gallery
+    // selection menu will disappear
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             profilePicture.image = image
+            
+            let otherVC = delegate as! changeProfilePicture
+            otherVC.changeProfilePic(newPicture: profilePicture.image!)
+            
+            picker.dismiss(animated: true)
         }
         
     }
     
+    // if the user selects "cancel" when choosing their profile picture, the image picker view will disappear
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
     
+    // changes navigation bar image to the app logo and formats it to be centered on the top of the screen
     func addNavBarImage() {
         
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))

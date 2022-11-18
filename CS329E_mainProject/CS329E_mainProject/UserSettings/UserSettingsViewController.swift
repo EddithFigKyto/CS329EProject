@@ -9,14 +9,20 @@ import UIKit
 
 //segue identifiers for VCs associated with each button on menu
 let personalInformationSegueIdentifier:String = "personalInformationSegue"
-let dietSegueIdentifier:String = "dietSegue"
+let dietSegueIdentifier:String = "dietFiltersSegue"
+let customizationSegueIdentifier: String  = "customizationSegue"
 
 //Protocol definition that allows the name of the user to be updated
 protocol changeNameProtocol{
     func changeName(newName:String)
 }
 
-class UserSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, changeNameProtocol{
+// Protocol definition that allows the profile picture of the user to be updated
+protocol changeProfilePicture {
+    func changeProfilePic(newPicture: UIImage)
+}
+
+class UserSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, changeNameProtocol, changeProfilePicture{
     
     //variable to store the user's name
     public var name = "Kyto"
@@ -25,6 +31,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     
     //Outlets for labels and buttons on the VC
 
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personalInformationLabel: UIButton!
     @IBOutlet weak var dietFiltersLabel: UIButton!
@@ -72,15 +79,35 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == personalInformationSegueIdentifier,
            let nextVC = segue.destination as? PersonalInformationViewController {
+            // delegate to change profile picture settings
             nextVC.delegate = self
             nextVC.currentName = name
+            nextVC.picture = profilePicture.image
         }
+        
+        if segue.identifier == dietSegueIdentifier,
+           let nextVC = segue.destination as? DietViewController {
+            // if user changes profile picture, the change will be reflected on this VC
+            nextVC.picture = profilePicture.image
+        }
+        
+        if segue.identifier == customizationSegueIdentifier,
+           let nextVC = segue.destination as? CustomizationViewController {
+            // if user changes profile picture, the change will be reflected on this VC
+            nextVC.picture = profilePicture.image
+        }
+           
     }
     
     //function defined in protocol that updates the user's name if the user changes it. 
     func changeName(newName: String) {
         name = newName
         self.viewDidLoad()
+    }
+    
+    // function defined in protocol that updated the user's profile picture if the user changes it
+    func changeProfilePic(newPicture: UIImage) {
+        self.profilePicture.image = newPicture
     }
     
     func addNavBarImage() {

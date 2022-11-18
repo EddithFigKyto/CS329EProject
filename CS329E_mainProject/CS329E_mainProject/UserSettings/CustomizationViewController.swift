@@ -10,16 +10,26 @@ import UIKit
 class CustomizationViewController: UIViewController {
     
     
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    // this variable hold an optional UIImage to set profilePicture if changed
+    var picture: UIImage?
+    
     @IBOutlet weak var ColorSchemeLabel: UIButton!
     
     @IBOutlet weak var FontButtonLabel: UIButton!
     
     @IBOutlet weak var NotificationSettingsButtonLabel: UIButton!
     
+    var delegate:UIViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addNavBarImage()
+        
+        // profile picture is always set to user settings profile picture - reflects any changes made by user
+        profilePicture.image = picture
         
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)

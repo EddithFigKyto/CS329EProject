@@ -42,11 +42,20 @@ class DietViewController: UIViewController {
     @IBOutlet weak var halalSwitch: UISwitch!
     
     
+    @IBOutlet weak var profilePicture: UIImageView!
+    
+    // this variable hold an optional UIImage to set profilePicture if changed
+    var picture: UIImage?
+    
+    var delegate:UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addNavBarImage()
+        
+        // profile picture is always set to user settings profile picture - reflects any changes made by user
+        profilePicture.image = picture
         
         pageTitle.font = UIFont(name: fontSet, size: 22)
         
