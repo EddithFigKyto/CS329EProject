@@ -18,8 +18,6 @@ class CookbookViewController: UIViewController {
         
         addNavBarImage()
         fetchRecipes()
-        
-        
 
     }
     

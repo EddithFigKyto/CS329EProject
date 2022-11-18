@@ -26,13 +26,13 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favorites.count
+        return recipes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
-        cell.textLabel?.text = favorites[row]
+        cell.textLabel?.text = recipes[row].title
         return cell
     }
     
