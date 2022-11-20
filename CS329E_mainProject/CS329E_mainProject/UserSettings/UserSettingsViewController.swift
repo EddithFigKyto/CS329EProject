@@ -105,6 +105,14 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     // function defined in protocol that updated the user's profile picture if the user changes it
     func changeProfilePic(newPicture: UIImage) {
         self.profilePicture.image = newPicture
+        
+        profilePicture!.layer.frame = CGRectInset(profilePicture!.layer.frame, 0, 0)
+        profilePicture!.layer.borderColor = UIColor.gray.cgColor
+        profilePicture!.layer.cornerRadius = profilePicture!.frame.height/2
+        profilePicture!.layer.masksToBounds = true
+        profilePicture!.clipsToBounds = true
+        profilePicture!.layer.borderWidth = 0.5
+        profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
     }
     
     func addNavBarImage() {

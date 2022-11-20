@@ -31,6 +31,14 @@ class CustomizationViewController: UIViewController {
         // profile picture is always set to user settings profile picture - reflects any changes made by user
         profilePicture.image = picture
         
+        profilePicture!.layer.frame = CGRectInset(profilePicture!.layer.frame, 0, 0)
+        profilePicture!.layer.borderColor = UIColor.gray.cgColor
+        profilePicture!.layer.cornerRadius = profilePicture!.frame.height/2
+        profilePicture!.layer.masksToBounds = true
+        profilePicture!.clipsToBounds = true
+        profilePicture!.layer.borderWidth = 0.5
+        profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
+        
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
         NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)

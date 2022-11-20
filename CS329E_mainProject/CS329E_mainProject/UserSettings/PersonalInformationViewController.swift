@@ -161,10 +161,19 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             profilePicture.image = image
+        
+            profilePicture!.layer.frame = CGRectInset(profilePicture!.layer.frame, 0, 0)
+            profilePicture!.layer.borderColor = UIColor.gray.cgColor
+            profilePicture!.layer.cornerRadius = profilePicture!.frame.height/2
+            profilePicture!.layer.masksToBounds = true
+            profilePicture!.clipsToBounds = true
+            profilePicture!.layer.borderWidth = 0.5
+            profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
             
             let otherVC = delegate as! changeProfilePicture
             otherVC.changeProfilePic(newPicture: profilePicture.image!)
             
+
             picker.dismiss(animated: true)
         }
         
