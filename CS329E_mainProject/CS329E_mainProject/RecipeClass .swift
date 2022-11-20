@@ -17,6 +17,7 @@ class Recipe {
     // array of strings which includes the measurement
     var ingredients: [String] = []
     // for filtering by ingredient only
+    var printIngredients: [String] = []
     var plainIngredients: [String] = []
     var description: [String] = [] //my bad
     var stepList: [String] = []
@@ -31,6 +32,8 @@ class Recipe {
     init(creator: String,
          title: String,
          ingredients: [String],
+         printIngredients: [String],
+         plainIngredients: [String],
          servingSize: String,
          cuisine: String,
          description: [String],
@@ -43,6 +46,8 @@ class Recipe {
         self.creator = creator
         self.title = title
         self.ingredients = ingredients
+        self.printIngredients = printIngredients
+        self.plainIngredients = plainIngredients
         self.servingSize = servingSize
         self.cuisine = cuisine //Mexican, Indian, Chinese, French, Italian, American,
         self.description = description
