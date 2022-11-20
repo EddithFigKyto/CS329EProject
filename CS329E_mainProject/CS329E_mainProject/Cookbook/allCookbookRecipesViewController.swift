@@ -33,6 +33,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, U
         let row = indexPath.row
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
         cell.textLabel?.text = recipes[row].title
+        cell.detailTextLabel?.text = recipes[row].description[0]
         return cell
     }
     

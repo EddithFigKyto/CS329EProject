@@ -14,10 +14,10 @@ class Recipe {
     var saves: Int = 0
     var creator: String = ""
     var title: String = ""
-    // array of strings which includes the measurement
     var ingredients: [String] = []
-    // for filtering by ingredient only
+    // array of strings which includes the measurement
     var printIngredients: [String] = []
+    // for filtering by ingredient only
     var plainIngredients: [String] = []
     var description: [String] = [] //my bad
     var stepList: [String] = []
@@ -39,7 +39,9 @@ class Recipe {
          description: [String],
          dietaryRestriction: diet,
          dish: dishType,
-         time: String//,
+         stepList: [String],
+         time: String,
+         tags: [String]//,
          //image: UIImage
     ) {
         
@@ -54,6 +56,7 @@ class Recipe {
         self.dietaryRestr = dietaryRestriction
         self.dish = dish
         self.time = time
+        self.stepList = stepList
         //self.image = image
     }
     
