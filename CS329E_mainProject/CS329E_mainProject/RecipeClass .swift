@@ -14,7 +14,10 @@ class Recipe {
     var saves: Int = 0
     var creator: String = ""
     var title: String = ""
+    // array of strings which includes the measurement
     var ingredients: [String] = []
+    // for filtering by ingredient only
+    var plainIngredients: [String] = []
     var description: [String] = [] //my bad
     var stepList: [String] = []
     var servingSize: String = ""
