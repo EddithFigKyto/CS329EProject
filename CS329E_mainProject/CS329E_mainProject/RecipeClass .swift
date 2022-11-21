@@ -14,8 +14,9 @@ class Recipe {
     var saves: Int = 0
     var creator: String = ""
     var title: String = ""
-    // array of strings which includes the measurement
     var ingredients: [String] = []
+    // array of strings which includes the measurement
+    var printIngredients: [String] = []
     // for filtering by ingredient only
     var plainIngredients: [String] = []
     var description: [String] = [] //my bad
@@ -31,24 +32,31 @@ class Recipe {
     init(creator: String,
          title: String,
          ingredients: [String],
+         printIngredients: [String],
+         plainIngredients: [String],
          servingSize: String,
          cuisine: String,
          description: [String],
          dietaryRestriction: diet,
          dish: dishType,
-         time: String//,
+         stepList: [String],
+         time: String,
+         tags: [String]//,
          //image: UIImage
     ) {
         
         self.creator = creator
         self.title = title
         self.ingredients = ingredients
+        self.printIngredients = printIngredients
+        self.plainIngredients = plainIngredients
         self.servingSize = servingSize
         self.cuisine = cuisine //Mexican, Indian, Chinese, French, Italian, American,
         self.description = description
         self.dietaryRestr = dietaryRestriction
         self.dish = dish
         self.time = time
+        self.stepList = stepList
         //self.image = image
     }
     
