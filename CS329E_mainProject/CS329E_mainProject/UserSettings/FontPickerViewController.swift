@@ -38,7 +38,7 @@ class FontPickerViewController: UIViewController {
         
         //personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
         
-        fontDisplay.font = UIFont(name: fontSet, size: 18)
+        fontDisplay.font = UIFont(name: fontSet, size: 20)
         AvenirNextLabel.font = UIFont(name: "Avenir Next", size: 18)
         AmericanTypewriterLabel.font = UIFont(name: "American Typewriter", size: 18)
         MenloRegularLabel.font = UIFont(name: "Menlo-Regular", size: 18)
@@ -48,7 +48,7 @@ class FontPickerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        fontDisplay.font = UIFont(name: fontSet, size: 18)
+        fontDisplay.font = UIFont(name: fontSet, size: 20)
         
         let index = font.firstIndex(of: fontSet)
         AvenirNextSwitch.setOn(0 == index, animated: true)

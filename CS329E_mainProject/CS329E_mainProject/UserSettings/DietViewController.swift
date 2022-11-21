@@ -44,6 +44,9 @@ class DietViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
+    var dirtyBit:Int = 0
+    
+    
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
     
@@ -86,7 +89,7 @@ class DietViewController: UIViewController {
     
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
-        
+        //dirtyBit = 1
         if sender.isOn == true{
             
         }
@@ -124,8 +127,6 @@ class DietViewController: UIViewController {
         }
     }
     
-    
-    
     func addNavBarImage() {
         
         var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
@@ -134,8 +135,4 @@ class DietViewController: UIViewController {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
-
-    
-
 }
