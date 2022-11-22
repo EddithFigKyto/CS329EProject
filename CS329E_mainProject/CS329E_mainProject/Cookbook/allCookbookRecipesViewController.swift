@@ -5,22 +5,22 @@
 //  Created by Laynee Tourne-Morton on 10/19/22.
 //
 
-let favorites = ["Recipe 1", "Recipe 2", "Recipe 3"]
-
 let textCellIdentifier = "favoritesTextCell"
+var recipe = ["1", "2"]
+
 
 import UIKit
 
-class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class allCookbookRecipesViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var favoritesTableView: UITableView!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addNavBarImage()
         
-        favoritesTableView.delegate = self
         favoritesTableView.dataSource = self
 
     }
@@ -31,9 +31,13 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDelegate, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
-        let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
-        cell.textLabel?.text = recipes[row].title
-        cell.detailTextLabel?.text = recipes[row].description[0]
+        let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! RecipeTableViewCell
+        cell.recipeTitle.text = recipes[row].title
+        cell.recipeDescription.text = recipes[row].description[0]
+        cell.recipeImage.image = UIImage(named: "greek_salad")
+        //cell.textLabel?.text =
+        //cell.detailTextLabel?.text = recipes[row].description[0]
+        
         return cell
     }
     
