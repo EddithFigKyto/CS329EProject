@@ -9,10 +9,25 @@ import UIKit
 
 class randomizeViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addNavBarImage()
+    }
+    
+    
+    @IBAction func randomizeButtonPress(_ sender: Any) {
+        var recipeNum = randomize()
+        titleLabel.text = recipes[recipeNum].title
+        
+    }
+    
+    
+    func randomize() -> Int {
+        let randomInt = Int.random(in: 1..<16)
+        return randomInt
     }
     
 
