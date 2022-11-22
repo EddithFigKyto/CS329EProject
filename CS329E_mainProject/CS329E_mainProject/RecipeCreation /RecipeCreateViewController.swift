@@ -13,7 +13,7 @@ var nextList = ["Next: Cook Time", "Next: Serving Size", "Next: Description"]
 var indexVC = 0
 
 // had to create a version of this with the additonal properties so app would not break - Laynee
-var creatingRecipe = Recipe(creator: "", title: "", ingredients: [], printIngredients: [], plainIngredients: [], servingSize: "", cuisine: "", description: [], dietaryRestriction: .none, dish: .unselected, stepList: [], time: "", tags: [])
+var creatingRecipe = Recipe(creator: "", title: "", ingredients: [], printIngredients: [], plainIngredients: [], servingSize: "", cuisine: "", description: [], dietaryRestriction: .none, dish: .unselected, stepList: [], time: "", tags: [], recipeImage: "")
 
 //var creatingRecipe = Recipe(creator: "", title: "", ingredients: [], servingSize: "", cuisine: "", description: [], dietaryRestriction: .none, dish: .unselected, time: "")
 

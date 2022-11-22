@@ -11,7 +11,7 @@ var recipe = ["1", "2"]
 
 import UIKit
 
-class allCookbookRecipesViewController: UIViewController, UITableViewDataSource {
+class allCookbookRecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
@@ -22,9 +22,14 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource 
         addNavBarImage()
         
         favoritesTableView.dataSource = self
+        favoritesTableView.delegate = self
 
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
@@ -34,9 +39,33 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource 
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! RecipeTableViewCell
         cell.recipeTitle.text = recipes[row].title
         cell.recipeDescription.text = recipes[row].description[0]
-        cell.recipeImage.image = UIImage(named: "greek_salad")
+        //cell.recipeImage.image = UIImage(named: "greek_salad")
         //cell.textLabel?.text =
         //cell.detailTextLabel?.text = recipes[row].description[0]
+        
+        let imageURL = URL(string: recipes[row].recipeImage)!
+        
+        let session = URLSession(configuration: .default)
+        
+        // Create a task for accessing the image
+        let task = session.dataTask(with: imageURL) {
+            (data, response, error) in
+            
+            guard error == nil else { return }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                
+                // ensure that we got a response code of 200 (which means "success")
+                guard httpResponse.statusCode == 200 else { return }
+                
+                if let receivedData = data {
+                    DispatchQueue.main.async {
+                        cell.recipeImage.image = UIImage(data: receivedData)
+                    }
+                }
+            }
+        }
+        task.resume()
         
         return cell
     }

@@ -27,6 +27,7 @@ class Recipe {
     var dish: dishType
     var time: String //in min
     //var image: UIImage
+    var recipeImage: String
     var tags: [String] = []
     
     init(creator: String,
@@ -41,7 +42,8 @@ class Recipe {
          dish: dishType,
          stepList: [String],
          time: String,
-         tags: [String]//,
+         tags: [String],
+         recipeImage: String//,
          //image: UIImage
     ) {
         
@@ -57,6 +59,7 @@ class Recipe {
         self.dish = dish
         self.time = time
         self.stepList = stepList
+        self.recipeImage = recipeImage
         //self.image = image
     }
     
