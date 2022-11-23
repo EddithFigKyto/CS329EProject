@@ -7,9 +7,9 @@
 
 import UIKit
 
-public var dietPreferences: [String] = (userCustomizations.array(forKey: "diet") as? [String])!
+public var dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
 
-let diet = ["vegetarian", "vegan", "gluten-free", "nut-free", "halal"]
+//let diet = ["vegetarian", "vegan", "gluten-free", "nut-free", "halal"]
 
 class DietViewController: UIViewController {
 
@@ -63,7 +63,8 @@ class DietViewController: UIViewController {
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
         
-
+        //dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
+        
 
         
     }
@@ -79,26 +80,27 @@ class DietViewController: UIViewController {
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
         
-        vegetarianSwitch.setOn(dietPreferences.contains("vegetarian"), animated: true)
-        veganSwitch.setOn(dietPreferences.contains("vegan"), animated: true)
-        glutenFreeSwitch.setOn(dietPreferences.contains("gluten-free"), animated: true)
-        nutFreeSwitch.setOn(dietPreferences.contains("nut-free"), animated: true)
-        halalSwitch.setOn(dietPreferences.contains("halal"), animated: true)
+        //dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
         
-
+        vegetarianSwitch.setOn(dietPreferences!.contains("vegetarian"), animated: true)
+        veganSwitch.setOn(dietPreferences!.contains("vegan"), animated: true)
+        glutenFreeSwitch.setOn(dietPreferences!.contains("gluten-free"), animated: true)
+        nutFreeSwitch.setOn(dietPreferences!.contains("nut-free"), animated: true)
+        halalSwitch.setOn(dietPreferences!.contains("halal"), animated: true)
+        
 
     }
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
         //dirtyBit = 1
         if sender.isOn == true{
-            if !dietPreferences.contains("vegetarian")
+            if !dietPreferences!.contains("vegetarian")
             {
-                dietPreferences.append("vegetarian")
+                dietPreferences!.append("vegetarian")
             }
         }
         else{
-            dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegetarian")!)
+            dietPreferences!.remove(at: dietPreferences!.firstIndex(of: "vegetarian")!)
         }
         
         userCustomizations.set(dietPreferences, forKey: "diet")
@@ -110,13 +112,13 @@ class DietViewController: UIViewController {
     @IBAction func veganPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            if !dietPreferences.contains("vegan")
+            if !dietPreferences!.contains("vegan")
             {
-                dietPreferences.append("vegan")
+                dietPreferences!.append("vegan")
             }
         }
         else{
-            dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegan")!)
+            dietPreferences!.remove(at: dietPreferences!.firstIndex(of: "vegan")!)
         }
         
         userCustomizations.set(dietPreferences, forKey: "diet")
@@ -129,13 +131,13 @@ class DietViewController: UIViewController {
     @IBAction func glutenFreePressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            if !dietPreferences.contains("gluten-free")
+            if !dietPreferences!.contains("gluten-free")
             {
-                dietPreferences.append("gluten-free")
+                dietPreferences!.append("gluten-free")
             }
         }
         else{
-            dietPreferences.remove(at: dietPreferences.firstIndex(of: "gluten-free")!)
+            dietPreferences!.remove(at: dietPreferences!.firstIndex(of: "gluten-free")!)
         }
         
         userCustomizations.set(dietPreferences, forKey: "diet")
@@ -148,13 +150,13 @@ class DietViewController: UIViewController {
     @IBAction func nutFreePressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            if !dietPreferences.contains("nut-free")
+            if !dietPreferences!.contains("nut-free")
             {
-                dietPreferences.append("nut-free")
+                dietPreferences!.append("nut-free")
             }
         }
         else{
-            dietPreferences.remove(at: dietPreferences.firstIndex(of: "nut-free")!)
+            dietPreferences!.remove(at: dietPreferences!.firstIndex(of: "nut-free")!)
         }
         
         userCustomizations.set(dietPreferences, forKey: "diet")
@@ -168,13 +170,13 @@ class DietViewController: UIViewController {
     @IBAction func halalPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            if !dietPreferences.contains("halal")
+            if !dietPreferences!.contains("halal")
             {
-                dietPreferences.append("halal")
+                dietPreferences!.append("halal")
             }
         }
         else{
-            dietPreferences.remove(at: dietPreferences.firstIndex(of: "halal")!)
+            dietPreferences!.remove(at: dietPreferences!.firstIndex(of: "halal")!)
         }
         
         userCustomizations.set(dietPreferences, forKey: "diet")

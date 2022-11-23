@@ -21,7 +21,7 @@ class CustomDefaults{
         let name = "Jane Doe"
         let birthday = "07/17/1999"
         let font = "Avenir Next"
-        let diet:[String] = []
+        let diet:[String] = [""]
     
     //method that creates the UserDefaults and sets the initial values of each key
     func setUp()
@@ -31,4 +31,6 @@ class CustomDefaults{
         userCustomizations.set(font, forKey: uFontKey)
         userCustomizations.set(diet, forKey: uDietKey)
     }
+    
+    
 }
