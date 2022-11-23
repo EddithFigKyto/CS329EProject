@@ -107,7 +107,7 @@ class DietViewController: UIViewController {
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegetarian")!)
         }
         
-        print(dietPreferences)
+        //print(dietPreferences)
     }
     
     @IBAction func veganPressed(_ sender: UISwitch) {
@@ -122,7 +122,7 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegan")!)
         }
-        print(dietPreferences)
+        //print(dietPreferences)
     }
     
     
@@ -138,7 +138,7 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "gluten-free")!)
         }
-        print(dietPreferences)
+        //print(dietPreferences)
     }
     
     
@@ -154,7 +154,7 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "nut-free")!)
         }
-        print(dietPreferences)
+        //print(dietPreferences)
     }
     
     
@@ -170,7 +170,7 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "halal")!)
         }
-        print(dietPreferences)
+        //print(dietPreferences)
     }
     
     func addNavBarImage() {
