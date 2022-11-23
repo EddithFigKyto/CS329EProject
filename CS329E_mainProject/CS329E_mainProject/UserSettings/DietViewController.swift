@@ -15,15 +15,6 @@ class DietViewController: UIViewController {
 
     @IBOutlet weak var pageTitle: UILabel!
     
-    /*
-          vegetarian = "Vegetarian",
-          vegan = "Vegan",
-          gluten_free = "Gluten Free",
-          nut_free = "Nut Free",
-          halal = "Halal"
-     */
-    
-    
     @IBOutlet weak var dietTitleLabel: UILabel!
     @IBOutlet weak var preferencesLabel: UILabel!
     
