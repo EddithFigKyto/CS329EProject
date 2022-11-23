@@ -45,8 +45,6 @@ class DietViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
-    //var dirtyBit:Int = 0
-    
     
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
@@ -70,9 +68,6 @@ class DietViewController: UIViewController {
         glutenFreeLabel.font = UIFont(name: fontSet, size: 18)
         nutFreeLabel.font = UIFont(name: fontSet, size: 18)
         halalLabel.font = UIFont(name: fontSet, size: 18)
-        
-        
-        //personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:fontSet, size:18)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,7 +88,6 @@ class DietViewController: UIViewController {
         halalSwitch.setOn(dietPreferences.contains("halal"), animated: true)
     }
     
-    
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
         //dirtyBit = 1
         if sender.isOn == true{
@@ -101,12 +95,10 @@ class DietViewController: UIViewController {
             {
                 dietPreferences.append("vegetarian")
             }
-            
         }
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegetarian")!)
         }
-        
         //print(dietPreferences)
     }
     
@@ -117,14 +109,12 @@ class DietViewController: UIViewController {
             {
                 dietPreferences.append("vegan")
             }
-            
         }
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegan")!)
         }
         //print(dietPreferences)
     }
-    
     
     @IBAction func glutenFreePressed(_ sender: UISwitch) {
         
@@ -133,14 +123,12 @@ class DietViewController: UIViewController {
             {
                 dietPreferences.append("gluten-free")
             }
-            
         }
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "gluten-free")!)
         }
         //print(dietPreferences)
     }
-    
     
     @IBAction func nutFreePressed(_ sender: UISwitch) {
         
@@ -149,14 +137,12 @@ class DietViewController: UIViewController {
             {
                 dietPreferences.append("nut-free")
             }
-            
         }
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "nut-free")!)
         }
         //print(dietPreferences)
     }
-    
     
     @IBAction func halalPressed(_ sender: UISwitch) {
         
@@ -165,7 +151,6 @@ class DietViewController: UIViewController {
             {
                 dietPreferences.append("halal")
             }
-            
         }
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "halal")!)

@@ -15,18 +15,14 @@ class FontPickerViewController: UIViewController {
     
     @IBOutlet weak var fontDisplay: UILabel!
     
-    
     @IBOutlet weak var AvenirNextLabel: UILabel!
     @IBOutlet weak var AvenirNextSwitch: UISwitch!
-    
     
     @IBOutlet weak var AmericanTypewriterLabel: UILabel!
     @IBOutlet weak var AmericanTypewriterSwitch: UISwitch!
     
-    
     @IBOutlet weak var MenloRegularLabel: UILabel!
     @IBOutlet weak var MenloRegularSwitch: UISwitch!
-    
     
     @IBOutlet weak var PapyrusLabel: UILabel!
     @IBOutlet weak var PapyrusSwitch: UISwitch!
@@ -35,8 +31,6 @@ class FontPickerViewController: UIViewController {
         super.viewDidLoad()
         
         addNavBarImage()
-        
-        //personalInformationLabel.configuration?.attributedTitle?.font = UIFont(name:"Avenir Next", size:18)
         
         fontDisplay.font = UIFont(name: fontSet, size: 20)
         AvenirNextLabel.font = UIFont(name: "Avenir Next", size: 18)
@@ -58,7 +52,6 @@ class FontPickerViewController: UIViewController {
         
     }
     
-    
     @IBAction func AvenirNextPicked(_ sender: UISwitch) {
         
         if sender.isOn == true{
@@ -70,7 +63,6 @@ class FontPickerViewController: UIViewController {
         }
     }
     
-    
     @IBAction func AmericanTypewriterPicked(_ sender: UISwitch) {
         if sender.isOn == true{
             fontSet = font[1]
@@ -80,12 +72,6 @@ class FontPickerViewController: UIViewController {
             viewWillAppear(true)
         }
     }
-    
-    
-    
-    
-    
-    
     
     @IBAction func MenloRegularPicked(_ sender: UISwitch) {
         
@@ -97,7 +83,6 @@ class FontPickerViewController: UIViewController {
             viewWillAppear(true)
         }
     }
-    
     
     @IBAction func PapyrusPicked(_ sender: UISwitch) {
         
