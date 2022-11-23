@@ -7,6 +7,10 @@
 
 import UIKit
 
+public var dietPreferences: [String] = []
+
+let diet = ["vegetarian", "vegan", "gluten-free", "nut-free", "halal"]
+
 class DietViewController: UIViewController {
 
     @IBOutlet weak var pageTitle: UILabel!
@@ -15,10 +19,7 @@ class DietViewController: UIViewController {
           vegetarian = "Vegetarian",
           vegan = "Vegan",
           gluten_free = "Gluten Free",
-          sugar_free = "Sugar Free",
-          lactose_free = "Lactose Free",
           nut_free = "Nut Free",
-          none = "",
           halal = "Halal"
      */
     
@@ -44,7 +45,7 @@ class DietViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
-    var dirtyBit:Int = 0
+    //var dirtyBit:Int = 0
     
     
     // this variable hold an optional UIImage to set profilePicture if changed
@@ -85,52 +86,97 @@ class DietViewController: UIViewController {
         nutFreeLabel.font = UIFont(name: fontSet, size: 18)
         halalLabel.font = UIFont(name: fontSet, size: 18)
         
+        vegetarianSwitch.setOn(dietPreferences.contains("vegetarian"), animated: true)
+        veganSwitch.setOn(dietPreferences.contains("vegan"), animated: true)
+        glutenFreeSwitch.setOn(dietPreferences.contains("gluten-free"), animated: true)
+        nutFreeSwitch.setOn(dietPreferences.contains("nut-free"), animated: true)
+        halalSwitch.setOn(dietPreferences.contains("halal"), animated: true)
     }
     
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
         //dirtyBit = 1
         if sender.isOn == true{
+            if !dietPreferences.contains("vegetarian")
+            {
+                dietPreferences.append("vegetarian")
+            }
             
         }
+        else{
+            dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegetarian")!)
+        }
         
+        print(dietPreferences)
     }
     
     @IBAction func veganPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
+            if !dietPreferences.contains("vegan")
+            {
+                dietPreferences.append("vegan")
+            }
             
         }
+        else{
+            dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegan")!)
+        }
+        print(dietPreferences)
     }
     
     
     @IBAction func glutenFreePressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
+            if !dietPreferences.contains("gluten-free")
+            {
+                dietPreferences.append("gluten-free")
+            }
             
         }
+        else{
+            dietPreferences.remove(at: dietPreferences.firstIndex(of: "gluten-free")!)
+        }
+        print(dietPreferences)
     }
     
     
     @IBAction func nutFreePressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
+            if !dietPreferences.contains("nut-free")
+            {
+                dietPreferences.append("nut-free")
+            }
             
         }
+        else{
+            dietPreferences.remove(at: dietPreferences.firstIndex(of: "nut-free")!)
+        }
+        print(dietPreferences)
     }
     
     
     @IBAction func halalPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
+            if !dietPreferences.contains("halal")
+            {
+                dietPreferences.append("halal")
+            }
             
         }
+        else{
+            dietPreferences.remove(at: dietPreferences.firstIndex(of: "halal")!)
+        }
+        print(dietPreferences)
     }
     
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
