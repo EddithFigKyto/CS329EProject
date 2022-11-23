@@ -9,7 +9,7 @@ import UIKit
 
 let font = ["Avenir Next", "American Typewriter", "Menlo-Regular", "Papyrus"]
 
-public var fontSet = font[0]
+public var fontSet = userCustomizations.string(forKey: "font")
 
 class FontPickerViewController: UIViewController {
     
@@ -32,7 +32,7 @@ class FontPickerViewController: UIViewController {
         
         addNavBarImage()
         
-        fontDisplay.font = UIFont(name: fontSet, size: 20)
+        fontDisplay.font = UIFont(name: fontSet!, size: 20)
         AvenirNextLabel.font = UIFont(name: "Avenir Next", size: 18)
         AmericanTypewriterLabel.font = UIFont(name: "American Typewriter", size: 18)
         MenloRegularLabel.font = UIFont(name: "Menlo-Regular", size: 18)
@@ -42,9 +42,9 @@ class FontPickerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        fontDisplay.font = UIFont(name: fontSet, size: 20)
+        fontDisplay.font = UIFont(name: fontSet!, size: 20)
         
-        let index = font.firstIndex(of: fontSet)
+        let index = font.firstIndex(of: fontSet!)
         AvenirNextSwitch.setOn(0 == index, animated: true)
         AmericanTypewriterSwitch.setOn(1 == index, animated: true)
         MenloRegularSwitch.setOn(2 == index, animated: true)
@@ -55,7 +55,8 @@ class FontPickerViewController: UIViewController {
     @IBAction func AvenirNextPicked(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            fontSet = font[0]
+            userCustomizations.set(font[0], forKey: "font")
+            fontSet = userCustomizations.string(forKey: "font")
             AmericanTypewriterSwitch.setOn(false, animated: true)
             MenloRegularSwitch.setOn(false, animated: true)
             PapyrusSwitch.setOn(false, animated: true)
@@ -65,7 +66,8 @@ class FontPickerViewController: UIViewController {
     
     @IBAction func AmericanTypewriterPicked(_ sender: UISwitch) {
         if sender.isOn == true{
-            fontSet = font[1]
+            userCustomizations.set(font[1], forKey: "font")
+            fontSet = userCustomizations.string(forKey: "font")
             AvenirNextSwitch.setOn(false, animated: true)
             MenloRegularSwitch.setOn(false, animated: true)
             PapyrusSwitch.setOn(false, animated: true)
@@ -76,7 +78,8 @@ class FontPickerViewController: UIViewController {
     @IBAction func MenloRegularPicked(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            fontSet = font[2]
+            userCustomizations.set(font[2], forKey: "font")
+            fontSet = userCustomizations.string(forKey: "font")
             AvenirNextSwitch.setOn(false, animated: true)
             AmericanTypewriterSwitch.setOn(false, animated: true)
             PapyrusSwitch.setOn(false, animated: true)
@@ -87,7 +90,8 @@ class FontPickerViewController: UIViewController {
     @IBAction func PapyrusPicked(_ sender: UISwitch) {
         
         if sender.isOn == true{
-            fontSet = font[3]
+            userCustomizations.set(font[3], forKey: "font")
+            fontSet = userCustomizations.string(forKey: "font")
             AvenirNextSwitch.setOn(false, animated: true)
             AmericanTypewriterSwitch.setOn(false, animated: true)
             MenloRegularSwitch.setOn(false, animated: true)

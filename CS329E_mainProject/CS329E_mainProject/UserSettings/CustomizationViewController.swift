@@ -39,16 +39,16 @@ class CustomizationViewController: UIViewController {
         profilePicture!.layer.borderWidth = 0.5
         profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
         
-        FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
-        ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
-        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+        FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
-        ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
-        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet, size: 18)
+        FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
     }
     

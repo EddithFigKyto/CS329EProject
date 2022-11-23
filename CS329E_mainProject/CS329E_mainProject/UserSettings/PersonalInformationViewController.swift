@@ -42,44 +42,44 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         // profile picture is always set to user settings profile picture - reflects any changes made by user
         profilePicture.image = picture
         
-        pageTitle.font = UIFont(name: fontSet, size: 22)
+        pageTitle.font = UIFont(name: fontSet!, size: 22)
         
-        editMessageLabel.font = UIFont(name: fontSet, size: 18)
+        editMessageLabel.font = UIFont(name: fontSet!, size: 18)
         
         nameLabel.text = currentName
-        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
         birthdayLabel.text = currentBirthday
-        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
         emailLabel.text = currentEmail
-        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        pageTitle.font = UIFont(name: fontSet, size: 22)
+        pageTitle.font = UIFont(name: fontSet!, size: 22)
         
-        editMessageLabel.font = UIFont(name: fontSet, size: 18)
+        editMessageLabel.font = UIFont(name: fontSet!, size: 18)
         
         nameLabel.text = currentName
-        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
         birthdayLabel.text = currentBirthday
-        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
         emailLabel.text = currentEmail
-        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
-        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet, size:18)
+        profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
     }
     

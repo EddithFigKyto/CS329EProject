@@ -12,7 +12,6 @@ class ColorSchemeViewController: UIViewController {
     @IBOutlet weak var colorSchemeTextDisplay: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
     
-    
     @IBOutlet weak var pinkSwitch: UISwitch!
     @IBOutlet weak var pinkLabel: UILabel!
     
@@ -29,12 +28,9 @@ class ColorSchemeViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         //

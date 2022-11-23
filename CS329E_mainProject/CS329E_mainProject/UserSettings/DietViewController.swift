@@ -50,27 +50,27 @@ class DietViewController: UIViewController {
         // profile picture is always set to user settings profile picture - reflects any changes made by user
         profilePicture.image = picture
         
-        pageTitle.font = UIFont(name: fontSet, size: 22)
+        pageTitle.font = UIFont(name: fontSet!, size: 22)
         
-        dietTitleLabel.font = UIFont(name: fontSet, size: 18)
-        preferencesLabel.font = UIFont(name: fontSet, size: 18)
-        vegetarianLabel.font = UIFont(name: fontSet, size: 18)
-        veganLabel.font = UIFont(name: fontSet, size: 18)
-        glutenFreeLabel.font = UIFont(name: fontSet, size: 18)
-        nutFreeLabel.font = UIFont(name: fontSet, size: 18)
-        halalLabel.font = UIFont(name: fontSet, size: 18)
+        dietTitleLabel.font = UIFont(name: fontSet!, size: 18)
+        preferencesLabel.font = UIFont(name: fontSet!, size: 18)
+        vegetarianLabel.font = UIFont(name: fontSet!, size: 18)
+        veganLabel.font = UIFont(name: fontSet!, size: 18)
+        glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
+        nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
+        halalLabel.font = UIFont(name: fontSet!, size: 18)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        pageTitle.font = UIFont(name: fontSet, size: 22)
-        dietTitleLabel.font = UIFont(name: fontSet, size: 18)
-        preferencesLabel.font = UIFont(name: fontSet, size: 18)
-        vegetarianLabel.font = UIFont(name: fontSet, size: 18)
-        veganLabel.font = UIFont(name: fontSet, size: 18)
-        glutenFreeLabel.font = UIFont(name: fontSet, size: 18)
-        nutFreeLabel.font = UIFont(name: fontSet, size: 18)
-        halalLabel.font = UIFont(name: fontSet, size: 18)
+        pageTitle.font = UIFont(name: fontSet!, size: 22)
+        dietTitleLabel.font = UIFont(name: fontSet!, size: 18)
+        preferencesLabel.font = UIFont(name: fontSet!, size: 18)
+        vegetarianLabel.font = UIFont(name: fontSet!, size: 18)
+        veganLabel.font = UIFont(name: fontSet!, size: 18)
+        glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
+        nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
+        halalLabel.font = UIFont(name: fontSet!, size: 18)
         
         vegetarianSwitch.setOn(dietPreferences.contains("vegetarian"), animated: true)
         veganSwitch.setOn(dietPreferences.contains("vegan"), animated: true)
