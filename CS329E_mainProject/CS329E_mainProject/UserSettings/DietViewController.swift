@@ -7,7 +7,7 @@
 
 import UIKit
 
-public var dietPreferences: [String] = []
+public var dietPreferences: [String] = (userCustomizations.array(forKey: "diet") as? [String])!
 
 let diet = ["vegetarian", "vegan", "gluten-free", "nut-free", "halal"]
 
@@ -36,6 +36,9 @@ class DietViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
+
+    
+    
     
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
@@ -59,6 +62,10 @@ class DietViewController: UIViewController {
         glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
+        
+
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +84,9 @@ class DietViewController: UIViewController {
         glutenFreeSwitch.setOn(dietPreferences.contains("gluten-free"), animated: true)
         nutFreeSwitch.setOn(dietPreferences.contains("nut-free"), animated: true)
         halalSwitch.setOn(dietPreferences.contains("halal"), animated: true)
+        
+
+
     }
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
@@ -90,7 +100,11 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegetarian")!)
         }
-        //print(dietPreferences)
+        
+        userCustomizations.set(dietPreferences, forKey: "diet")
+        dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
+
+
     }
     
     @IBAction func veganPressed(_ sender: UISwitch) {
@@ -104,7 +118,12 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "vegan")!)
         }
-        //print(dietPreferences)
+        
+        userCustomizations.set(dietPreferences, forKey: "diet")
+        dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
+        
+
+
     }
     
     @IBAction func glutenFreePressed(_ sender: UISwitch) {
@@ -118,7 +137,12 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "gluten-free")!)
         }
-        //print(dietPreferences)
+        
+        userCustomizations.set(dietPreferences, forKey: "diet")
+        dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
+        
+ 
+        
     }
     
     @IBAction func nutFreePressed(_ sender: UISwitch) {
@@ -132,7 +156,13 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "nut-free")!)
         }
-        //print(dietPreferences)
+        
+        userCustomizations.set(dietPreferences, forKey: "diet")
+        dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
+        
+        
+ 
+
     }
     
     @IBAction func halalPressed(_ sender: UISwitch) {
@@ -146,7 +176,12 @@ class DietViewController: UIViewController {
         else{
             dietPreferences.remove(at: dietPreferences.firstIndex(of: "halal")!)
         }
-        //print(dietPreferences)
+        
+        userCustomizations.set(dietPreferences, forKey: "diet")
+        dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
+        
+
+        
     }
     
     func addNavBarImage() {
