@@ -52,7 +52,22 @@ class ColorSchemeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //
+        
+        cyanLabel.font = UIFont(name: fontSet!, size: 18)
+        cyanLabel.textColor = UIColor.cyan
+        
+        pinkLabel.font = UIFont(name: fontSet!, size: 18)
+        pinkLabel.textColor = UIColor.systemPink
+        
+        blackLabel.font = UIFont(name: fontSet!, size: 18)
+        blackLabel.textColor = UIColor.black
+        
+        purpleLabel.font = UIFont(name: fontSet!, size: 18)
+        purpleLabel.textColor = UIColor.purple
+        
+        greenLabel.font = UIFont(name: fontSet!, size: 18)
+        greenLabel.textColor = UIColor.green
+        
     }
     
     @IBAction func pinkPressed(_ sender: UISwitch) {
