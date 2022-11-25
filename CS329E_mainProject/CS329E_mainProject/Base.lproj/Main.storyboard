@@ -730,8 +730,8 @@
                         <outlet property="blackLabel" destination="rS1-VL-dWq" id="rYC-zt-EKH"/>
                         <outlet property="blackSwitch" destination="iA2-uE-dOf" id="wOO-gV-HTt"/>
                         <outlet property="colorSchemeTextDisplay" destination="cSe-UP-BXT" id="qWJ-OT-taJ"/>
-                        <outlet property="cyanLabel" destination="YOJ-1J-sJT" id="BuA-z6-sui"/>
-                        <outlet property="cyanSwitch" destination="Cib-h7-kIr" id="qi5-ae-l33"/>
+                        <outlet property="cyanLabel" destination="YOJ-1J-sJT" id="dGE-qI-rKn"/>
+                        <outlet property="cyanSwitch" destination="Cib-h7-kIr" id="Yb0-gO-jNL"/>
                         <outlet property="greenLabel" destination="el0-vr-si6" id="bxi-o6-QVT"/>
                         <outlet property="greenSwitch" destination="UAo-GX-9hN" id="KPE-my-CrE"/>
                         <outlet property="instructionLabel" destination="gMx-U1-xdI" id="0nB-G1-S7j"/>

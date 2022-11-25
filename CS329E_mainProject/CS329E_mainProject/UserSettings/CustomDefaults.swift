@@ -16,6 +16,7 @@ class CustomDefaults{
     let uBirthdayKey = "birthday"
     let uFontKey = "font"
     let uDietKey = "diet"
+    let uColorKey = "color"
     let uChangedKey = "changed"
         
     //values for associated keys
@@ -23,6 +24,7 @@ class CustomDefaults{
     let birthday = "07/17/1999"
     let font = "Avenir Next"
     let diet:[String] = [""]
+    let color = "cyan"
     let changed:Bool = false
     
     //method that creates the UserDefaults and sets the initial values of each key
@@ -34,6 +36,7 @@ class CustomDefaults{
             userCustomizations.set(birthday, forKey: uBirthdayKey)
             userCustomizations.set(font, forKey: uFontKey)
             userCustomizations.set(diet, forKey: uDietKey)
+            userCustomizations.set(color, forKey: uColorKey)
             userCustomizations.set(true, forKey: uChangedKey)
         }
     }
