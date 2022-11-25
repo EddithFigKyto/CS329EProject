@@ -35,7 +35,7 @@ class ColorSchemeViewController: UIViewController {
         super.viewDidLoad()
         
         cyanLabel.font = UIFont(name: fontSet!, size: 18)
-        cyanLabel.textColor = UIColor.cyan
+        cyanLabel.textColor = UIColor.systemCyan
         
         pinkLabel.font = UIFont(name: fontSet!, size: 18)
         pinkLabel.textColor = UIColor.systemPink
@@ -47,7 +47,7 @@ class ColorSchemeViewController: UIViewController {
         purpleLabel.textColor = UIColor.purple
         
         greenLabel.font = UIFont(name: fontSet!, size: 18)
-        greenLabel.textColor = UIColor.green
+        greenLabel.textColor = UIColor.systemGreen
         
     }
     
