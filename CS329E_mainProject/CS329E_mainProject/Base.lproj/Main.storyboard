@@ -1328,10 +1328,10 @@
             </objects>
             <point key="canvasLocation" x="2226" y="1843"/>
         </scene>
-        <!--View Controller-->
+        <!--Greeting Animation View Controller-->
         <scene sceneID="kCr-nN-Bea">
             <objects>
-                <viewController id="9bh-SM-NFK" sceneMemberID="viewController">
+                <viewController id="9bh-SM-NFK" customClass="GreetingAnimationViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ur8-4I-wQo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1429,10 +1429,10 @@
             </objects>
             <point key="canvasLocation" x="-3662" y="-2131"/>
         </scene>
-        <!--View Controller-->
+        <!--Pick Profile Picture View Controller-->
         <scene sceneID="ekB-qt-4xw">
             <objects>
-                <viewController id="KKd-1T-cZq" sceneMemberID="viewController">
+                <viewController id="KKd-1T-cZq" customClass="PickProfilePictureViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="POH-vb-sLH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1482,10 +1482,10 @@
             </objects>
             <point key="canvasLocation" x="-2832" y="-2136"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial Diet View Controller-->
         <scene sceneID="BTw-uJ-msi">
             <objects>
-                <viewController id="96t-Dw-B9x" sceneMemberID="viewController">
+                <viewController id="96t-Dw-B9x" customClass="InitialDietViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fKG-1U-8s6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

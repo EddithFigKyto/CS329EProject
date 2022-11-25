@@ -34,6 +34,9 @@
 		AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F528FF5B380075EBF6 /* DietViewController.swift */; };
 		AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */; };
 		AE5679C6291AD8A400E72A21 /* CustomDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5679C5291AD8A400E72A21 /* CustomDefaults.swift */; };
+		AEC77EEA2930E8D200687941 /* GreetingAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC77EE92930E8D200687941 /* GreetingAnimationViewController.swift */; };
+		AEC77EEC2930E90400687941 /* PickProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */; };
+		AEC77EEE2930E92E00687941 /* InitialDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC77EED2930E92E00687941 /* InitialDietViewController.swift */; };
 		AEF443032925676D004B9B66 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF443022925676D004B9B66 /* WelcomeViewController.swift */; };
 		F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */; };
 		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
@@ -71,6 +74,9 @@
 		AE3794F528FF5B380075EBF6 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
 		AE3794F728FF5B820075EBF6 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
 		AE5679C5291AD8A400E72A21 /* CustomDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDefaults.swift; sourceTree = "<group>"; };
+		AEC77EE92930E8D200687941 /* GreetingAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingAnimationViewController.swift; sourceTree = "<group>"; };
+		AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickProfilePictureViewController.swift; sourceTree = "<group>"; };
+		AEC77EED2930E92E00687941 /* InitialDietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDietViewController.swift; sourceTree = "<group>"; };
 		AEF443022925676D004B9B66 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreateViewController.swift; sourceTree = "<group>"; };
 		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
@@ -132,6 +138,8 @@
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				AEC77EED2930E92E00687941 /* InitialDietViewController.swift */,
+				AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A928FC665A007AC1E7 /* Info.plist */,
@@ -172,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
+				AEC77EE92930E8D200687941 /* GreetingAnimationViewController.swift */,
 				AEF443022925676D004B9B66 /* WelcomeViewController.swift */,
 				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 			);
@@ -284,17 +293,20 @@
 				A59CFB402900DD9900FB3B05 /* allCookbookRecipesViewController.swift in Sources */,
 				AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */,
 				A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */,
+				AEC77EEA2930E8D200687941 /* GreetingAnimationViewController.swift in Sources */,
 				82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */,
 				A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */,
 				AE5679C6291AD8A400E72A21 /* CustomDefaults.swift in Sources */,
 				F4F92618291B9161009E13B7 /* HomeVC.swift in Sources */,
 				AEF443032925676D004B9B66 /* WelcomeViewController.swift in Sources */,
 				A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */,
+				AEC77EEE2930E92E00687941 /* InitialDietViewController.swift in Sources */,
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 				AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */,
 				AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */,
 				F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
+				AEC77EEC2930E90400687941 /* PickProfilePictureViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
