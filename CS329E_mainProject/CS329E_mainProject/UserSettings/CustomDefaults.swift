@@ -11,25 +11,31 @@ public let userCustomizations = UserDefaults.standard
 
 class CustomDefaults{
     
-        //keys for defaults
-        let uNameKey = "user name"
-        let uBirthdayKey = "birthday"
-        let uFontKey = "font"
-        let uDietKey = "diet"
+    //keys for defaults
+    let uNameKey = "user name"
+    let uBirthdayKey = "birthday"
+    let uFontKey = "font"
+    let uDietKey = "diet"
+    let uChangedKey = "changed"
         
-        //values for associated keys
-        let name = "Jane Doe"
-        let birthday = "07/17/1999"
-        let font = "Avenir Next"
-        let diet:[String] = [""]
+    //values for associated keys
+    let name = "Jane Doe"
+    let birthday = "07/17/1999"
+    let font = "Avenir Next"
+    let diet:[String] = [""]
+    let changed:Bool = false
     
     //method that creates the UserDefaults and sets the initial values of each key
     func setUp()
     {
-        userCustomizations.set(name, forKey: uNameKey)
-        userCustomizations.set(birthday, forKey: uBirthdayKey)
-        userCustomizations.set(font, forKey: uFontKey)
-        userCustomizations.set(diet, forKey: uDietKey)
+        if !userCustomizations.bool(forKey: uChangedKey){
+            
+            userCustomizations.set(name, forKey: uNameKey)
+            userCustomizations.set(birthday, forKey: uBirthdayKey)
+            userCustomizations.set(font, forKey: uFontKey)
+            userCustomizations.set(diet, forKey: uDietKey)
+            userCustomizations.set(true, forKey: uChangedKey)
+        }
     }
     
     
