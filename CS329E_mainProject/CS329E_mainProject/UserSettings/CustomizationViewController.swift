@@ -15,6 +15,9 @@ class CustomizationViewController: UIViewController {
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
     
+    @IBOutlet weak var CustomizationTitleLabel: UILabel!
+    
+    
     @IBOutlet weak var ColorSchemeLabel: UIButton!
     
     @IBOutlet weak var FontButtonLabel: UIButton!
@@ -39,6 +42,8 @@ class CustomizationViewController: UIViewController {
         profilePicture!.layer.borderWidth = 0.5
         profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
         
+        CustomizationTitleLabel.font = UIFont(name: fontSet!, size: 18)
+        
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
@@ -46,6 +51,8 @@ class CustomizationViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        CustomizationTitleLabel.font = UIFont(name: fontSet!, size: 18)
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)

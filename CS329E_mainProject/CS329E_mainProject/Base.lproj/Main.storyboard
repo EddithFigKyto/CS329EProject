@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hFV-1v-ahp">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -463,6 +463,7 @@
                     <navigationItem key="navigationItem" id="vgi-lQ-TIE"/>
                     <connections>
                         <outlet property="ColorSchemeLabel" destination="sGR-cW-ICR" id="6jJ-oK-D9s"/>
+                        <outlet property="CustomizationTitleLabel" destination="69W-n3-vD1" id="ALJ-eD-IbT"/>
                         <outlet property="FontButtonLabel" destination="ifJ-ws-64C" id="Zfj-K2-RDe"/>
                         <outlet property="NotificationSettingsButtonLabel" destination="mKU-vx-yXg" id="Omi-Ud-BZD"/>
                         <outlet property="profilePicture" destination="kAi-qL-sUQ" id="y4e-xH-JiK"/>
@@ -1326,6 +1327,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-Cv-GJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2226" y="1843"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kCr-nN-Bea">
+            <objects>
+                <viewController id="9bh-SM-NFK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ur8-4I-wQo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animation VC in progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKg-hR-oJW">
+                                <rect key="frame" x="142" y="344" width="192" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Udp-X7-HPs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxd-L8-A2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4408.3969465648852" y="-2122.5352112676055"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="XBH-0J-dyU">
