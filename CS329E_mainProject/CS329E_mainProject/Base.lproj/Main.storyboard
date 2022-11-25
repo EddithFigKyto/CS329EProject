@@ -312,7 +312,7 @@
                                 <rect key="frame" x="16" y="514" width="361" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Customization  &gt;"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Customization  Settings &gt;"/>
                                 <connections>
                                     <segue destination="Qeu-ZU-rST" kind="show" identifier="customizationSegue" id="Yr5-K3-Ykb"/>
                                 </connections>
