@@ -42,6 +42,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userSettings.setUp()
         addNavBarImage()
         
         //Set greeting to user's name and change font to Avenir Next, size 22
@@ -55,7 +56,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet!, size:18)
         logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
-        userSettings.setUp()
+        
         
     }
     
