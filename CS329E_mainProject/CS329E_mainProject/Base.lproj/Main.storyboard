@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7u-hK-MmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="1843"/>
+            <point key="canvasLocation" x="2423.6641221374043" y="1842.9577464788733"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="KHf-Ih-8K5">
@@ -1288,7 +1288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjH-VI-oqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3756.9230769230767" y="1581.7535545023695"/>
+            <point key="canvasLocation" x="4683.2061068702287" y="1581.6901408450706"/>
         </scene>
         <!--Randomize View Controller-->
         <scene sceneID="3xg-at-kFl">
@@ -1326,7 +1326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-Cv-GJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226" y="1843"/>
+            <point key="canvasLocation" x="3151.9083969465646" y="1842.9577464788733"/>
         </scene>
         <!--Greeting Animation View Controller-->
         <scene sceneID="kCr-nN-Bea">
@@ -1607,10 +1607,10 @@
             </objects>
             <point key="canvasLocation" x="1630.7692307692307" y="1038.6255924170616"/>
         </scene>
-        <!--Recipe CreationVC-->
+        <!--Recipe DisplayVC-->
         <scene sceneID="noz-Wd-fap">
             <objects>
-                <viewController id="opl-rz-QO0" customClass="RecipeCreationVC" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="opl-rz-QO0" customClass="RecipeDisplayVC" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8V-um-0qs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1658,10 +1658,11 @@
                         <viewLayoutGuide key="safeArea" id="crJ-cX-hob"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FGX-l4-2GX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fD4-hH-mzp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1163" y="1882"/>
+            <point key="canvasLocation" x="-237.40458015267174" y="1881.6901408450706"/>
         </scene>
         <!--MeasurementVC-->
         <scene sceneID="tcp-zY-GMT">
@@ -1692,7 +1693,7 @@
             </objects>
             <point key="canvasLocation" x="-422" y="1099"/>
         </scene>
-        <!--Home-->
+        <!--HomeVC-->
         <scene sceneID="jal-ml-RZe">
             <objects>
                 <viewController id="M39-hY-Ew0" customClass="HomeVC" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -1738,6 +1739,7 @@
                                             <outlet property="descriptionLabel" destination="WAd-GJ-Z5S" id="XwA-7O-ho5"/>
                                             <outlet property="picture" destination="Bl4-FJ-SlJ" id="kZM-U9-VTq"/>
                                             <outlet property="titleLabel" destination="Y8o-o8-zjj" id="Jjp-V3-1W4"/>
+                                            <segue destination="opl-rz-QO0" kind="show" id="eHW-Jx-MNe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1752,14 +1754,14 @@
                             <constraint firstItem="gLi-f8-8vH" firstAttribute="top" secondItem="FDD-Ay-d5A" secondAttribute="top" id="xfq-Ok-B0Z"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="sQo-FI-Jv6"/>
+                    <navigationItem key="navigationItem" id="r03-tg-w5a"/>
                     <connections>
                         <outlet property="tableView" destination="gLi-f8-8vH" id="JVy-FY-wt5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vp5-M8-Bir" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2020" y="1882"/>
+            <point key="canvasLocation" x="-1093.8931297709923" y="1881.6901408450706"/>
         </scene>
         <!--Recipe CreationVC2-->
         <scene sceneID="211-kk-5Pm">
@@ -1906,6 +1908,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uwJ-0w-Anp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2983.0769230769229" y="1099.7630331753553"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="zFg-5D-tNX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XXb-NH-8lK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="sQo-FI-Jv6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="giS-J2-qwR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M39-hY-Ew0" kind="relationship" relationship="rootViewController" id="nfC-zM-46w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSK-XX-hBZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2020.6106870229007" y="1881.6901408450706"/>
         </scene>
     </scenes>
     <resources>

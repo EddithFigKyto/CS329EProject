@@ -76,6 +76,8 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
+    
+    
 
 
   
