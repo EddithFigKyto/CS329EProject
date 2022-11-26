@@ -39,6 +39,7 @@
 		AEC77EEE2930E92E00687941 /* InitialDietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC77EED2930E92E00687941 /* InitialDietViewController.swift */; };
 		AEF443032925676D004B9B66 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF443022925676D004B9B66 /* WelcomeViewController.swift */; };
 		F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */; };
+		F496B48229322FC000794DD2 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F496B48129322FC000794DD2 /* HomeTableViewCell.swift */; };
 		F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC4B4529125341003A32E4 /* RecipeClass .swift */; };
 		F4F92618291B9161009E13B7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92617291B9161009E13B7 /* HomeVC.swift */; };
 		F4F9261A291B918E009E13B7 /* RecipeCreationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */; };
@@ -79,6 +80,7 @@
 		AEC77EED2930E92E00687941 /* InitialDietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialDietViewController.swift; sourceTree = "<group>"; };
 		AEF443022925676D004B9B66 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F436D587291C315A0088BA02 /* RecipeCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreateViewController.swift; sourceTree = "<group>"; };
+		F496B48129322FC000794DD2 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		F4BC4B4529125341003A32E4 /* RecipeClass .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeClass .swift"; sourceTree = "<group>"; };
 		F4F92617291B9161009E13B7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCreationVC.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				F496B48129322FC000794DD2 /* HomeTableViewCell.swift */,
 				AEC77EED2930E92E00687941 /* InitialDietViewController.swift */,
 				AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
@@ -307,6 +310,7 @@
 				F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				AEC77EEC2930E90400687941 /* PickProfilePictureViewController.swift in Sources */,
+				F496B48229322FC000794DD2 /* HomeTableViewCell.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
