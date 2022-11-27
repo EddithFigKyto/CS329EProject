@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol DisplayRecipe{
-    func sendAllInfo(someRecipe:Recipe)
-}
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -95,6 +92,14 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
        // otherVC.sendAllInfo(someRecipe: selectedRecipe)
 
 //        send data to next VC
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "recipeDisplayVC") as! RecipeDisplayVC
+        vc.title1 = selectedRecipe.title
+        vc.description1 = selectedRecipe.description[0]
+        vc.ingredients1 = selectedRecipe.printIngredients.joined(separator: "\n")
+        vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
+        
+        // the following segues to the next screen while pushing the appropriate cell data
+        self.navigationController?.pushViewController(vc, animated: true)
     
         
     }

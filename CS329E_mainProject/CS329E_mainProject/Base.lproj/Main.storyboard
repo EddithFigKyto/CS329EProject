@@ -1835,7 +1835,7 @@
         <!--Recipe DisplayVC-->
         <scene sceneID="noz-Wd-fap">
             <objects>
-                <viewController id="opl-rz-QO0" customClass="RecipeDisplayVC" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="recipeDisplayVC" id="opl-rz-QO0" customClass="RecipeDisplayVC" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8V-um-0qs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1971,7 +1971,6 @@
                                             <outlet property="descriptionLabel" destination="WAd-GJ-Z5S" id="XwA-7O-ho5"/>
                                             <outlet property="picture" destination="Bl4-FJ-SlJ" id="kZM-U9-VTq"/>
                                             <outlet property="titleLabel" destination="Y8o-o8-zjj" id="Jjp-V3-1W4"/>
-                                            <segue destination="opl-rz-QO0" kind="show" id="eHW-Jx-MNe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
