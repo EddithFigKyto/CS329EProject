@@ -52,10 +52,11 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         ingredientTableView.delegate = self
         ingredientTableView.dataSource = self
         //self.navigationItem.rightBarButtonItem = barButton
-        
         titleLabel.text = title1
-        descripLabel.text = description1
+        descripLabel.text = "\n" + description1
+        descripLabel.numberOfLines = 0 // Unlimited number of lines
         tagsLabel.text = tags1
+        tagsLabel.numberOfLines = 0
         
     }
     
@@ -88,7 +89,20 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        if tableView == ingredientTableView{
+            tableView.deselectRow(at: indexPath, animated: true)
+            if let cell = tableView.cellForRow(at: indexPath) {
+                if cell.accessoryType == .none {
+                    cell.accessoryType = .checkmark
+                }else{
+                    cell.accessoryType = .none
+                }
+                    
+                }
+            
+        }else{
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
 
     }
     // MARK: Segue
