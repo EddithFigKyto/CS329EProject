@@ -14,7 +14,7 @@ import UIKit
 
 // protocol for filtering recipes via the filterPopUpVC
 protocol filterProtocol{
-    func filter(tempDietFilters: [Recipe.diet])
+    func filter(tempDietFilters: [Recipe.diet], tempDishFilters: [Recipe.dishType])
 }
 
 
@@ -95,12 +95,15 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     }
     
     // takes filters from filterPopUpVC and changes the recipes visible to user
-    func filter(tempDietFilters: [Recipe.diet]) {
+    func filter(tempDietFilters: [Recipe.diet], tempDishFilters: [Recipe.dishType]) {
         filteredRecipes = []
-        for filter in tempDietFilters {
-            for recipe in recipes {
-                if recipe.dietaryRestr == filter {
+        
+        for filter in tempDishFilters{
+            for otherfilter in tempDietFilters{
+                for recipe in recipes{
+                    if recipe.dish == filter && recipe.dietaryRestr == otherfilter {
                     filteredRecipes.append(recipe)
+                }
                 }
             }
         }

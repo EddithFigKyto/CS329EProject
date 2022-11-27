@@ -26,7 +26,7 @@ class randomizeViewController: UIViewController {
     
     
     func randomize() -> Int {
-        let randomInt = Int.random(in: 1..<16)
+        let randomInt = Int.random(in: 1..<recipes.count)
         return randomInt
     }
     

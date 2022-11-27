@@ -14,6 +14,7 @@
 		A53E64C1292C4DD300CEFC0A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */; };
 		A556FD4D291EA6BE008C0C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A556FD4C291EA6BE008C0C43 /* FirebaseFirestore */; };
 		A56635D22932D7B300E986A7 /* filterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */; };
+		A56635D6293335FA00E986A7 /* restaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56635D5293335FA00E986A7 /* restaurantViewController.swift */; };
 		A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769828FC665A007AC1E7 /* AppDelegate.swift */; };
 		A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769A28FC665A007AC1E7 /* SceneDelegate.swift */; };
 		A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769C28FC665A007AC1E7 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		82507E93290EF3E800837CD3 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterPopUpViewController.swift; sourceTree = "<group>"; };
+		A56635D5293335FA00E986A7 /* restaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restaurantViewController.swift; sourceTree = "<group>"; };
 		A584769528FC665A007AC1E7 /* CS329E_mainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS329E_mainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584769828FC665A007AC1E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A584769A28FC665A007AC1E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
-				A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */,
 				F496B4832932377300794DD2 /* RecipeDisplayVC.swift */,
 				F496B48129322FC000794DD2 /* HomeTableViewCell.swift */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
@@ -171,6 +172,8 @@
 				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */,
 				A5D500722932782A00F1F437 /* byCategoryTableViewController.swift */,
+				A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */,
+				A56635D5293335FA00E986A7 /* restaurantViewController.swift */,
 			);
 			path = Cookbook;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				F496B48229322FC000794DD2 /* HomeTableViewCell.swift in Sources */,
 				A5D500732932782A00F1F437 /* byCategoryTableViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
+				A56635D6293335FA00E986A7 /* restaurantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
