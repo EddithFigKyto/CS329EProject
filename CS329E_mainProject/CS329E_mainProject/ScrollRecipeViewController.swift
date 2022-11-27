@@ -11,6 +11,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
     
     
@@ -19,7 +20,18 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = stackView.bounds.size
         scrollView.delegate = self
 
+        imageView.image = UIImage(named: "greek_salad")
+        addNavBarImage()
+
         
+    }
+    func addNavBarImage() {
+        
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
     
 
