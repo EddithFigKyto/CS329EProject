@@ -26,7 +26,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     //var image: UIImage
     //var recipeImage1: String
     var tags1: String = ""
-    var timers: [Int] = [] //in seconds
+    var timersList: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
     var timerOn = false
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -39,32 +39,34 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     @IBOutlet weak var descripLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     
-    func makeTimers(theStepList: [String]){
-        // parses through the steps to find a potential timer
-        for _ in theStepList{
-            timers.append(0)
-        }
-        for step in theStepList{
-            var index2 = theStepList.firstIndex(of: step)!
-            let components = step.components(separatedBy: " ")
-            for word in components{
-                if word == "min" || word == "minute" || word == "minutes"{
-                    var index1 = components.firstIndex(of: word)!
-                    let numStr = components[index1]
-                    if numStr.contains("-"){
-                        let range = numStr.components(separatedBy: "-")
-                        let timerTime = Int(((Int(range[0])! + Int(range[1])!)/2)*60) //in seconds
-                        timers[index2] = timerTime
-                    }
-                }
-            }
-        }
-    }
+//    func makeTimers(theStepList: [String]){
+//        print("hi")
+//        // parses through the steps to find a potential timer
+//        for _ in theStepList{
+//            timers.append(0)
+//        }
+//        for step in theStepList{
+//            let index2 = theStepList.firstIndex(of: step)!
+//            let components = step.components(separatedBy: " ")
+//            for word in components{
+//                if word == "min" || word == "minute" || word == "minutes"{
+//                    let index1 = components.firstIndex(of: word)!
+//                    let numStr = components[index1]
+//                    if numStr.contains("-"){
+//                        let range = numStr.components(separatedBy: "-")
+//                        let timerTime = Int(((Int(range[0])! + Int(range[1])!)/2)*60) //in seconds
+//                        timers[index2] = timerTime
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeTimers(theStepList: stepList1)
+//        makeTimers(theStepList: stepList1)
+//        print(timers)
         scrollView.contentSize = stackView.bounds.size
         scrollView.delegate = self
         imageView.image = UIImage(named: "greek_salad")
@@ -102,7 +104,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let step = stepList1[row]
             cell.textLabel?.text = step
             cell.textLabel?.numberOfLines = 0
-            if timers[row] != 0 { //always seconds
+            if timersList[row] != 0 { //always seconds
                 let mySwitch = UISwitch()
                 //mySwitch.addTarget(self, action: #selector(didChangeSwitch()), for: .valueChanged)
                 cell.accessoryView = mySwitch
