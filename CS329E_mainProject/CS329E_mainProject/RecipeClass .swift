@@ -65,6 +65,7 @@ class Recipe {
         self.time = time
         self.stepList = stepList
         self.recipeImage = recipeImage
+        self.timersList = timersList
         //self.image = image
     }
     

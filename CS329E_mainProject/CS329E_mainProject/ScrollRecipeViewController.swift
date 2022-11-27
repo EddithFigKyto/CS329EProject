@@ -26,7 +26,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     //var image: UIImage
     //var recipeImage1: String
     var tags1: String = ""
-    var timersList: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
+    var timersList1: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
     var timerOn = false
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -104,7 +104,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let step = stepList1[row]
             cell.textLabel?.text = step
             cell.textLabel?.numberOfLines = 0
-            if timersList[row] != 0 { //always seconds
+            if timersList1[row] != 0 { //always seconds
                 let mySwitch = UISwitch()
                 //mySwitch.addTarget(self, action: #selector(didChangeSwitch()), for: .valueChanged)
                 cell.accessoryView = mySwitch

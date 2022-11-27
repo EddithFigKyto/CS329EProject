@@ -101,7 +101,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         vc.description1 = selectedRecipe.description[0]
         vc.ingredients1 = selectedRecipe.printIngredients
         vc.stepList1 = selectedRecipe.stepList
-        
+        vc.timersList1 = selectedRecipe.timersList
         vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
         
         // the following segues to the next screen while pushing the appropriate cell data
