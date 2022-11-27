@@ -7,23 +7,37 @@
 
 import UIKit
 
-class RecipeDisplayVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class RecipeDisplayVC: UIViewController, DisplayRecipe {
+    
+    
+   
+    @IBOutlet weak var titleLabel: UILabel!
+    
+  
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    @IBOutlet weak var ingredTextView: UITextView!
+    
+    @IBOutlet weak var tagsTextView: UITextView!
+    
+    @IBOutlet weak var stepsTextView: UITextView!
+    
+    func sendAllInfo(someRecipe: Recipe) {
+        titleLabel.text = someRecipe.title
+        descriptionTextView.text = someRecipe.description[0]
+        ingredTextView.text = someRecipe.printIngredients.joined(separator: "\n")
+        tagsTextView.text = someRecipe.tags.joined(separator: ", ")
     }
     
 
-    /*
-    // MARK: - Navigation
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        descriptionTextView.isEditable = false
+        ingredTextView.isEditable = false
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
     }
-    */
+    
 
+  
 }

@@ -7,11 +7,15 @@
 
 import UIKit
 
-
+protocol DisplayRecipe{
+    func sendAllInfo(someRecipe:Recipe)
+}
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    
 
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,12 +40,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let row = indexPath.row
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
         
-        cell.titleLabel.text = recipes[row].title
-        cell.descriptionLabel.text = recipes[row].description[0]
-        cell.picture.image = UIImage(named: "greek_salad")
-
+        let selectedRecipe = recipes[row]
         
-        let imageURL = URL(string: recipes[row].recipeImage)!
+        
+        cell.titleLabel.text = selectedRecipe.title
+        cell.descriptionLabel.text = selectedRecipe.description[0]
+        cell.picture.image = UIImage(named: "greek_salad")
+        let imageURL = URL(string: selectedRecipe.recipeImage)!
         
         let session = URLSession(configuration: .default)
         
@@ -56,7 +61,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 // ensure that we got a response code of 200 (which means "success")
                 guard httpResponse.statusCode == 200 else { return }
                 
-                if let receivedData = data {
+                if data != nil {
                     DispatchQueue.main.async {
 //                        cell.recipeImage.image = UIImage(data: receivedData)
                     }
@@ -68,14 +73,33 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+//    adds chef's kiss logo at top
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
+    
+    
+    var delegate: UIViewController!
+    
+//click on cell to segue to the recipeDisplayVC
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let row = indexPath.row
+        //let otherVC = delegate as! DisplayRecipe
+        let selectedRecipe = recipes[row]
+       // otherVC.sendAllInfo(someRecipe: selectedRecipe)
+
+//        send data to next VC
+    
+        
+    }
+    
+    
     
     
 
