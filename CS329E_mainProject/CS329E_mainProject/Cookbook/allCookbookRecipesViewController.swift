@@ -5,45 +5,60 @@
 //  Created by Laynee Tourne-Morton on 10/19/22.
 //
 
+
+// cookbook favorites table view cell identifier
 let textCellIdentifier = "favoritesTextCell"
-var recipe = ["1", "2"]
 
 
 import UIKit
 
-class allCookbookRecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+// protocol for filtering recipes via the filterPopUpVC
+protocol filterProtocol{
+    func filter(tempDietFilters: [Recipe.diet])
+}
+
+
+// holds the visible recipes in cookbook
+// will change if filters applied (see filter func)
+var filteredRecipes = recipes
+
+class allCookbookRecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, filterProtocol {
+
+    // recipes visible via table view
     @IBOutlet weak var favoritesTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // logo format function
         addNavBarImage()
         
+        // set table view data source and delegate to self
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
 
     }
     
+    // row formatting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
         
+    // number of rows always equal to length of filteredRecipes array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        return filteredRecipes.count
     }
     
+    // create cells
+    // not use of networking to aquire the recipe images
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! RecipeTableViewCell
-        cell.recipeTitle.text = recipes[row].title
-        cell.recipeDescription.text = recipes[row].description[0]
-        //cell.recipeImage.image = UIImage(named: "greek_salad")
-        //cell.textLabel?.text =
-        //cell.detailTextLabel?.text = recipes[row].description[0]
+        cell.recipeTitle.text = filteredRecipes[row].title
+        cell.recipeDescription.text = filteredRecipes[row].description[0]
         
-        let imageURL = URL(string: recipes[row].recipeImage)!
+        let imageURL = URL(string: filteredRecipes[row].recipeImage)!
         
         let session = URLSession(configuration: .default)
         
@@ -70,10 +85,34 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         return cell
     }
     
+    // need to set filterPopUpVC delegate to self
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "filterSegue",
+           let nextVC = segue.destination as? filterPopUpViewController {
+            // delegate to change profile picture settings
+            nextVC.delegate = self
+        }
+    }
+    
+    // takes filters from filterPopUpVC and changes the recipes visible to user
+    func filter(tempDietFilters: [Recipe.diet]) {
+        filteredRecipes = []
+        for filter in tempDietFilters {
+            for recipe in recipes {
+                if recipe.dietaryRestr == filter {
+                    filteredRecipes.append(recipe)
+                }
+            }
+        }
+        // must reload table view data to see changes
+        favoritesTableView.reloadData()
+    }
+    
+    // logo formatting function
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView

@@ -13,6 +13,7 @@
 		82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E93290EF3E800837CD3 /* signUpViewController.swift */; };
 		A53E64C1292C4DD300CEFC0A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */; };
 		A556FD4D291EA6BE008C0C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A556FD4C291EA6BE008C0C43 /* FirebaseFirestore */; };
+		A56635D22932D7B300E986A7 /* filterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */; };
 		A584769928FC665A007AC1E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769828FC665A007AC1E7 /* AppDelegate.swift */; };
 		A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769A28FC665A007AC1E7 /* SceneDelegate.swift */; };
 		A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A584769C28FC665A007AC1E7 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */; };
 		A59CFB442900DE7700FB3B05 /* cookbookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */; };
 		A59CFB472900DF2400FB3B05 /* cookbookCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */; };
+		A5D500732932782A00F1F437 /* byCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D500722932782A00F1F437 /* byCategoryTableViewController.swift */; };
 		A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEE7E92915829D00ECB92E /* Recipes.swift */; };
 		AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */; };
 		AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */; };
@@ -53,6 +55,7 @@
 		82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82507E93290EF3E800837CD3 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterPopUpViewController.swift; sourceTree = "<group>"; };
 		A584769528FC665A007AC1E7 /* CS329E_mainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CS329E_mainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A584769828FC665A007AC1E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A584769A28FC665A007AC1E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
 		A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookSearchViewController.swift; sourceTree = "<group>"; };
 		A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookbookCategoryViewController.swift; sourceTree = "<group>"; };
+		A5D500722932782A00F1F437 /* byCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = byCategoryTableViewController.swift; sourceTree = "<group>"; };
 		A5DEE7E92915829D00ECB92E /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeViewController.swift; sourceTree = "<group>"; };
 		AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +117,6 @@
 		A584768C28FC665A007AC1E7 = {
 			isa = PBXGroup;
 			children = (
-				A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */,
 				A584769728FC665A007AC1E7 /* CS329E_mainProject */,
 				A584769628FC665A007AC1E7 /* Products */,
 				A556FD4B291EA6BE008C0C43 /* Frameworks */,
@@ -142,10 +145,9 @@
 				A5DEE7E92915829D00ECB92E /* Recipes.swift */,
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
+				A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */,
 				F496B4832932377300794DD2 /* RecipeDisplayVC.swift */,
 				F496B48129322FC000794DD2 /* HomeTableViewCell.swift */,
-				AEC77EED2930E92E00687941 /* InitialDietViewController.swift */,
-				AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
 				A58476A928FC665A007AC1E7 /* Info.plist */,
@@ -158,12 +160,14 @@
 		A59CFB452900DEDF00FB3B05 /* Cookbook */ = {
 			isa = PBXGroup;
 			children = (
+				A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */,
 				A59CFB3D2900DAF600FB3B05 /* customRecipeViewController.swift */,
 				A59CFB432900DE7700FB3B05 /* cookbookSearchViewController.swift */,
 				A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */,
 				A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */,
 				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A59CFB462900DF2400FB3B05 /* cookbookCategoryViewController.swift */,
+				A5D500722932782A00F1F437 /* byCategoryTableViewController.swift */,
 			);
 			path = Cookbook;
 			sourceTree = "<group>";
@@ -186,8 +190,10 @@
 			isa = PBXGroup;
 			children = (
 				82507E8A290EEF0900837CD3 /* loginViewController.swift */,
+				AEC77EED2930E92E00687941 /* InitialDietViewController.swift */,
 				AEC77EE92930E8D200687941 /* GreetingAnimationViewController.swift */,
 				AEF443022925676D004B9B66 /* WelcomeViewController.swift */,
+				AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */,
 				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 			);
 			path = LoginCreateUser;
@@ -284,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A584769D28FC665A007AC1E7 /* ViewController.swift in Sources */,
+				A56635D22932D7B300E986A7 /* filterPopUpViewController.swift in Sources */,
 				F4BC4B4629125341003A32E4 /* RecipeClass .swift in Sources */,
 				F4F92620291C2D51009E13B7 /* RecipeCreationVC2.swift in Sources */,
 				A53E64C1292C4DD300CEFC0A /* RecipeTableViewCell.swift in Sources */,
@@ -315,6 +322,7 @@
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				AEC77EEC2930E90400687941 /* PickProfilePictureViewController.swift in Sources */,
 				F496B48229322FC000794DD2 /* HomeTableViewCell.swift in Sources */,
+				A5D500732932782A00F1F437 /* byCategoryTableViewController.swift in Sources */,
 				82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

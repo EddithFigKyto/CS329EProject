@@ -10,17 +10,15 @@ import Firebase
 import FirebaseFirestore
 
 class CookbookViewController: UIViewController {
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addNavBarImage()
-        fetchRecipes()
+        //fetchRecipes()
 
     }
-    
     
     func addNavBarImage() {
         
@@ -31,6 +29,7 @@ class CookbookViewController: UIViewController {
         navigationItem.titleView = titleView
     }
     
+    
     func fetchRecipes() {
         
         var db = Firestore.firestore()
@@ -40,7 +39,7 @@ class CookbookViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    print(document.data())
                 }
             }
         }
