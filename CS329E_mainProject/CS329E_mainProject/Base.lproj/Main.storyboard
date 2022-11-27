@@ -74,6 +74,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="XOA-Iz-Eev"/>
+                    <connections>
+                        <outlet property="byIngredientButton" destination="l52-w1-VY8" id="AKA-bP-LMj"/>
+                        <outlet property="cookbookLabel" destination="6mI-cR-vmN" id="UoF-Eb-Mub"/>
+                        <outlet property="favoritesButton" destination="ogk-Nu-3eV" id="b0k-aI-ch4"/>
+                        <outlet property="randombutton" destination="2zN-bm-f69" id="ugJ-Ln-vFE"/>
+                        <outlet property="restaurantsButton" destination="jd5-dU-9FI" id="5B6-lq-FF3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="of8-f3-RU7" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7u-hK-MmM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599" y="2284"/>
+            <point key="canvasLocation" x="5118" y="2300"/>
         </scene>
         <!--Grocery List-->
         <scene sceneID="KHf-Ih-8K5">
@@ -424,6 +431,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="favoritesTableView" destination="uWV-OQ-G7s" id="Kh7-Dn-lkd"/>
+                        <outlet property="filtersButton" destination="O5h-So-ENO" id="kQa-yF-2zW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjV-Hd-tpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1575,6 +1583,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gt0-ZY-lL8"/>
                     <connections>
+                        <outlet property="randomizeButton" destination="zHN-0T-FTU" id="Lxe-J2-Khv"/>
                         <outlet property="titleLabel" destination="qkn-82-5oD" id="MDh-l1-HIt"/>
                     </connections>
                 </viewController>

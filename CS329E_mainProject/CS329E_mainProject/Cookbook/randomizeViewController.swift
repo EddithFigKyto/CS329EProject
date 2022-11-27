@@ -11,10 +11,17 @@ class randomizeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var randomizeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         addNavBarImage()
+        
+        titleLabel.font = UIFont(name: fontSet!, size: 18)
+        
+        randomizeButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+
     }
     
     

@@ -26,6 +26,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
 
     // recipes visible via table view
     @IBOutlet weak var favoritesTableView: UITableView!
+    @IBOutlet weak var filtersButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -55,8 +56,18 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! RecipeTableViewCell
+        
+        // cell title to recipe title
         cell.recipeTitle.text = filteredRecipes[row].title
+        
+        // cell title font to user default font
+        cell.recipeTitle.font = UIFont(name: fontSet!, size: 18)
+        
+        // cell description to recipe description
         cell.recipeDescription.text = filteredRecipes[row].description[0]
+        
+        // cell description fon to user default font
+        cell.recipeDescription.font = UIFont(name: fontSet!, size: 18)
         
         let imageURL = URL(string: filteredRecipes[row].recipeImage)!
         
