@@ -115,7 +115,6 @@
 		A584768C28FC665A007AC1E7 = {
 			isa = PBXGroup;
 			children = (
-				F496B4892933254300794DD2 /* ScrollRecipeViewController.swift */,
 				A584769728FC665A007AC1E7 /* CS329E_mainProject */,
 				A584769628FC665A007AC1E7 /* Products */,
 				A556FD4B291EA6BE008C0C43 /* Frameworks */,
@@ -145,6 +144,7 @@
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				A584769E28FC665A007AC1E7 /* Main.storyboard */,
 				F496B4832932377300794DD2 /* RecipeDisplayVC.swift */,
+				F496B4892933254300794DD2 /* ScrollRecipeViewController.swift */,
 				F496B48129322FC000794DD2 /* HomeTableViewCell.swift */,
 				A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */,
 				A58476A428FC665A007AC1E7 /* Assets.xcassets */,
