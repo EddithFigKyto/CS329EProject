@@ -22,6 +22,7 @@ class Recipe {
     var plainIngredients: [String] = []
     var description: [String] = [] //my bad
     var stepList: [String] = []
+    var timersList: [Int] = []  //in seconds // length is same as stepList // 0 means no timer 
     var servingSize: String = ""
     var cuisine: String = ""
     var dietaryRestr: diet
@@ -30,6 +31,7 @@ class Recipe {
     //var image: UIImage
     var recipeImage: String
     var tags: [String] = []
+
     
     init(creator: String,
          title: String,
@@ -44,7 +46,9 @@ class Recipe {
          stepList: [String],
          time: String,
          tags: [String],
-         recipeImage: String//,
+         recipeImage: String,
+         timersList: [Int]
+         //,
          //image: UIImage
     ) {
         

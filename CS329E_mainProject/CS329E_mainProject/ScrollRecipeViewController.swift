@@ -4,7 +4,6 @@
 //
 //  Created by Najia Khan Sherwani on 2022-11-26.
 //
-
 import UIKit
 
 class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
@@ -27,6 +26,8 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     //var image: UIImage
     //var recipeImage1: String
     var tags1: String = ""
+    var timersList: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
+    var timerOn = false
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -38,9 +39,34 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     @IBOutlet weak var descripLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     
+//    func makeTimers(theStepList: [String]){
+//        print("hi")
+//        // parses through the steps to find a potential timer
+//        for _ in theStepList{
+//            timers.append(0)
+//        }
+//        for step in theStepList{
+//            let index2 = theStepList.firstIndex(of: step)!
+//            let components = step.components(separatedBy: " ")
+//            for word in components{
+//                if word == "min" || word == "minute" || word == "minutes"{
+//                    let index1 = components.firstIndex(of: word)!
+//                    let numStr = components[index1]
+//                    if numStr.contains("-"){
+//                        let range = numStr.components(separatedBy: "-")
+//                        let timerTime = Int(((Int(range[0])! + Int(range[1])!)/2)*60) //in seconds
+//                        timers[index2] = timerTime
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        makeTimers(theStepList: stepList1)
+//        print(timers)
         scrollView.contentSize = stackView.bounds.size
         scrollView.delegate = self
         imageView.image = UIImage(named: "greek_salad")
@@ -78,6 +104,11 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let step = stepList1[row]
             cell.textLabel?.text = step
             cell.textLabel?.numberOfLines = 0
+            if timersList[row] != 0 { //always seconds
+                let mySwitch = UISwitch()
+                //mySwitch.addTarget(self, action: #selector(didChangeSwitch()), for: .valueChanged)
+                cell.accessoryView = mySwitch
+            }
             return cell
         }else{
             let ingred = ingredients1[row]
@@ -99,12 +130,35 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
                 }
                     
                 }
-            
         }else{
             tableView.deselectRow(at: indexPath, animated: true)
+
         }
 
     }
+    
+//    @objc func didChangeSwitch(_ sender: UISwitch){
+//        if sender.isOn {
+//            timerOn = true
+//
+//
+//            let q = DispatchQueue.global(qos: .background)
+//            q.async{ [self] in //background thread
+//                if Int(timer.remainingTime) == 0{
+//                    break
+//                }else{
+//                    sleep(1)
+//                    remainTimeInt! -= 1
+//                    timer.remainingTime = String(remainTimeInt!)
+//                    DispatchQueue.main.sync{ //main thread
+//                        remainTime.text = String(remainTimeInt!)
+//                        }
+//                    }
+//                }
+//            }
+//
+//
+//    }
     // MARK: Segue
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
