@@ -43,6 +43,9 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.text = selectedRecipe.title
         cell.descriptionLabel.text = selectedRecipe.description[0]
         cell.picture.image = UIImage(named: "greek_salad")
+        cell.picture.layer.cornerRadius = 10
+        cell.picture.clipsToBounds = true
+        
         let imageURL = URL(string: selectedRecipe.recipeImage)!
         
         let session = URLSession(configuration: .default)
@@ -92,10 +95,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
        // otherVC.sendAllInfo(someRecipe: selectedRecipe)
 
 //        send data to next VC
-        let vc = self.storyboard!.instantiateViewController(withIdentifier: "recipeDisplayVC") as! RecipeDisplayVC
+        let vc = self.storyboard!.instantiateViewController(withIdentifier: "ScrollRecipeViewController") as! ScrollRecipeViewController
+        
         vc.title1 = selectedRecipe.title
         vc.description1 = selectedRecipe.description[0]
-        vc.ingredients1 = selectedRecipe.printIngredients.joined(separator: "\n")
+        vc.ingredients1 = selectedRecipe.printIngredients
+        vc.stepList1 = selectedRecipe.stepList
+        
         vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
         
         // the following segues to the next screen while pushing the appropriate cell data

@@ -7,24 +7,107 @@
 
 import UIKit
 
-class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate {
-
-    @IBOutlet weak var scrollView: UIScrollView!git add .
+class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    var saves1: Int = 0
+    var creator1: String = ""
+    var title1: String = ""
+    var ingredients1: [String] = []
+    // array of strings which includes the measurement
+    //var ingredients1: String = ""
+    // for filtering by ingredient only
+    //var plainIngredients1: [String] = []
+    var description1: String = "" //not [String] here
+    var stepList1: [String] = []
+    var servingSize1: String = ""
+    var cuisine1: String = ""
+    //var dietaryRestr1: diet
+    //var dish1: dishType
+    var time1: String = ""//in min
+    //var image: UIImage
+    //var recipeImage1: String
+    var tags1: String = ""
+
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var stepsTableView: UITableView!
+    @IBOutlet weak var ingredientTableView: UITableView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sCLabel: UILabel!
+    @IBOutlet weak var descripLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.contentSize = stackView.bounds.size
         scrollView.delegate = self
-
         imageView.image = UIImage(named: "greek_salad")
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
         addNavBarImage()
-
+        stepsTableView.delegate = self
+        stepsTableView.dataSource = self
+        ingredientTableView.delegate = self
+        ingredientTableView.dataSource = self
+        //self.navigationItem.rightBarButtonItem = barButton
+        
+        titleLabel.text = title1
+        descripLabel.text = description1
+        tagsLabel.text = tags1
         
     }
+    
+    
+    // MARK: TableView
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == stepsTableView{
+            return stepList1.count
+        }else{
+            return ingredients1.count
+        }
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let row = indexPath.row
+        if tableView == stepsTableView{
+            let step = stepList1[row]
+            cell.textLabel?.text = step
+            cell.textLabel?.numberOfLines = 0
+            return cell
+        }else{
+            let ingred = ingredients1[row]
+            cell.textLabel?.text = ingred
+            cell.textLabel?.numberOfLines = 0
+            return cell
+        }
+        
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
+    // MARK: Segue
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "AddPizzaSegue", //comma implies sequencing
+//           let nextVC = segue.destination as? CreationVC{ //pointer to 2nd VC
+//            let backItem = UIBarButtonItem()
+//            backItem.title = "Pizza Order"
+//            navigationItem.backBarButtonItem = backItem //add + button
+//            nextVC.delegate = self
+//            nextVC.pizzaList2 = pizzaList //pass data btwn the two VCs
+//
+//
+//        }
+//    }
+    
+    // MARK: Nav Banner
+    
     func addNavBarImage() {
         
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
