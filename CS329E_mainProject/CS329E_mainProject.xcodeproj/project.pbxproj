@@ -12,6 +12,7 @@
 		82507E90290EF1F800837CD3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 82507E8F290EF1F800837CD3 /* FirebaseAuth */; };
 		8292DC63293477C600367929 /* groceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292DC62293477C600367929 /* groceryListViewController.swift */; };
 		8292DC652934832100367929 /* learnMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292DC642934832100367929 /* learnMoreViewController.swift */; };
+		8292DC672934F91400367929 /* recipeGLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8292DC662934F91400367929 /* recipeGLViewController.swift */; };
 		A53E64C1292C4DD300CEFC0A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */; };
 		A556FD4D291EA6BE008C0C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A556FD4C291EA6BE008C0C43 /* FirebaseFirestore */; };
 		A56635D22932D7B300E986A7 /* filterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */; };
@@ -55,6 +56,7 @@
 		82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8292DC62293477C600367929 /* groceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groceryListViewController.swift; sourceTree = "<group>"; };
 		8292DC642934832100367929 /* learnMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnMoreViewController.swift; sourceTree = "<group>"; };
+		8292DC662934F91400367929 /* recipeGLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeGLViewController.swift; sourceTree = "<group>"; };
 		A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterPopUpViewController.swift; sourceTree = "<group>"; };
 		A56635D5293335FA00E986A7 /* restaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restaurantViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				F4BC4B4529125341003A32E4 /* RecipeClass .swift */,
 				8292DC642934832100367929 /* learnMoreViewController.swift */,
 				8292DC62293477C600367929 /* groceryListViewController.swift */,
+				8292DC662934F91400367929 /* recipeGLViewController.swift */,
 				F496B4832932377300794DD2 /* RecipeDisplayVC.swift */,
 				F496B4892933254300794DD2 /* ScrollRecipeViewController.swift */,
 				F496B48129322FC000794DD2 /* HomeTableViewCell.swift */,
@@ -318,6 +321,7 @@
 				A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */,
 				AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */,
 				AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */,
+				8292DC672934F91400367929 /* recipeGLViewController.swift in Sources */,
 				F436D588291C315A0088BA02 /* RecipeCreateViewController.swift in Sources */,
 				AE3794F428FF5B1A0075EBF6 /* PersonalInformationViewController.swift in Sources */,
 				AEC77EEC2930E90400687941 /* PickProfilePictureViewController.swift in Sources */,

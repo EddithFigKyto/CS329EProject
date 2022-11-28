@@ -7,12 +7,17 @@
 
 import UIKit
 
-class groceryListViewController: UIViewController {
-
+class groceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+ 
     @IBOutlet weak var tableView: UITableView!
     var items = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        addNavBarImage()
 
         // Do any additional setup after loading the view.
     }
@@ -37,13 +42,37 @@ class groceryListViewController: UIViewController {
                 if let textFieldArray = controller.textFields {
                     let textFields = textFieldArray as [UITextField]
                     let enteredText = textFields[0].text
-                    print(enteredText!)
+                    self.items.append(enteredText!)
+                    self.tableView.reloadData()
                 }
             }))
         present(controller, animated: true)
-        
-        
     }
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = indexPath.row
+        let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath)
+        cell.textLabel?.text = items[row]
+        return cell
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.items.count
+    }
+    func addNavBarImage() {
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "glSegue",
+           let destination = segue.destination as? recipeGLViewController,
+           let itemIndex = tableView.indexPathForSelectedRow?.row {
+            destination.itemName = items[itemIndex]
+        }
+    }
 }
