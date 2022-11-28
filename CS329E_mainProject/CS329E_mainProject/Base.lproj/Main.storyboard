@@ -1243,6 +1243,9 @@
                                     <segment title="Log in"/>
                                     <segment title="Sign up"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segControl:" destination="FQT-6I-1mK" eventType="valueChanged" id="sEk-sM-G3j"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpQ-lw-ExU">
                                 <rect key="frame" x="16" y="343" width="139" height="21"/>
@@ -1263,6 +1266,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWk-FD-x6o">
+                                <rect key="frame" x="174" y="336" width="203" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="suW-uT-enl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1272,9 +1281,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="mQr-Ka-TdJ"/>
                     <connections>
+                        <outlet property="cpLabel" destination="MpQ-lw-ExU" id="zYo-DA-Hhu"/>
+                        <outlet property="cpTF" destination="mWk-FD-x6o" id="4gh-sU-TXf"/>
                         <outlet property="createAccount" destination="b8N-cV-9Xc" id="Jhx-r4-q87"/>
                         <outlet property="logInButton" destination="tiC-ZM-HPE" id="BUP-KE-Ql5"/>
                         <outlet property="passwordTF" destination="61v-Ao-9V8" id="Xyi-sy-afT"/>
+                        <outlet property="segControl" destination="28d-xV-VNd" id="ys2-Qi-qaC"/>
                         <outlet property="statusLabel" destination="KoS-Be-erc" id="Hgk-Ab-2pS"/>
                         <outlet property="userTF" destination="tfE-zX-ALZ" id="lo4-xK-lXW"/>
                     </connections>
