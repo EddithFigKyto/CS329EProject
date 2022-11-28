@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rvg-aq-1ZU">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -191,7 +191,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uMM-Tx-bWE" kind="presentation" modalPresentationStyle="fullScreen" id="rvy-Ev-xxc"/>
+                                            <segue destination="1ca-cJ-IxD" kind="presentation" identifier="recipeSegue1" modalPresentationStyle="fullScreen" id="Geg-z8-bIb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -219,22 +219,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCY-Zd-ucm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3551.9083969465646" y="-139.43661971830986"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="bPh-7B-GBN">
-            <objects>
-                <viewController id="uMM-Tx-bWE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fcV-gD-ahe">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="UMC-ve-jD7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="qr9-Gr-pvx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2E8-Sl-UzI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4454" y="-139"/>
         </scene>
         <!--Filter Pop Up View Controller-->
         <scene sceneID="lgX-6F-sIP">

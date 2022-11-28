@@ -34,5 +34,13 @@ class recipeGLViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.ingridients.count
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "recipeSegue1" {
+            let destination = segue.destination as? ScrollRecipeViewController
+        }
+    }
 }
