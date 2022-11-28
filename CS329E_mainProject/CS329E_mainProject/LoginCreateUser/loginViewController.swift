@@ -27,7 +27,14 @@ class loginViewController: UIViewController {
         createAccount.isHidden = true
         logInButton.isHidden = false
         
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleRight(recognizer:)))
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        self.view.addGestureRecognizer(swipeRight)
+        
         addNavBarImage()
+    }
+    @IBAction func handleRight(recognizer: UISwipeGestureRecognizer) {
+        
     }
     
     @IBAction func segControl(_ sender: Any) {
@@ -70,7 +77,6 @@ class loginViewController: UIViewController {
                         self.statusLabel.text = ""
                     }
                 }
-        
     }
    
     func addNavBarImage() {
