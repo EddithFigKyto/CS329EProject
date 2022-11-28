@@ -22,6 +22,9 @@ class loginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordTF.isSecureTextEntry = true
+        cpTextF.isSecureTextEntry = true
+        cpTextF.isHidden = true
         cpTextF.isHidden = true
         cpLabel.isHidden = true
         createAccount.isHidden = true
