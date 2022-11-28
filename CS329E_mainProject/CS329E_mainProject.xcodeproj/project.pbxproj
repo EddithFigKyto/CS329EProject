@@ -10,7 +10,6 @@
 		82507E8B290EEF0900837CD3 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E8A290EEF0900837CD3 /* loginViewController.swift */; };
 		82507E8D290EF19D00837CD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */; };
 		82507E90290EF1F800837CD3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 82507E8F290EF1F800837CD3 /* FirebaseAuth */; };
-		82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82507E93290EF3E800837CD3 /* signUpViewController.swift */; };
 		A53E64C1292C4DD300CEFC0A /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */; };
 		A556FD4D291EA6BE008C0C43 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A556FD4C291EA6BE008C0C43 /* FirebaseFirestore */; };
 		A56635D22932D7B300E986A7 /* filterPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */; };
@@ -52,7 +51,6 @@
 /* Begin PBXFileReference section */
 		82507E8A290EEF0900837CD3 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		82507E8C290EF19D00837CD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		82507E93290EF3E800837CD3 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filterPopUpViewController.swift; sourceTree = "<group>"; };
 		A56635D5293335FA00E986A7 /* restaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restaurantViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				AEC77EE92930E8D200687941 /* GreetingAnimationViewController.swift */,
 				AEF443022925676D004B9B66 /* WelcomeViewController.swift */,
 				AEC77EEB2930E90400687941 /* PickProfilePictureViewController.swift */,
-				82507E93290EF3E800837CD3 /* signUpViewController.swift */,
 			);
 			path = LoginCreateUser;
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 				AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */,
 				A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */,
 				AEC77EEA2930E8D200687941 /* GreetingAnimationViewController.swift in Sources */,
-				82507E94290EF3E800837CD3 /* signUpViewController.swift in Sources */,
 				A58476A328FC665A007AC1E7 /* CS329E_mainProject.xcdatamodeld in Sources */,
 				AE5679C6291AD8A400E72A21 /* CustomDefaults.swift in Sources */,
 				F4F92618291B9161009E13B7 /* HomeVC.swift in Sources */,
