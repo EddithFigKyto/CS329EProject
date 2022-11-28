@@ -22,7 +22,7 @@ class CustomizationViewController: UIViewController {
     
     @IBOutlet weak var FontButtonLabel: UIButton!
     
-    @IBOutlet weak var NotificationSettingsButtonLabel: UIButton!
+    //@IBOutlet weak var NotificationSettingsButtonLabel: UIButton!
     
     var delegate:UIViewController!
     
@@ -46,7 +46,7 @@ class CustomizationViewController: UIViewController {
         
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
     }
     
@@ -55,7 +55,7 @@ class CustomizationViewController: UIViewController {
         CustomizationTitleLabel.font = UIFont(name: fontSet!, size: 18)
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
     }
     

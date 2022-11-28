@@ -112,6 +112,12 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         vc.stepList1 = selectedRecipe.stepList
         vc.timersList1 = selectedRecipe.timersList
         vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
+        vc.saves1 = selectedRecipe.saves
+        vc.creator1 = selectedRecipe.creator
+        vc.servingSize1 = selectedRecipe.servingSize
+        vc.cuisine1 = selectedRecipe.cuisine
+        vc.time1 = selectedRecipe.time
+        
         
         let imageURL = URL(string: selectedRecipe.recipeImage)!
         

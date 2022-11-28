@@ -8,6 +8,11 @@ import UIKit
 
 class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    //timer stuff
+    var timerOn = false
+
+    
+    //just like the variables in recipe class
     var saves1: Int = 0
     var creator1: String = ""
     var title1: String = ""
@@ -27,7 +32,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     //var recipeImage1: String
     var tags1: String = ""
     var timersList1: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
-    var timerOn = false
+    
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -60,8 +65,11 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         tagsLabel.text = tags1
         tagsLabel.numberOfLines = 0
         
+        //saves1,creator1, servingsize1,cusine1, time1
+        sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
+        
     }
-    
+
     
     // MARK: TableView
     
@@ -120,28 +128,28 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     @objc func didChangeSwitch(_ sender: UISwitch){
         var countdown = timersList1[sender.tag] - 1 // for notification time
         let q = DispatchQueue.global(qos: .background)
+        
+        //if the app gets closed a notification will be sent
+        let content = UNMutableNotificationContent()
+        content.title = title1
+        content.subtitle = "Time's Up!"
+        content.body = "It's time to proceed to the next step!"
+        content.sound = UNNotificationSound.defaultCritical
+        // create trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(countdown), repeats: false)
+        // combine it all into a request
+        let request = UNNotificationRequest(identifier: "myNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request)
+        
+        //if the app is open the entire time
+        //we need to know when to turn the button off
+        //so an additional timer is needed
         timerOn = sender.isOn
         q.async{ [self] in
             while timerOn {
                 if countdown == 0{
                     DispatchQueue.main.sync{ //main thread
-                        //send notifcation
-                        print("notify")
-                        let content = UNMutableNotificationContent()
-                        content.title = title1
-                        content.subtitle = "Time's Up!"
-                        content.body = "It's time to proceed to the next step!"
-                        content.sound = UNNotificationSound.defaultCritical
-                        
-                        // create trigger
-                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-                        
-                        // combine it all into a request
-                        let request = UNNotificationRequest(identifier: "myNotification", content: content, trigger: trigger)
-                        
-                        UNUserNotificationCenter.current().add(request)
-                        sender.setOn(false, animated: true) //turned button off should auto break the while loop
-                        print("sent")
+                        sender.setOn(false, animated: true)
                     }
                     timerOn = false
                 }else{
@@ -151,7 +159,10 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
                 }
             }
         }
+        sender.setOn(false, animated: true)
     }
+    
+
 
     
     // MARK: Nav Banner
