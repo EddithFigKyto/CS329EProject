@@ -61,9 +61,9 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 // ensure that we got a response code of 200 (which means "success")
                 guard httpResponse.statusCode == 200 else { return }
                 
-                if data != nil {
+                if let receivedData = data {
                     DispatchQueue.main.async {
-//                        cell.recipeImage.image = UIImage(data: receivedData)
+                        cell.picture.image = UIImage(data: receivedData)
                     }
                 }
             }

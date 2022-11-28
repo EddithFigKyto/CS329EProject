@@ -104,9 +104,10 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let step = stepList1[row]
             cell.textLabel?.text = step
             cell.textLabel?.numberOfLines = 0
-            if timersList1[row] != 0 { //always seconds
+            let time = timersList1[row]
+            if time != 0 { //always seconds
                 let mySwitch = UISwitch()
-                //mySwitch.addTarget(self, action: #selector(didChangeSwitch()), for: .valueChanged)
+                //mySwitch.addTarget(self, action: #selector(didChangeSwitch(sender: mySwitch,timerTime: time)), for: .valueChanged)
                 cell.accessoryView = mySwitch
             }
             return cell
@@ -137,22 +138,21 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
 
     }
     
-//    @objc func didChangeSwitch(_ sender: UISwitch){
+//    @objc func didChangeSwitch(sender: UISwitch, timerTime: Int){
 //        if sender.isOn {
 //            timerOn = true
-//
-//
 //            let q = DispatchQueue.global(qos: .background)
 //            q.async{ [self] in //background thread
-//                if Int(timer.remainingTime) == 0{
+//                if timerTime == 0{
+//                    //send a notification
 //                    break
 //                }else{
-//                    sleep(1)
-//                    remainTimeInt! -= 1
-//                    timer.remainingTime = String(remainTimeInt!)
-//                    DispatchQueue.main.sync{ //main thread
-//                        remainTime.text = String(remainTimeInt!)
-//                        }
+////                    sleep(1) //should be one second
+////                    remainTimeInt! -= 1
+////                    timer.remainingTime = String(remainTimeInt!)
+////                    DispatchQueue.main.sync{ //main thread
+////                        remainTime.text = String(remainTimeInt!)
+////                        }
 //                    }
 //                }
 //            }
