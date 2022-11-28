@@ -17,13 +17,15 @@ class loginViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var cpLabel: UILabel!
     @IBOutlet weak var createAccount: UIButton!
-    @IBOutlet weak var cpTF: UITextField!
+
+    @IBOutlet weak var cpTextF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cpTF.isHidden = true
+        cpTextF.isHidden = true
         cpLabel.isHidden = true
         createAccount.isHidden = true
+        logInButton.isHidden = false
         
         addNavBarImage()
 
@@ -34,13 +36,15 @@ class loginViewController: UIViewController {
     @IBAction func segControl(_ sender: Any) {
         switch segControl.selectedSegmentIndex {
         case 0:
-            cpTF.isHidden = true
+            cpTextF.isHidden = true
             cpLabel.isHidden = true
+            logInButton.isHidden = false
             createAccount.isHidden = true
         case 1:
-            cpTF.isHidden = false
+            cpTextF.isHidden = false
             cpLabel.isHidden = false
             createAccount.isHidden = false
+            logInButton.isHidden = true
         default:
             break
         }
@@ -71,12 +75,7 @@ class loginViewController: UIViewController {
                 }
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "createAccountSegue",
-           var nextVC =  segue.destination as? signUpViewController {
-            nextVC.delegate = self
-        }
-    }
+   
   
     
     func addNavBarImage() {
