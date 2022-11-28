@@ -56,7 +56,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         privacyPolicyButton.configuration?.attributedTitle?.font = UIFont(name:fontSet!, size:18)
         logOutButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
-        
+        //currentUserPic = profilePicture.image!
         
     }
     

@@ -5,6 +5,8 @@
 //  Created by Eddith Figueroa on 10/7/22.
 //
 
+//public var currentUserPic:  UIImage = 
+
 import UIKit
 
 class PersonalInformationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -27,6 +29,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
+    
     
     
     @IBOutlet weak var nameLabel: UILabel!

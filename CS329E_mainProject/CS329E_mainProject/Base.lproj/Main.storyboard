@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XXb-NH-8lK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -1266,7 +1266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6j-2P-N2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2651" y="-690"/>
+            <point key="canvasLocation" x="-2833" y="-723"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="V06-no-KZU">
@@ -1382,9 +1382,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="XXb-NH-8lK" kind="relationship" relationship="viewControllers" id="thv-ZA-RRm"/>
                         <segue destination="fG4-Vx-bms" kind="relationship" relationship="viewControllers" id="ARP-qc-BU1"/>
-                        <segue destination="nop-Vk-YHe" kind="relationship" relationship="viewControllers" destinationCreationSelector="Personal Settings" id="Auk-b0-CN1"/>
                         <segue destination="Rvg-aq-1ZU" kind="relationship" relationship="viewControllers" id="vLT-cW-Nhj"/>
+                        <segue destination="nop-Vk-YHe" kind="relationship" relationship="viewControllers" destinationCreationSelector="Personal Settings" id="Auk-b0-CN1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htu-H3-vPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
