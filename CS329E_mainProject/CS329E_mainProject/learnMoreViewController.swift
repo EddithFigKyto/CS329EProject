@@ -11,6 +11,16 @@ class learnMoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNavBarImage()
         
     }
+    
+     func addNavBarImage() {
+         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
+         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+         titleView.addSubview(titleImageView)
+         navigationItem.titleView = titleView
+     }
+     
 }

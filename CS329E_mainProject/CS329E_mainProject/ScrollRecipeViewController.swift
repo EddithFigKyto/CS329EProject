@@ -6,6 +6,13 @@
 //
 import UIKit
 
+extension String {
+    var isNumber: Bool {
+        let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+        return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
+    }
+}
+
 class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     //timer stuff
@@ -62,8 +69,11 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         titleLabel.text = title1
         descripLabel.text = "\n" + description1
         descripLabel.numberOfLines = 0 // Unlimited number of lines
-        tagsLabel.text = tags1
-        tagsLabel.numberOfLines = 0
+        if time1.isNumber{
+            time1 = time1 + " minutes"
+        }
+        tagsLabel.text = "Serves: \(servingSize1) | Cook Time: \(time1)"
+        //tagsLabel.numberOfLines = 0
         
         //saves1,creator1, servingsize1,cusine1, time1
         sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
