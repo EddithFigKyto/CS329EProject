@@ -37,7 +37,7 @@ class loginViewController: UIViewController {
         addNavBarImage()
     }
     @IBAction func handleRight(recognizer: UISwipeGestureRecognizer) {
-        
+        performSegue(withIdentifier: "learnMoreSegue", sender: self)
     }
     
     @IBAction func segControl(_ sender: Any) {
@@ -64,7 +64,7 @@ class loginViewController: UIViewController {
             }
             else {
                 self.statusLabel.text = ""
-                self.performSegue(withIdentifier: "loggedSegue", sender: nil)
+                self.performSegue(withIdentifier: "loggedSegue", sender: self)
             }
         }
 

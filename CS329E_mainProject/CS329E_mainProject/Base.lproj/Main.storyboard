@@ -1226,6 +1226,21 @@
             </objects>
             <point key="canvasLocation" x="3553.8461538461538" y="-2839.336492890995"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="T60-xh-eIs">
+            <objects>
+                <viewController id="Um8-pd-4YS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aof-lp-Qqq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mtF-Xy-pWp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lor-70-O0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2544" y="-637"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="cBa-Y6-cbt">
             <objects>
@@ -1310,12 +1325,21 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe right to learn more about chefs kiss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcr-x1-iyk">
-                                <rect key="frame" x="37" y="780" width="319" height="21"/>
+                                <rect key="frame" x="37" y="779" width="319" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-sh-V8I">
+                                <rect key="frame" x="307" y="806" width="24" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <segue destination="te6-hn-kaa" kind="show" identifier="learnMoreSegue" id="ZWJ-1x-UKv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="suW-uT-enl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1345,15 +1369,27 @@
             <objects>
                 <viewController id="te6-hn-kaa" customClass="learnMoreViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jTP-YF-hLf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-aT-fne">
+                                <rect key="frame" x="16" y="104" width="361" height="543"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Chef’s kiss is a modern, digital recipe book that has many features that would are very useful for cooking a meal. First of all, having a list of recipes to scroll through, complete with pictures and preview can help a user decide on one to click on. When clicked, everything needed to cook it appears. Saving the recipes for posterior consulting is important so a user can go back quickly and easily. If a user does not decide for a recipe, they can input the ingredients on hand in order to receive a list of recipes that use those ingredients. Another feature includes a grocery list based on saved recipes that updates accordingly so a user can buy everything they need. Chef’s kiss is an application for novice chefs or even more experienced users who want to keep track of the ingredients and recipes they use.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="i6u-UW-GUz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TR0-cg-OZI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfI-sP-1CM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1784" y="162"/>
+            <point key="canvasLocation" x="-1709" y="234"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qrP-St-VyP">
