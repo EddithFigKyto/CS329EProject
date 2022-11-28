@@ -39,34 +39,10 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     @IBOutlet weak var descripLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     
-//    func makeTimers(theStepList: [String]){
-//        print("hi")
-//        // parses through the steps to find a potential timer
-//        for _ in theStepList{
-//            timers.append(0)
-//        }
-//        for step in theStepList{
-//            let index2 = theStepList.firstIndex(of: step)!
-//            let components = step.components(separatedBy: " ")
-//            for word in components{
-//                if word == "min" || word == "minute" || word == "minutes"{
-//                    let index1 = components.firstIndex(of: word)!
-//                    let numStr = components[index1]
-//                    if numStr.contains("-"){
-//                        let range = numStr.components(separatedBy: "-")
-//                        let timerTime = Int(((Int(range[0])! + Int(range[1])!)/2)*60) //in seconds
-//                        timers[index2] = timerTime
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        makeTimers(theStepList: stepList1)
-//        print(timers)
         scrollView.contentSize = stackView.bounds.size
         scrollView.delegate = self
         imageView.image = UIImage(named: "greek_salad")
@@ -107,7 +83,8 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let time = timersList1[row]
             if time != 0 { //always seconds
                 let mySwitch = UISwitch()
-                //mySwitch.addTarget(self, action: #selector(didChangeSwitch(sender: mySwitch,timerTime: time)), for: .valueChanged)
+                mySwitch.tag = row
+                mySwitch.addTarget(self, action: #selector(self.didChangeSwitch(_:)), for: .valueChanged)
                 cell.accessoryView = mySwitch
             }
             return cell
@@ -138,41 +115,44 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
 
     }
     
-//    @objc func didChangeSwitch(sender: UISwitch, timerTime: Int){
-//        if sender.isOn {
-//            timerOn = true
-//            let q = DispatchQueue.global(qos: .background)
-//            q.async{ [self] in //background thread
-//                if timerTime == 0{
-//                    //send a notification
-//                    break
-//                }else{
-////                    sleep(1) //should be one second
-////                    remainTimeInt! -= 1
-////                    timer.remainingTime = String(remainTimeInt!)
-////                    DispatchQueue.main.sync{ //main thread
-////                        remainTime.text = String(remainTimeInt!)
-////                        }
-//                    }
-//                }
-//            }
-//
-//
-//    }
-    // MARK: Segue
+    
+    
+    @objc func didChangeSwitch(_ sender: UISwitch){
+        var countdown = timersList1[sender.tag] - 1 // for notification time
+        let q = DispatchQueue.global(qos: .background)
+        timerOn = sender.isOn
+        q.async{ [self] in
+            while timerOn {
+                if countdown == 0{
+                    DispatchQueue.main.sync{ //main thread
+                        //send notifcation
+                        print("notify")
+                        let content = UNMutableNotificationContent()
+                        content.title = title1
+                        content.subtitle = "Time's Up!"
+                        content.body = "It's time to proceed to the next step!"
+                        content.sound = UNNotificationSound.defaultCritical
+                        
+                        // create trigger
+                        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                        
+                        // combine it all into a request
+                        let request = UNNotificationRequest(identifier: "myNotification", content: content, trigger: trigger)
+                        
+                        UNUserNotificationCenter.current().add(request)
+                        sender.setOn(false, animated: true) //turned button off should auto break the while loop
+                        print("sent")
+                    }
+                    timerOn = false
+                }else{
+                    sleep(1)
+                    print(countdown)
+                    countdown -= 1
+                }
+            }
+        }
+    }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "AddPizzaSegue", //comma implies sequencing
-//           let nextVC = segue.destination as? CreationVC{ //pointer to 2nd VC
-//            let backItem = UIBarButtonItem()
-//            backItem.title = "Pizza Order"
-//            navigationItem.backBarButtonItem = backItem //add + button
-//            nextVC.delegate = self
-//            nextVC.pizzaList2 = pizzaList //pass data btwn the two VCs
-//
-//
-//        }
-//    }
     
     // MARK: Nav Banner
     

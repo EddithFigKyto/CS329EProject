@@ -23,6 +23,15 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         addNavBarImage()
         tableView.dataSource = self
         tableView.delegate = self
+        //request permissions for notifcations 
+        UNUserNotificationCenter.current().requestAuthorization(options:[.alert,.badge,.sound]) {
+            granted, error in
+            if granted {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
    
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
