@@ -28,9 +28,6 @@ class loginViewController: UIViewController {
         logInButton.isHidden = false
         
         addNavBarImage()
-
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func segControl(_ sender: Any) {
@@ -76,8 +73,6 @@ class loginViewController: UIViewController {
         
     }
    
-  
-    
     func addNavBarImage() {
         var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         var titleImageView = UIImageView(image: UIImage(named: "banner1"))
