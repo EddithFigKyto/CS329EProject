@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -1358,7 +1358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-aT-fne">
-                                <rect key="frame" x="16" y="104" width="361" height="543"/>
+                                <rect key="frame" x="16" y="66" width="361" height="543"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Chef’s kiss is a modern, digital recipe book that has many features that would are very useful for cooking a meal. First of all, having a list of recipes to scroll through, complete with pictures and preview can help a user decide on one to click on. When clicked, everything needed to cook it appears. Saving the recipes for posterior consulting is important so a user can go back quickly and easily. If a user does not decide for a recipe, they can input the ingredients on hand in order to receive a list of recipes that use those ingredients. Another feature includes a grocery list based on saved recipes that updates accordingly so a user can buy everything they need. Chef’s kiss is an application for novice chefs or even more experienced users who want to keep track of the ingredients and recipes they use.</string>
