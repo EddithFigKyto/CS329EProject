@@ -96,6 +96,28 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         return cell
     }
     
+    //click on cell to segue to the recipeDisplayVC
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            tableView.deselectRow(at: indexPath, animated: true)
+            let row = indexPath.row
+            //let otherVC = delegate as! DisplayRecipe
+            let selectedRecipe = recipes[row]
+           // otherVC.sendAllInfo(someRecipe: selectedRecipe)
+
+    //        send data to next VC
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "ScrollRecipeViewController") as! ScrollRecipeViewController
+            
+            vc.title1 = selectedRecipe.title
+            vc.description1 = selectedRecipe.description[0]
+            vc.ingredients1 = selectedRecipe.printIngredients
+            vc.stepList1 = selectedRecipe.stepList
+            vc.timersList1 = selectedRecipe.timersList
+            vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
+            
+            // the following segues to the next screen while pushing the appropriate cell data
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    
     // need to set filterPopUpVC delegate to self
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSegue",
