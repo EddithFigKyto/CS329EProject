@@ -26,7 +26,7 @@ class randomizeViewController: UIViewController {
     
     
     @IBAction func randomizeButtonPress(_ sender: Any) {
-        var recipeNum = randomize()
+        let recipeNum = randomize()
         let selectedRecipe = recipes[recipeNum]
        // otherVC.sendAllInfo(someRecipe: selectedRecipe)
 
@@ -77,8 +77,8 @@ class randomizeViewController: UIViewController {
 
     func addNavBarImage() {
         
-        var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        var titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView

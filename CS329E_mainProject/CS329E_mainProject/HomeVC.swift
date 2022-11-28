@@ -104,6 +104,29 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         vc.timersList1 = selectedRecipe.timersList
         vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
         
+        let imageURL = URL(string: selectedRecipe.recipeImage)!
+        
+        let session = URLSession(configuration: .default)
+        
+        let task = session.dataTask(with: imageURL) {
+            (data, response, error) in
+            
+            guard error == nil else { return }
+            
+            if let httpResponse = response as? HTTPURLResponse {
+                
+                // ensure that we got a response code of 200 (which means "success")
+                guard httpResponse.statusCode == 200 else { return }
+                
+                if let receivedData = data {
+                    DispatchQueue.main.async {
+                        vc.imageView.image = UIImage(data: receivedData)
+                    }
+                }
+            }
+        }
+        task.resume()
+        
         // the following segues to the next screen while pushing the appropriate cell data
         self.navigationController?.pushViewController(vc, animated: true)
     
