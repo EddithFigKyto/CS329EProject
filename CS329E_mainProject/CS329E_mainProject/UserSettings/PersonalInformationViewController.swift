@@ -111,7 +111,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
                     
                     let otherVC = self.delegate as! changeNameProtocol
                     otherVC.changeName(newName: self.currentName)
-                    //self.dismiss(animated: true)
+                    
                     
                 }
             }))
