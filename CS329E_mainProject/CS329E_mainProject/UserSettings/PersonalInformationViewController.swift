@@ -35,7 +35,6 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var backUpLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +51,15 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         nameLabel.text = currentName
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+    
         birthdayLabel.text = currentBirthday
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+        
         emailLabel.text = currentEmail
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
     }
@@ -73,15 +72,15 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         nameLabel.text = currentName
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //birthdayEditor.setTitle("Birthday: \(currentBirthday)", for: .normal)
+
         birthdayLabel.text = currentBirthday
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //emailEditor.setTitle("Email: \(currentEmail)", for: .normal)
+
         emailLabel.text = currentEmail
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        //profilePictureEditor.setTitle("Edit Profile Picture", for: .normal)
+        
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
     }
@@ -198,15 +197,6 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         navigationItem.titleView = titleView
     }
     
-    
-    
-    
-    
-    
-//    @IBAction func button2Pressed(_ sender: Any) {
-//        let otherVC = delegate as! TextChanger
-//        otherVC.changeText(newName: textField2.text!)
-//        self.dismiss(animated: true)
-//    }
+
 
 }
