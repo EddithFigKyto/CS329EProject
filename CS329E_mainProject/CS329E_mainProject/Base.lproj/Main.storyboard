@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vd4-iX-ohg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -524,7 +524,7 @@
                                 <rect key="frame" x="16" y="514" width="361" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Customization  Settings &gt;"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Customization Settings &gt;"/>
                                 <connections>
                                     <segue destination="Qeu-ZU-rST" kind="show" identifier="customizationSegue" id="Yr5-K3-Ykb"/>
                                 </connections>
@@ -1114,28 +1114,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CR7-CL-V1D">
-                                <rect key="frame" x="20" y="439" width="69" height="35"/>
+                                <rect key="frame" x="20" y="439" width="73.666666666666671" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Name"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Name"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Name:"/>
                                 <connections>
                                     <action selector="nameEditorPressed:" destination="VQE-bg-tNz" eventType="touchUpInside" id="3vm-ie-Ckg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZB-ex-opy">
-                                <rect key="frame" x="20" y="494" width="87.666666666666671" height="35"/>
+                                <rect key="frame" x="19.999999999999993" y="493.33333333333331" width="92.333333333333314" height="34.999999999999943"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Birthday"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Birthday:"/>
                                 <connections>
                                     <action selector="birthdayButtonPressed:" destination="VQE-bg-tNz" eventType="touchUpInside" id="i1v-1L-2sN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-dU-fjq">
-                                <rect key="frame" x="20" y="549" width="64.666666666666671" height="35"/>
+                                <rect key="frame" x="20" y="548.33333333333337" width="69.333333333333329" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Email"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Email:"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyv-J2-0t2">
                                 <rect key="frame" x="20" y="408" width="91" height="21"/>
@@ -1144,16 +1145,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xj-Nf4">
-                                <rect key="frame" x="20" y="599" width="130.66666666666666" height="35"/>
+                                <rect key="frame" x="20" y="608.33333333333337" width="191" height="35"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Profile Picture"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Update Profile Picture"/>
                                 <connections>
                                     <action selector="profilePictureChange:" destination="VQE-bg-tNz" eventType="touchUpInside" id="gng-on-AaZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr2-vR-aFV">
-                                <rect key="frame" x="124" y="439" width="250" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr2-vR-aFV">
+                                <rect key="frame" x="103.66666666666669" y="438.66666666666669" width="250" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="GE0-UO-scE"/>
                                     <constraint firstAttribute="width" constant="250" id="Mxk-3D-8v7"/>
@@ -1162,8 +1163,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-LE-ccn">
-                                <rect key="frame" x="124" y="494" width="250" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hr-LE-ccn">
+                                <rect key="frame" x="122.33333333333331" y="493.33333333333331" width="250" height="34.999999999999943"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="7f0-cT-WOY"/>
                                     <constraint firstAttribute="height" constant="35" id="vIK-on-ECC"/>
@@ -1172,8 +1173,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULL-CA-qGc">
-                                <rect key="frame" x="124" y="549" width="250" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULL-CA-qGc">
+                                <rect key="frame" x="99.333333333333314" y="548.33333333333337" width="250" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="hPd-iV-oaZ"/>
                                     <constraint firstAttribute="width" constant="250" id="rsw-As-Cgs"/>
@@ -1188,8 +1189,8 @@
                         <constraints>
                             <constraint firstItem="kfb-5D-v61" firstAttribute="top" secondItem="wmJ-9b-WQR" secondAttribute="top" constant="100" id="0dQ-2O-QMb"/>
                             <constraint firstItem="pr2-vR-aFV" firstAttribute="centerY" secondItem="CR7-CL-V1D" secondAttribute="centerY" id="2Co-yU-NML"/>
+                            <constraint firstItem="1Hr-LE-ccn" firstAttribute="leading" secondItem="hZB-ex-opy" secondAttribute="trailing" constant="10" id="76q-mc-VgG"/>
                             <constraint firstItem="1Hr-LE-ccn" firstAttribute="centerY" secondItem="hZB-ex-opy" secondAttribute="centerY" id="BGh-dX-5Ea"/>
-                            <constraint firstItem="ULL-CA-qGc" firstAttribute="leading" secondItem="1Hr-LE-ccn" secondAttribute="leading" id="D3b-dc-g3s"/>
                             <constraint firstItem="3Ua-dU-fjq" firstAttribute="leading" secondItem="gpd-xj-Nf4" secondAttribute="leading" id="Evz-hR-Soe"/>
                             <constraint firstItem="ULL-CA-qGc" firstAttribute="centerY" secondItem="3Ua-dU-fjq" secondAttribute="centerY" id="IrL-OR-gNg"/>
                             <constraint firstItem="hZB-ex-opy" firstAttribute="leading" secondItem="3Ua-dU-fjq" secondAttribute="leading" id="J7E-hd-4UW"/>
@@ -1197,15 +1198,15 @@
                             <constraint firstItem="hyv-J2-0t2" firstAttribute="leading" secondItem="CR7-CL-V1D" secondAttribute="leading" id="KIc-bB-oCw"/>
                             <constraint firstItem="CR7-CL-V1D" firstAttribute="top" secondItem="a1g-oX-Gmf" secondAttribute="bottom" constant="60" id="NIY-1D-fme"/>
                             <constraint firstItem="kfb-5D-v61" firstAttribute="centerX" secondItem="sqS-zv-ECn" secondAttribute="centerX" id="P7l-xE-FrI"/>
-                            <constraint firstItem="1Hr-LE-ccn" firstAttribute="leading" secondItem="pr2-vR-aFV" secondAttribute="leading" id="Tjr-av-xhu"/>
-                            <constraint firstItem="pr2-vR-aFV" firstAttribute="leading" secondItem="CR7-CL-V1D" secondAttribute="trailing" constant="35" id="WWy-XO-2iu"/>
+                            <constraint firstItem="pr2-vR-aFV" firstAttribute="leading" secondItem="CR7-CL-V1D" secondAttribute="trailing" constant="10" id="WWy-XO-2iu"/>
                             <constraint firstItem="a1g-oX-Gmf" firstAttribute="top" secondItem="kfb-5D-v61" secondAttribute="bottom" constant="30" id="Zy1-nE-5cw"/>
                             <constraint firstItem="a1g-oX-Gmf" firstAttribute="centerX" secondItem="sqS-zv-ECn" secondAttribute="centerX" id="dnp-bJ-YWW"/>
                             <constraint firstItem="CR7-CL-V1D" firstAttribute="leading" secondItem="wmJ-9b-WQR" secondAttribute="leading" constant="20" id="gZx-DV-hFN"/>
                             <constraint firstItem="CR7-CL-V1D" firstAttribute="top" secondItem="hyv-J2-0t2" secondAttribute="bottom" constant="10" id="i6X-s2-lcE"/>
                             <constraint firstItem="hZB-ex-opy" firstAttribute="top" secondItem="CR7-CL-V1D" secondAttribute="bottom" constant="20" id="rPD-e7-UX9"/>
                             <constraint firstItem="CR7-CL-V1D" firstAttribute="leading" secondItem="hZB-ex-opy" secondAttribute="leading" id="rmD-o7-QoY"/>
-                            <constraint firstItem="gpd-xj-Nf4" firstAttribute="top" secondItem="3Ua-dU-fjq" secondAttribute="bottom" constant="15" id="wfK-d9-Xz2"/>
+                            <constraint firstItem="ULL-CA-qGc" firstAttribute="leading" secondItem="3Ua-dU-fjq" secondAttribute="trailing" constant="10" id="vo3-w4-2c8"/>
+                            <constraint firstItem="gpd-xj-Nf4" firstAttribute="top" secondItem="3Ua-dU-fjq" secondAttribute="bottom" constant="25" id="wfK-d9-Xz2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="679-KL-bfA"/>

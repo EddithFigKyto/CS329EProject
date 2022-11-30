@@ -49,14 +49,17 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         editMessageLabel.font = UIFont(name: fontSet!, size: 18)
         
         nameLabel.text = currentName
+        nameLabel.font = UIFont(name: fontSet!, size: 16)
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
     
         birthdayLabel.text = currentBirthday
+        birthdayLabel.font = UIFont(name: fontSet!, size: 16)
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         
         emailLabel.text = currentEmail
+        emailLabel.font = UIFont(name: fontSet!, size: 16)
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         
