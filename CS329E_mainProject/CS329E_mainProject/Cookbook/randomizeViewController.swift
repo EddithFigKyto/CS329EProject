@@ -9,7 +9,6 @@ import UIKit
 
 class randomizeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var randomizeButton: UIButton!
     
@@ -17,9 +16,7 @@ class randomizeViewController: UIViewController {
         super.viewDidLoad()
 
         addNavBarImage()
-        
-        titleLabel.font = UIFont(name: fontSet!, size: 18)
-        
+
         randomizeButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
 
     }
