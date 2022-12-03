@@ -98,7 +98,8 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     
     //click on cell to segue to the recipeDisplayVC
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            tableView.deselectRow(at: indexPath, animated: true)
+            
+            favoritesTableView.deselectRow(at: indexPath, animated: true)
             let row = indexPath.row
             //let otherVC = delegate as! DisplayRecipe
             let selectedRecipe = recipes[row]
@@ -113,16 +114,46 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
             vc.stepList1 = selectedRecipe.stepList
             vc.timersList1 = selectedRecipe.timersList
             vc.tags1 = selectedRecipe.tags.joined(separator: ", ")
+            vc.saves1 = selectedRecipe.saves
+            vc.creator1 = selectedRecipe.creator
+            vc.servingSize1 = selectedRecipe.servingSize
+            vc.cuisine1 = selectedRecipe.cuisine
+            vc.time1 = selectedRecipe.time
+            
+            
+            let imageURL = URL(string: selectedRecipe.recipeImage)!
+            
+            let session = URLSession(configuration: .default)
+            
+            let task = session.dataTask(with: imageURL) {
+                (data, response, error) in
+                
+                guard error == nil else { return }
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    
+                    // ensure that we got a response code of 200 (which means "success")
+                    guard httpResponse.statusCode == 200 else { return }
+                    
+                    if let receivedData = data {
+                        DispatchQueue.main.async {
+                            vc.imageView.image = UIImage(data: receivedData)
+                        }
+                    }
+                }
+            }
+            task.resume()
             
             // the following segues to the next screen while pushing the appropriate cell data
             self.navigationController?.pushViewController(vc, animated: true)
+        
+            
         }
     
     // need to set filterPopUpVC delegate to self
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSegue",
            let nextVC = segue.destination as? filterPopUpViewController {
-            // delegate to change profile picture settings
             nextVC.delegate = self
         }
     }
