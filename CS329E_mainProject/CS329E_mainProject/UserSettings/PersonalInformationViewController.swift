@@ -5,8 +5,6 @@
 //  Created by Eddith Figueroa on 10/7/22.
 //
 
-//public var currentUserPic:  UIImage = 
-
 import UIKit
 
 class PersonalInformationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{

@@ -1820,7 +1820,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
-                                    <segue destination="hFV-1v-ahp" kind="presentation" modalPresentationStyle="fullScreen" id="u3l-4Y-oqN"/>
+                                    <segue destination="hFV-1v-ahp" kind="presentation" identifier="welcomeInfoSegue" modalPresentationStyle="fullScreen" id="u3l-4Y-oqN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1834,7 +1834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxd-L8-A2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4408.3969465648852" y="-2122.5352112676055"/>
+            <point key="canvasLocation" x="-4407" y="-2132"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="XBH-0J-dyU">
@@ -1864,7 +1864,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enter"/>
                                 <connections>
-                                    <segue destination="KKd-1T-cZq" kind="presentation" modalPresentationStyle="fullScreen" id="4Ad-gX-wNQ"/>
+                                    <action selector="enterButtonPressed:" destination="hFV-1v-ahp" eventType="touchUpInside" id="3u3-Dn-vqZ"/>
+                                    <segue destination="KKd-1T-cZq" kind="presentation" identifier="profilePictureSegue" modalPresentationStyle="fullScreen" id="4Ad-gX-wNQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Your Birthday:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-M9-DqH">
@@ -1914,6 +1915,10 @@
                             <constraint firstItem="aMD-tB-eNh" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="sd3-ho-EVF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthdayTextField" destination="sdQ-5l-eC1" id="rDP-Ov-rYV"/>
+                        <outlet property="nameTextField" destination="aMD-tB-eNh" id="yBW-Bc-3cH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug6-PW-9at" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
