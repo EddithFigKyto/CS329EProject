@@ -2044,15 +2044,27 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G8y-Af-d6t">
                                 <rect key="frame" x="71" y="331" width="51" height="31"/>
+                                <connections>
+                                    <action selector="vegetarianSelected:" destination="96t-Dw-B9x" eventType="valueChanged" id="o7b-U5-iH3"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gTy-o5-Kz2">
                                 <rect key="frame" x="71" y="387" width="51" height="31"/>
+                                <connections>
+                                    <action selector="veganSelected:" destination="96t-Dw-B9x" eventType="valueChanged" id="hRI-Bh-lSy"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Dg-wJL">
                                 <rect key="frame" x="71" y="443" width="51" height="31"/>
+                                <connections>
+                                    <action selector="glutenFreeSelected:" destination="96t-Dw-B9x" eventType="valueChanged" id="G8J-Ye-hej"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-5L-BUl">
                                 <rect key="frame" x="71" y="499" width="51" height="31"/>
+                                <connections>
+                                    <action selector="nutFreeSelected:" destination="96t-Dw-B9x" eventType="valueChanged" id="c5H-Oa-ELq"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsJ-zY-aCr">
                                 <rect key="frame" x="170" y="336" width="82" height="21"/>
@@ -2080,6 +2092,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bmT-3r-nkC">
                                 <rect key="frame" x="71" y="555" width="51" height="31"/>
+                                <connections>
+                                    <action selector="halalSelected:" destination="96t-Dw-B9x" eventType="valueChanged" id="i9D-GI-FEV"/>
+                                </connections>
                             </switch>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="mih-xA-bss">
                                 <rect key="frame" x="46.666666666666657" y="59" width="300" height="75"/>
@@ -2126,6 +2141,20 @@
                             <constraint firstItem="MUd-K0-Qxe" firstAttribute="leading" secondItem="7Kc-5L-BUl" secondAttribute="trailing" constant="50" id="yVC-jP-81T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="glutenFreeLabel" destination="2en-F2-Sxl" id="dWc-gy-zzB"/>
+                        <outlet property="glutenFreeSwitch" destination="q2r-Dg-wJL" id="zZM-tK-orf"/>
+                        <outlet property="halalLabel" destination="Dys-Eq-kBQ" id="l8U-I7-2R6"/>
+                        <outlet property="halalSwitch" destination="bmT-3r-nkC" id="x5O-Bd-dgG"/>
+                        <outlet property="instructionsLabel" destination="qky-HG-dmB" id="qFg-8e-Nds"/>
+                        <outlet property="nutFreeLabel" destination="MUd-K0-Qxe" id="rOY-OC-bEY"/>
+                        <outlet property="nutFreeSwitch" destination="7Kc-5L-BUl" id="I3G-CV-Vlq"/>
+                        <outlet property="selectAllApplyLabel" destination="KgC-QX-wMZ" id="xCQ-6L-XeC"/>
+                        <outlet property="veganLabel" destination="ldR-Ht-hwt" id="18d-Pm-Udf"/>
+                        <outlet property="veganSwitch" destination="gTy-o5-Kz2" id="JKb-Lz-rcy"/>
+                        <outlet property="vegetarianLabel" destination="NsJ-zY-aCr" id="tmK-D6-mZf"/>
+                        <outlet property="vegetarianSwitch" destination="G8y-Af-d6t" id="yM7-g4-v0T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxa-Ca-5VX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
