@@ -173,9 +173,33 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     }
     
 
-
+    
     
     // MARK: Nav Banner
+    
+    @IBAction func saveButtonPress(_ sender: Any) {
+        var userLikedTitles = [String]()
+        
+        for x in userLikedRecipes {
+            userLikedTitles.append(x.title)
+        }
+        
+        for recipe in recipes {
+            
+            if recipe.title == title1 {
+                                
+                if userLikedTitles.contains(title1) {
+                    print("you already saved this recipe")
+                }
+                else {
+                    userLikedRecipes.append(recipe)
+                }
+                
+            }
+            
+        }
+    }
+    
     
     func addNavBarImage() {
         

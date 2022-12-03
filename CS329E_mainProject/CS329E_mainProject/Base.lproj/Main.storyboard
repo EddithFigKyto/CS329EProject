@@ -2346,7 +2346,13 @@
                         <viewLayoutGuide key="safeArea" id="0OP-Eg-ZIT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uMI-q5-eku"/>
+                    <navigationItem key="navigationItem" id="uMI-q5-eku">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="lig-hf-eD8">
+                            <connections>
+                                <action selector="saveButtonPress:" destination="1ca-cJ-IxD" id="h1K-M5-NaP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="descripLabel" destination="uj6-qp-Vfp" id="5rT-St-m2d"/>
                         <outlet property="imageView" destination="qfe-WM-QHk" id="x5K-wE-O03"/>

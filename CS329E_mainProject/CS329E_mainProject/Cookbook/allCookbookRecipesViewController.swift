@@ -20,7 +20,7 @@ protocol filterProtocol{
 
 // holds the visible recipes in cookbook
 // will change if filters applied (see filter func)
-var filteredRecipes = recipes
+var filteredRecipes = userLikedRecipes
 
 class allCookbookRecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, filterProtocol {
 
