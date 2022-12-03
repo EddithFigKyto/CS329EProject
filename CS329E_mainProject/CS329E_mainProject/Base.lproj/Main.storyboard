@@ -1917,6 +1917,10 @@
                     </view>
                     <connections>
                         <outlet property="birthdayTextField" destination="sdQ-5l-eC1" id="rDP-Ov-rYV"/>
+                        <outlet property="dateFormatLabel" destination="0KZ-xd-WKG" id="wUy-I3-at0"/>
+                        <outlet property="enterButtonOutlet" destination="MtO-2x-Z91" id="HIs-c0-IWx"/>
+                        <outlet property="enterYourBirthdayLabel" destination="m9I-M9-DqH" id="B4N-lf-1eY"/>
+                        <outlet property="enterYourNameLabel" destination="i15-Za-q9P" id="fRm-mg-SCL"/>
                         <outlet property="nameTextField" destination="aMD-tB-eNh" id="yBW-Bc-3cH"/>
                     </connections>
                 </viewController>
@@ -1965,13 +1969,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Upload Photo"/>
+                                        <connections>
+                                            <action selector="uploadPhotoButtonPressed:" destination="KKd-1T-cZq" eventType="touchUpInside" id="2Rf-6g-zwt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-hx-dOC">
                                         <rect key="frame" x="150" y="0.0" width="150" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                         <connections>
-                                            <segue destination="96t-Dw-B9x" kind="presentation" modalPresentationStyle="fullScreen" id="ozz-vE-hBT"/>
+                                            <action selector="nextButtonPressed:" destination="KKd-1T-cZq" eventType="touchUpInside" id="6Bf-aW-S0r"/>
+                                            <segue destination="96t-Dw-B9x" kind="presentation" identifier="dietSelectionSegue" modalPresentationStyle="fullScreen" id="ozz-vE-hBT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2002,6 +2010,13 @@
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="OdB-gy-Nzr"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="M7v-ey-Pa2" id="9uz-IR-L4m"/>
+                        <outlet property="instructionsLabel" destination="CvH-lx-tuJ" id="YkV-Wq-bAx"/>
+                        <outlet property="nextButtonOutlet" destination="Qhe-hx-dOC" id="0AM-s7-UN0"/>
+                        <outlet property="profilePictureImageView" destination="cZD-nW-2Vq" id="E4c-je-tMd"/>
+                        <outlet property="uploadButtonOutlet" destination="BCs-9r-q04" id="NXi-uS-yjm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lus-GT-3vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

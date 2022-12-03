@@ -8,22 +8,24 @@
 import UIKit
 
 class PickProfilePictureViewController: UIViewController {
-
+    
+    @IBOutlet weak var profilePictureImageView: UIImageView!
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var instructionsLabel: UILabel!
+    @IBOutlet weak var uploadButtonOutlet: UIButton!
+    @IBOutlet weak var nextButtonOutlet: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func uploadPhotoButtonPressed(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+    }
+    
 }
