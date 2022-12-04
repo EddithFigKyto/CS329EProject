@@ -1333,30 +1333,6 @@
                                 <rect key="frame" x="0.0" y="79" width="393" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lb-Sm-Cfy">
-                                <rect key="frame" x="161" y="351" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nj-oa-G5L">
-                                <rect key="frame" x="161" y="351" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UV-3I-s77">
-                                <rect key="frame" x="46.666666666666657" y="326" width="300" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="KNs-6t-R95"/>
-                                    <constraint firstAttribute="width" constant="300" id="kbF-wC-MYX"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoS-Be-erc">
                                 <rect key="frame" x="54" y="553" width="309" height="165"/>
                                 <constraints>
@@ -1369,19 +1345,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner1" translatesAutoresizingMaskIntoConstraints="NO" id="4ry-Hh-Sxc">
+                                <rect key="frame" x="0.0" y="348.66666666666669" width="393" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="9wO-fP-dk1"/>
+                                    <constraint firstAttribute="width" constant="393" id="Uan-QV-vvN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="suW-uT-enl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KoS-Be-erc" firstAttribute="centerX" secondItem="4Hz-I9-acq" secondAttribute="centerX" id="6TV-Es-Oah"/>
-                            <constraint firstItem="3UV-3I-s77" firstAttribute="centerY" secondItem="4Hz-I9-acq" secondAttribute="centerY" id="Bs1-zD-F6L"/>
+                            <constraint firstItem="4ry-Hh-Sxc" firstAttribute="centerY" secondItem="4Hz-I9-acq" secondAttribute="centerY" id="ABz-RE-nSW"/>
                             <constraint firstItem="KoS-Be-erc" firstAttribute="bottom" secondItem="suW-uT-enl" secondAttribute="bottom" constant="76" id="ENT-FO-4Af"/>
                             <constraint firstItem="suW-uT-enl" firstAttribute="bottom" secondItem="KoS-Be-erc" secondAttribute="bottom" constant="51" id="L89-WF-dnz"/>
-                            <constraint firstItem="3UV-3I-s77" firstAttribute="centerX" secondItem="4Hz-I9-acq" secondAttribute="centerX" id="NzW-IK-LMQ"/>
                             <constraint firstItem="KoS-Be-erc" firstAttribute="bottom" secondItem="suW-uT-enl" secondAttribute="bottom" constant="2" id="RCA-5c-5Wo"/>
-                            <constraint firstItem="3UV-3I-s77" firstAttribute="centerX" secondItem="4Hz-I9-acq" secondAttribute="centerX" id="cMg-Pw-Cq4"/>
                             <constraint firstItem="suW-uT-enl" firstAttribute="bottom" secondItem="KoS-Be-erc" secondAttribute="bottom" constant="151" id="fFY-0T-E90"/>
-                            <constraint firstItem="3UV-3I-s77" firstAttribute="centerY" secondItem="4Hz-I9-acq" secondAttribute="centerY" id="ha0-26-erI"/>
+                            <constraint firstItem="4ry-Hh-Sxc" firstAttribute="centerX" secondItem="4Hz-I9-acq" secondAttribute="centerX" id="yxQ-WB-qkv"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -1394,9 +1375,11 @@
                     <navigationItem key="navigationItem" id="mQr-Ka-TdJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="animationImage" destination="4ry-Hh-Sxc" id="raf-t3-Kz9"/>
                         <outlet property="cpLabel" destination="MpQ-lw-ExU" id="zYo-DA-Hhu"/>
                         <outlet property="cpTextF" destination="Dko-9k-796" id="9oD-5B-1Ft"/>
                         <outlet property="createAccount" destination="b8N-cV-9Xc" id="Jhx-r4-q87"/>
+                        <outlet property="imageTop" destination="mPA-Qr-B0b" id="Fmx-v9-rBh"/>
                         <outlet property="learn" destination="vcr-x1-iyk" id="Q6v-Eu-GYr"/>
                         <outlet property="logInButton" destination="tiC-ZM-HPE" id="BUP-KE-Ql5"/>
                         <outlet property="passwordLabel" destination="nok-UO-5U7" id="n3e-l5-llH"/>
@@ -1405,7 +1388,6 @@
                         <outlet property="statusLabel" destination="KoS-Be-erc" id="Hgk-Ab-2pS"/>
                         <outlet property="userLabel" destination="5DX-ky-C2q" id="eCq-0L-odN"/>
                         <outlet property="userTF" destination="tfE-zX-ALZ" id="lo4-xK-lXW"/>
-                        <outlet property="welcomeLabel2" destination="3UV-3I-s77" id="haF-Hr-yoO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6j-2P-N2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1428,7 +1410,7 @@
                                 <rect key="frame" x="16" y="140" width="361" height="543"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Chef’s kiss is a modern, digital recipe book that has many features that would are very useful for cooking a meal. First of all, having a list of recipes to scroll through, complete with pictures and preview can help a user decide on one to click on. When clicked, everything needed to cook it appears. Saving the recipes for posterior consulting is important so a user can go back quickly and easily. If a user does not decide for a recipe, they can input the ingredients on hand in order to receive a list of recipes that use those ingredients. Another feature includes a grocery list based on saved recipes that updates accordingly so a user can buy everything they need. Chef’s kiss is an application for novice chefs or even more experienced users who want to keep track of the ingredients and recipes they use.</mutableString>
+                                <string key="text">Chef’s kiss is a modern, digital recipe book that has many features that would are very useful for cooking a meal. First of all, having a list of recipes to scroll through, complete with pictures and preview can help a user decide on one to click on. When clicked, everything needed to cook it appears. Saving the recipes for posterior consulting is important so a user can go back quickly and easily. If a user does not decide for a recipe, they can input the ingredients on hand in order to receive a list of recipes that use those ingredients. Another feature includes a grocery list based on saved recipes that updates accordingly so a user can buy everything they need. Chef’s kiss is an application for novice chefs or even more experienced users who want to keep track of the ingredients and recipes they use.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
