@@ -35,6 +35,10 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         // logo format function
         addNavBarImage()
         
+        // holds the visible recipes in cookbook
+        // will change if filters applied (see filter func)
+        var filteredRecipes = userLikedRecipes
+        
         // set table view data source and delegate to self
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
@@ -69,8 +73,10 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         // cell description fon to user default font
         cell.recipeDescription.font = UIFont(name: fontSet!, size: 18)
         
+        // set URL to the Recipe's image URL property
         let imageURL = URL(string: filteredRecipes[row].recipeImage)!
         
+        // start session to prep app to access the URL address
         let session = URLSession(configuration: .default)
         
         // Create a task for accessing the image
@@ -93,6 +99,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         }
         task.resume()
         
+        // return the table view cell with recipe content
         return cell
     }
     
@@ -101,11 +108,10 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
             
             favoritesTableView.deselectRow(at: indexPath, animated: true)
             let row = indexPath.row
-            //let otherVC = delegate as! DisplayRecipe
-            let selectedRecipe = recipes[row]
-           // otherVC.sendAllInfo(someRecipe: selectedRecipe)
 
-    //        send data to next VC
+            let selectedRecipe = userLikedRecipes[row]
+            
+            // send recipe info to Scroll View VC
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ScrollRecipeViewController") as! ScrollRecipeViewController
             
             vc.title1 = selectedRecipe.title
@@ -162,9 +168,12 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     func filter(tempDietFilters: [Recipe.diet], tempDishFilters: [Recipe.dishType]) {
         filteredRecipes = []
         
+        // filter the recipes using the filter switches selected by the user
+        // filters are stored as enum values in the temporary filter arrays
+        // each enum filter is checked against the recipe properties to either keep it or filter it out
         for filter in tempDishFilters{
             for otherfilter in tempDietFilters{
-                for recipe in recipes{
+                for recipe in userLikedRecipes{
                     if recipe.dish == filter && recipe.dietaryRestr == otherfilter {
                     filteredRecipes.append(recipe)
                 }
