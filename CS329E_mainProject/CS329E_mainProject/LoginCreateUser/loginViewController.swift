@@ -153,17 +153,16 @@ class loginViewController: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: userTF.text!, password: passwordTF.text!) {
-                    authResult, error in
-                    if let error = error as NSError? {
-                        self.statusLabel.text = "\(error.localizedDescription)"
-                    }
-                    else {
-                        self.statusLabel.text = "Account created!"
-                        self.performSegue(withIdentifier: "createUserNextSegue", sender: nil)
-                    }
-                }
-    }
-   
     
+        Auth.auth().createUser(withEmail: userTF.text!, password: passwordTF.text!) {
+            authResult, error in
+                if let error = error as NSError? {
+                    self.statusLabel.text = "\(error.localizedDescription)"
+                }
+                else {
+                    self.statusLabel.text = "Account created!"
+                    self.performSegue(withIdentifier: "createUserNextSegue", sender: nil)
+                }
+        }
+    }
 }
