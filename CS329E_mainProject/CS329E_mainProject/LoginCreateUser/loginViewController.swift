@@ -26,12 +26,15 @@ class loginViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var cpTextF: UITextField!
     
+    let userDefaultInitializer = CustomDefaults()
+    
     let queue = DispatchQueue(label: "myQueue")
     
     let manager = CMMotionManager()
     
     override func viewDidLoad() {
         
+        userDefaultInitializer.setUp()
         
         super.viewDidLoad()
         //hide create account stuff

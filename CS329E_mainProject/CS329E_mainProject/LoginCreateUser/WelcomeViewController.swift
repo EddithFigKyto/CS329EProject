@@ -19,7 +19,12 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var enterButtonOutlet: UIButton!
     
+    let initialDefaults = CustomDefaults()
+    
     override func viewDidLoad() {
+        //initialDefaults.setUp()
+        //userCustomizations.set(true, forKey: "changed")
+    
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
