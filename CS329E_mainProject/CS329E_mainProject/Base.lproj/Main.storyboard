@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9bh-SM-NFK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -1540,7 +1540,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Enter"/>
                                 <connections>
                                     <action selector="enterButtonPressed:" destination="hFV-1v-ahp" eventType="touchUpInside" id="3u3-Dn-vqZ"/>
-                                    <segue destination="KKd-1T-cZq" kind="presentation" identifier="profilePictureSegue" modalPresentationStyle="fullScreen" id="4Ad-gX-wNQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Your Birthday:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-M9-DqH">
@@ -1570,6 +1569,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-MI-JrX">
+                                <rect key="frame" x="175" y="503" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ohE-Fd-HDl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1591,17 +1597,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthdayFormatCheckerLabel" destination="tpr-MI-JrX" id="weu-5W-JNT"/>
                         <outlet property="birthdayTextField" destination="sdQ-5l-eC1" id="rDP-Ov-rYV"/>
                         <outlet property="dateFormatLabel" destination="0KZ-xd-WKG" id="wUy-I3-at0"/>
                         <outlet property="enterButtonOutlet" destination="MtO-2x-Z91" id="HIs-c0-IWx"/>
                         <outlet property="enterYourBirthdayLabel" destination="m9I-M9-DqH" id="B4N-lf-1eY"/>
                         <outlet property="enterYourNameLabel" destination="i15-Za-q9P" id="fRm-mg-SCL"/>
                         <outlet property="nameTextField" destination="aMD-tB-eNh" id="yBW-Bc-3cH"/>
+                        <segue destination="KKd-1T-cZq" kind="presentation" identifier="profilePictureSegue" modalPresentationStyle="fullScreen" id="4he-Jc-qZF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug6-PW-9at" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3810" y="-1392"/>
+            <point key="canvasLocation" x="-3827" y="-1392"/>
         </scene>
         <!--Pick Profile Picture View Controller-->
         <scene sceneID="ekB-qt-4xw">

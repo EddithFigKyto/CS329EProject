@@ -17,21 +17,50 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var enterYourBirthdayLabel: UILabel!
     @IBOutlet weak var dateFormatLabel: UILabel!
     
+    @IBOutlet weak var birthdayFormatCheckerLabel: UILabel!
     @IBOutlet weak var enterButtonOutlet: UIButton!
     
     let initialDefaults = CustomDefaults()
     
     override func viewDidLoad() {
-        //initialDefaults.setUp()
-        //userCustomizations.set(true, forKey: "changed")
-    
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        enterYourNameLabel.font = UIFont(name: "Avenir Next", size: 18)
+        enterYourBirthdayLabel.font = UIFont(name: "Avenir Next", size: 18)
+        dateFormatLabel.font = UIFont(name: "Avenir Next", size: 18)
+        
+    
     }
     
     @IBAction func enterButtonPressed(_ sender: Any) {
         
+//        if birthdayTextField.text!.range(of: #"^[01-12]\/[01-31]\/[1900-2022]\z"#, options: .regularExpression, range: nil, locale: nil) == nil{
+//
+//            dateFormatLabel.text! = "Birthday Entered Invalid"
+//
+//        }
+//        else{
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "MM/dd/yyyy"
+        let date = birthdayTextField.text!
+
+        if dateFormatterGet.date(from: date) != nil {
+            userCustomizations.set(nameTextField.text!, forKey: "name")
+            userCustomizations.set(birthdayTextField.text!, forKey: "birthday")
+            self.performSegue(withIdentifier: "profilePictureSegue", sender: self)
+        } else {
+            birthdayFormatCheckerLabel.text! = "Birthday Entered Invalid"
+        }
+        
+        
+        
+        
+        
+        
+            
+            
+        //}
         
     }
     

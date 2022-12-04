@@ -14,6 +14,7 @@ class CustomDefaults{
     //keys for defaults
     let uNameKey = "user name"
     let uBirthdayKey = "birthday"
+    let uEmailKey = "email"
     let uFontKey = "font"
     let uDietKey = "diet"
     let uColorKey = "color"
@@ -22,6 +23,7 @@ class CustomDefaults{
     //values for associated keys
     let name = "Jane Doe"
     let birthday = "07/17/1999"
+    let email = "test@hotmail.com"
     let font = "Avenir Next"
     let diet:[String] = [""]
     let color = "cyan"
@@ -34,6 +36,7 @@ class CustomDefaults{
             
             userCustomizations.set(name, forKey: uNameKey)
             userCustomizations.set(birthday, forKey: uBirthdayKey)
+            userCustomizations.set(email, forKey: uEmailKey)
             userCustomizations.set(font, forKey: uFontKey)
             userCustomizations.set(diet, forKey: uDietKey)
             userCustomizations.set(color, forKey: uColorKey)

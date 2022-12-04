@@ -27,7 +27,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     //variable to store the user's name
     public var name = "Kyto"
     
-    public let userSettings = CustomDefaults()
+    //public let userSettings = CustomDefaults()
     
     //Outlets for labels and buttons on the VC
 
@@ -42,7 +42,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userSettings.setUp()
+        //userSettings.setUp()
         addNavBarImage()
         
         //Set greeting to user's name and change font to Avenir Next, size 22
