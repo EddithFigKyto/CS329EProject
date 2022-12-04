@@ -34,6 +34,9 @@ class loginViewController: UIViewController {
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
         
+        passwordTF.isSecureTextEntry = true
+
+        
         addNavBarImage()
     }
     @IBAction func handleRight(recognizer: UISwipeGestureRecognizer) {
@@ -64,14 +67,13 @@ class loginViewController: UIViewController {
             }
             else {
                 self.statusLabel.text = ""
-                self.performSegue(withIdentifier: "loggedSegue", sender: self)
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
-
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
-        Auth.auth().createUser(withEmail: userTF.text!, password: passwordTF.text!) { [self]
+        Auth.auth().createUser(withEmail: userTF.text!, password: passwordTF.text!) {
                     authResult, error in
                     if let error = error as NSError? {
                         self.statusLabel.text = "\(error.localizedDescription)"
@@ -89,5 +91,4 @@ class loginViewController: UIViewController {
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
 }
