@@ -25,8 +25,6 @@ class loginViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var cpTextF: UITextField!
     
-    var bool1 = true
-    
     let queue = DispatchQueue(label: "myQueue")
     
     override func viewDidLoad() {
@@ -103,9 +101,7 @@ class loginViewController: UIViewController {
                     DispatchQueue.main.sync {
                         self.performSegue(withIdentifier: "loginSegue", sender: nil)
                     }
-
                 }
-                
             }
         }
     }
