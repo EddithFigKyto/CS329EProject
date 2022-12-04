@@ -138,7 +138,6 @@
 			children = (
 				AE2957B62900486400FFDBB0 /* UserSettings */,
 				F436D586291C2F5A0088BA02 /* RecipeCreation  */,
-				A59CFB452900DEDF00FB3B05 /* Cookbook */,
 				AEF44305292567AA004B9B66 /* LoginCreateUser */,
 				A584769828FC665A007AC1E7 /* AppDelegate.swift */,
 				A584769A28FC665A007AC1E7 /* SceneDelegate.swift */,
@@ -205,6 +204,7 @@
 		F436D586291C2F5A0088BA02 /* RecipeCreation  */ = {
 			isa = PBXGroup;
 			children = (
+				A59CFB452900DEDF00FB3B05 /* Cookbook */,
 				F4F92619291B918E009E13B7 /* RecipeCreationVC.swift */,
 				F4F9261F291C2D51009E13B7 /* RecipeCreationVC2.swift */,
 				F4F9261D291B9793009E13B7 /* MeasurementVC.swift */,

@@ -8,8 +8,10 @@
 import UIKit
 import FirebaseAuth
 
+
 class loginViewController: UIViewController {
 
+    @IBOutlet weak var learn: UILabel!
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var segControl: UISegmentedControl!
@@ -18,7 +20,14 @@ class loginViewController: UIViewController {
     @IBOutlet weak var cpLabel: UILabel!
     @IBOutlet weak var createAccount: UIButton!
 
+    @IBOutlet weak var welcomeLabel2: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var cpTextF: UITextField!
+    
+    var bool1 = true
+    
+    let queue = DispatchQueue(label: "myQueue")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +38,7 @@ class loginViewController: UIViewController {
         cpLabel.isHidden = true
         createAccount.isHidden = true
         logInButton.isHidden = false
+
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleRight(recognizer:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
@@ -67,7 +77,35 @@ class loginViewController: UIViewController {
             }
             else {
                 self.statusLabel.text = ""
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                //create a welcome __name
+                self.segControl.isHidden = true
+                self.userTF.isHidden = true
+                self.userLabel.isHidden = true
+                self.passwordLabel.isHidden = true
+                self.passwordTF.isHidden = true
+                self.learn.isHidden = true
+                self.logInButton.isHidden = true
+                self.welcomeLabel2.text = "Welcome to chef's kiss!"
+                self.welcomeLabel2.font = UIFont(name: "Avenir Next", size: 25)
+                
+                
+                self.queue.async {
+                    DispatchQueue.main.sync {
+                        self.welcomeLabel2.alpha = 0.0
+                        UIView.animate (
+                            withDuration: 5.0,
+                            animations: {
+                                self.welcomeLabel2.alpha = 1.0
+                            }
+                        )
+                    }
+                    sleep(5)
+                    DispatchQueue.main.sync {
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    }
+
+                }
+                
             }
         }
     }
