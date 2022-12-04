@@ -1569,9 +1569,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-MI-JrX">
-                                <rect key="frame" x="175" y="503" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpr-MI-JrX">
+                                <rect key="frame" x="196.66666666666666" y="535.33333333333337" width="0.0" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="TxK-VN-B7d"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1585,6 +1587,7 @@
                             <constraint firstItem="m9I-M9-DqH" firstAttribute="top" secondItem="aMD-tB-eNh" secondAttribute="bottom" constant="75" id="3zk-RV-TR9"/>
                             <constraint firstItem="sdQ-5l-eC1" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="6k1-2b-XaQ"/>
                             <constraint firstItem="0KZ-xd-WKG" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="8Wm-Bq-MYp"/>
+                            <constraint firstItem="tpr-MI-JrX" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="8q8-9M-8TL"/>
                             <constraint firstItem="aMD-tB-eNh" firstAttribute="top" secondItem="i15-Za-q9P" secondAttribute="bottom" constant="25" id="CzS-ja-gk2"/>
                             <constraint firstItem="i15-Za-q9P" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="DpL-47-lEH"/>
                             <constraint firstItem="vo0-yx-ANo" firstAttribute="top" secondItem="ohE-Fd-HDl" secondAttribute="top" id="JmP-IE-rbS"/>
@@ -1594,6 +1597,7 @@
                             <constraint firstItem="i15-Za-q9P" firstAttribute="top" secondItem="vo0-yx-ANo" secondAttribute="bottom" constant="75" id="lh3-OS-eLf"/>
                             <constraint firstItem="m9I-M9-DqH" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="rEN-5U-XM8"/>
                             <constraint firstItem="aMD-tB-eNh" firstAttribute="centerX" secondItem="kX1-W4-HWl" secondAttribute="centerX" id="sd3-ho-EVF"/>
+                            <constraint firstItem="MtO-2x-Z91" firstAttribute="top" secondItem="tpr-MI-JrX" secondAttribute="bottom" constant="30" id="xb5-Uf-u0q"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1609,7 +1613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug6-PW-9at" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3827" y="-1392"/>
+            <point key="canvasLocation" x="-3828.2442748091603" y="-1392.2535211267607"/>
         </scene>
         <!--Pick Profile Picture View Controller-->
         <scene sceneID="ekB-qt-4xw">

@@ -34,13 +34,6 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func enterButtonPressed(_ sender: Any) {
         
-//        if birthdayTextField.text!.range(of: #"^[01-12]\/[01-31]\/[1900-2022]\z"#, options: .regularExpression, range: nil, locale: nil) == nil{
-//
-//            dateFormatLabel.text! = "Birthday Entered Invalid"
-//
-//        }
-//        else{
-        
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MM/dd/yyyy"
         let date = birthdayTextField.text!
@@ -52,15 +45,6 @@ class WelcomeViewController: UIViewController {
         } else {
             birthdayFormatCheckerLabel.text! = "Birthday Entered Invalid"
         }
-        
-        
-        
-        
-        
-        
-            
-            
-        //}
         
     }
     
