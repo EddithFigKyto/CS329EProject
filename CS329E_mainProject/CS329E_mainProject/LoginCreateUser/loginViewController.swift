@@ -117,7 +117,7 @@ class loginViewController: UIViewController {
                         self.statusLabel.text = "\(error.localizedDescription)"
                     }
                     else {
-                        self.statusLabel.text = ""
+                        self.statusLabel.text = "Account created"
                     }
                 }
     }
