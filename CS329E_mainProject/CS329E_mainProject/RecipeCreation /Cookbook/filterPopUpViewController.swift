@@ -213,13 +213,13 @@ class filterPopUpViewController: UIViewController {
     // once user applies the filter, the filteredRecipes array in allCookbookRecipesVC is changed to reflect filters
     @IBAction func applyFiltersPressed(_ sender: Any) {
         
-        if tempDietFilters == [] {
-            tempDietFilters = [Recipe.diet.gluten_free, Recipe.diet.lactose_free, Recipe.diet.sugar_free, Recipe.diet.vegan, Recipe.diet.vegetarian, Recipe.diet.nut_free, Recipe.diet.halal]
-        }
-        
-        if tempDishFilters == [] {
-            tempDishFilters = [Recipe.dishType.main, Recipe.dishType.drinks, Recipe.dishType.salad, Recipe.dishType.side, Recipe.dishType.dessert]
-        }
+//        if tempDietFilters == [] {
+//            tempDietFilters = [Recipe.diet.gluten_free, Recipe.diet.lactose_free, Recipe.diet.sugar_free, Recipe.diet.vegan, Recipe.diet.vegetarian, Recipe.diet.nut_free, Recipe.diet.halal]
+//        }
+//
+//        if tempDishFilters == [] {
+//            tempDishFilters = [Recipe.dishType.main, Recipe.dishType.drinks, Recipe.dishType.salad, Recipe.dishType.side, Recipe.dishType.dessert]
+//        }
         
         let otherVC = delegate as! filterProtocol
         otherVC.filter(tempDietFilters: tempDietFilters, tempDishFilters: tempDishFilters)

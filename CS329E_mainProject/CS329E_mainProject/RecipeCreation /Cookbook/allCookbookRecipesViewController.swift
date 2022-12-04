@@ -35,9 +35,6 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         // logo format function
         addNavBarImage()
         
-        // holds the visible recipes in cookbook
-        // will change if filters applied (see filter func)
-        var filteredRecipes = userLikedRecipes
         
         // set table view data source and delegate to self
         favoritesTableView.dataSource = self
@@ -171,12 +168,43 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         // filter the recipes using the filter switches selected by the user
         // filters are stored as enum values in the temporary filter arrays
         // each enum filter is checked against the recipe properties to either keep it or filter it out
-        for filter in tempDishFilters{
-            for otherfilter in tempDietFilters{
-                for recipe in userLikedRecipes{
-                    if recipe.dish == filter && recipe.dietaryRestr == otherfilter {
-                    filteredRecipes.append(recipe)
+        
+        // if no filters are selected
+        if tempDietFilters == [] && tempDishFilters == [] {
+            filteredRecipes = userLikedRecipes
+        }
+        
+        // if only dish filters are selected
+        else if tempDietFilters == [] && tempDishFilters != [] {
+            for filter in tempDishFilters {
+                for recipe in userLikedRecipes {
+                    if recipe.dish == filter {
+                        filteredRecipes.append(recipe)
+                    }
                 }
+            }
+        }
+        
+        // if only diet filters are selected
+        else if tempDishFilters == [] && tempDietFilters != [] {
+            for filter in tempDietFilters {
+                for recipe in userLikedRecipes {
+                    if recipe.dietaryRestr == filter {
+                        filteredRecipes.append(recipe)
+                    }
+                }
+            }
+        }
+        
+        // if both filter types are selected
+        else {
+            for filter in tempDishFilters {
+                for otherfilter in tempDietFilters {
+                    for recipe in userLikedRecipes {
+                        if recipe.dish == filter && recipe.dietaryRestr == otherfilter {
+                            filteredRecipes.append(recipe)
+                        }
+                    }
                 }
             }
         }
