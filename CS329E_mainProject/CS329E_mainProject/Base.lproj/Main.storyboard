@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FQT-6I-1mK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1388,11 +1388,12 @@
                         <outlet property="statusLabel" destination="KoS-Be-erc" id="Hgk-Ab-2pS"/>
                         <outlet property="userLabel" destination="5DX-ky-C2q" id="eCq-0L-odN"/>
                         <outlet property="userTF" destination="tfE-zX-ALZ" id="lo4-xK-lXW"/>
+                        <segue destination="9bh-SM-NFK" kind="presentation" identifier="createUserNextSegue" modalPresentationStyle="fullScreen" id="jkt-Me-iFD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6j-2P-N2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2489.3129770992364" y="-565.49295774647885"/>
+            <point key="canvasLocation" x="-5956" y="-821"/>
         </scene>
         <!--Learn More View Controller-->
         <scene sceneID="meg-gV-eA1">
@@ -1423,7 +1424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfI-sP-1CM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1709.1603053435115" y="233.80281690140845"/>
+            <point key="canvasLocation" x="-4987" y="128"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qrP-St-VyP">
@@ -1508,7 +1509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vxd-L8-A2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4407" y="-2132"/>
+            <point key="canvasLocation" x="-4639" y="-1392"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="XBH-0J-dyU">
@@ -1600,7 +1601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ug6-PW-9at" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3663.3587786259541" y="-2131.6901408450703"/>
+            <point key="canvasLocation" x="-3810" y="-1392"/>
         </scene>
         <!--Pick Profile Picture View Controller-->
         <scene sceneID="ekB-qt-4xw">
@@ -1694,7 +1695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lus-GT-3vz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2832" y="-2136"/>
+            <point key="canvasLocation" x="-2992" y="-1392"/>
         </scene>
         <!--Initial Diet View Controller-->
         <scene sceneID="BTw-uJ-msi">
@@ -1787,6 +1788,9 @@
                                 <rect key="frame" x="166" y="683" width="61" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <segue destination="Kxc-Af-0DV" kind="presentation" identifier="createHomeScreenSegue" modalPresentationStyle="fullScreen" id="9rc-AF-GxU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3IV-ag-stM"/>
@@ -1839,7 +1843,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vxa-Ca-5VX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1892" y="-2136"/>
+            <point key="canvasLocation" x="-2163" y="-1392"/>
         </scene>
         <!--Personal Settings-->
         <scene sceneID="H1j-SA-lHh">
@@ -2427,6 +2431,9 @@
             <point key="canvasLocation" x="2826.7175572519081" y="-139.43661971830986"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hpI-QM-gWi"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="banner1" width="667" height="213"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>

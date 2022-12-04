@@ -31,6 +31,8 @@ class loginViewController: UIViewController {
     let manager = CMMotionManager()
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         //hide create account stuff
         passwordTF.isSecureTextEntry = true
@@ -88,6 +90,7 @@ class loginViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleRight(recognizer:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
+        
         
         
     }
@@ -156,7 +159,8 @@ class loginViewController: UIViewController {
                         self.statusLabel.text = "\(error.localizedDescription)"
                     }
                     else {
-                        self.statusLabel.text = "Account created, ready to log in."
+                        self.statusLabel.text = "Account created!"
+                        self.performSegue(withIdentifier: "createUserNextSegue", sender: nil)
                     }
                 }
     }
