@@ -7,10 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import CoreMotion
 
 
 class loginViewController: UIViewController {
-
+    
     @IBOutlet weak var learn: UILabel!
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -27,8 +28,11 @@ class loginViewController: UIViewController {
     
     let queue = DispatchQueue(label: "myQueue")
     
+    let manager = CMMotionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //hide create account stuff
         passwordTF.isSecureTextEntry = true
         cpTextF.isSecureTextEntry = true
         cpTextF.isHidden = true
@@ -37,16 +41,55 @@ class loginViewController: UIViewController {
         createAccount.isHidden = true
         logInButton.isHidden = false
         animationImage.isHidden = true
-
+        passwordTF.isSecureTextEntry = true
         
+        //shake alert
+        var xInPositiveDirection = 0.0
+        var xInNegativeDirection = 0.0
+        var shakeCount = 0
+        var tempVariable = 0
+        
+        manager.deviceMotionUpdateInterval = 0.02
+        
+        manager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: {
+            (data, error) in
+            if data!.userAcceleration.x > 1.0 || data!.userAcceleration.x < -1.0 {
+                if data!.userAcceleration.x > 1.0 {
+                    xInPositiveDirection = data!.userAcceleration.x
+                }
+                if data!.userAcceleration.x < -1.0 {
+                    xInNegativeDirection = data!.userAcceleration.x
+                }
+                if xInPositiveDirection != 0.0 && xInNegativeDirection != 0.0 {
+                    shakeCount = shakeCount + 1
+                    xInPositiveDirection = 0.0
+                    xInNegativeDirection = 0.0
+                }
+                
+                if shakeCount > 5 {
+                    tempVariable = tempVariable + 1
+                    let controller = UIAlertController(title: "Did something go wrong?", message: "Report a probem", preferredStyle: .alert)
+                    controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                    controller.addTextField(configurationHandler: {
+                        (textField:UITextField!) in
+                        textField.placeholder = "Enter something"
+                    })
+                    controller.addAction(UIAlertAction(title: "Report", style: .default))
+                    self.present(controller, animated: true)
+                    shakeCount = 0
+                }
+                
+            }
+        })
+    
+ 
+
+        //swipe right
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleRight(recognizer:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
         
-        passwordTF.isSecureTextEntry = true
-
         
-        addNavBarImage()
     }
     @IBAction func handleRight(recognizer: UISwipeGestureRecognizer) {
         performSegue(withIdentifier: "learnMoreSegue", sender: self)
@@ -118,11 +161,5 @@ class loginViewController: UIViewController {
                 }
     }
    
-    func addNavBarImage() {
-        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
-        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
-        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
-        titleView.addSubview(titleImageView)
-        navigationItem.titleView = titleView
-    }
+    
 }
