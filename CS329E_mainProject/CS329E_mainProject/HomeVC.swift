@@ -57,6 +57,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         cell.titleLabel.text = selectedRecipe.title
         cell.descriptionLabel.text = selectedRecipe.description[0]
+        cell.descriptionLabel.numberOfLines = 0 //unlimited lines 
         cell.picture.image = UIImage(named: "greek_salad")
         cell.picture.layer.cornerRadius = 10
         cell.picture.clipsToBounds = true
