@@ -48,6 +48,8 @@ class CustomizationViewController: UIViewController {
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
+        UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +58,8 @@ class CustomizationViewController: UIViewController {
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
+        
+        UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
         
     }
     

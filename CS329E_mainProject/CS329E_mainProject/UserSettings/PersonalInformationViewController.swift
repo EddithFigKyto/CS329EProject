@@ -71,6 +71,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         deleteAccountButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
+        //setChosenColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +93,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
+        //setChosenColor()
     }
     
     @IBAction func nameEditorPressed(_ sender: Any) {

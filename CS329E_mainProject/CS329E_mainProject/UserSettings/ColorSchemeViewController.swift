@@ -9,9 +9,27 @@ import UIKit
 
 public var colorSet = userCustomizations.string(forKey: "color")
 
-
-
 let colors = ["cyan", "pink", "black", "purple", "green"]
+
+public func setChosenColor(){
+    
+    switch userCustomizations.string(forKey: "color") {
+    case "cyan":
+        chosenColor = UIColor.systemCyan
+    case "pink":
+        chosenColor = UIColor.systemPink
+    case "black":
+        chosenColor = UIColor.black
+    case "purple":
+        chosenColor = UIColor.systemPurple
+    case "green":
+        chosenColor = UIColor.systemGreen
+    default:
+        chosenColor = UIColor.systemCyan
+    }
+    
+    
+}
 
 class ColorSchemeViewController: UIViewController {
     
@@ -56,6 +74,7 @@ class ColorSchemeViewController: UIViewController {
         greenLabel.font = UIFont(name: fontSet!, size: 18)
         greenLabel.textColor = UIColor.systemGreen
         
+        setChosenColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +97,6 @@ class ColorSchemeViewController: UIViewController {
         
         greenLabel.font = UIFont(name: fontSet!, size: 18)
         greenLabel.textColor = UIColor.green
-        
         
         let index = colors.firstIndex(of: colorSet!)
         cyanSwitch.setOn(0 == index, animated: true)
@@ -164,6 +182,8 @@ class ColorSchemeViewController: UIViewController {
             viewWillAppear(true)
         }
     }
+    
+    
     
     
     

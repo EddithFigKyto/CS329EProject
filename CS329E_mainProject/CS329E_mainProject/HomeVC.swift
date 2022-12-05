@@ -10,10 +10,6 @@ import UIKit
 
 class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -32,7 +28,13 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 print(error.localizedDescription)
             }
         }
-   
+        setChosenColor()
+        UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setChosenColor()
+        UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
