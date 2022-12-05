@@ -36,9 +36,6 @@ class DietViewController: UIViewController {
     
     @IBOutlet weak var profilePicture: UIImageView!
     
-
-    
-    
     
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
@@ -69,8 +66,7 @@ class DietViewController: UIViewController {
         glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
-        
-        //dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
+
         
 
         
@@ -87,15 +83,12 @@ class DietViewController: UIViewController {
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
         
-        //dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
-        
         vegetarianSwitch.setOn(dietPreferences!.contains("vegetarian"), animated: true)
         veganSwitch.setOn(dietPreferences!.contains("vegan"), animated: true)
         glutenFreeSwitch.setOn(dietPreferences!.contains("gluten-free"), animated: true)
         nutFreeSwitch.setOn(dietPreferences!.contains("nut-free"), animated: true)
         halalSwitch.setOn(dietPreferences!.contains("halal"), animated: true)
         
-
     }
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
@@ -112,7 +105,6 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-
 
     }
     
