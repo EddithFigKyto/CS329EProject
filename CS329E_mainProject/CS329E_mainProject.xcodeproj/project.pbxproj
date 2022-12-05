@@ -29,6 +29,7 @@
 		A59CFB402900DD9900FB3B05 /* allCookbookRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */; };
 		A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */; };
 		A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEE7E92915829D00ECB92E /* Recipes.swift */; };
+		A5FB633E293E724900BE2901 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A5FB633D293E724900BE2901 /* README.rtf */; };
 		AE1FA09D2927AB6E00C184A9 /* ColorSchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */; };
 		AE27DCF7290EF2CB000B369B /* FontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */; };
 		AE30C90A290342DC004586FC /* CustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE30C909290342DC004586FC /* CustomizationViewController.swift */; };
@@ -74,6 +75,7 @@
 		A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allCookbookRecipesViewController.swift; sourceTree = "<group>"; };
 		A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
 		A5DEE7E92915829D00ECB92E /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		A5FB633D293E724900BE2901 /* README.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = README.rtf; path = "../../../Library/Developer/Xcode/DerivedData/CS329E_mainProject-bwmyjhmamgtmfddcsbcjlygtjybw/SourcePackages/checkouts/leveldb/README.rtf"; sourceTree = "<group>"; };
 		AE1FA09C2927AB6E00C184A9 /* ColorSchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeViewController.swift; sourceTree = "<group>"; };
 		AE27DCF6290EF2CB000B369B /* FontPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPickerViewController.swift; sourceTree = "<group>"; };
 		AE30C909290342DC004586FC /* CustomizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		A584768C28FC665A007AC1E7 = {
 			isa = PBXGroup;
 			children = (
+				A5FB633D293E724900BE2901 /* README.rtf */,
 				A584769728FC665A007AC1E7 /* CS329E_mainProject */,
 				A584769628FC665A007AC1E7 /* Products */,
 				A556FD4B291EA6BE008C0C43 /* Frameworks */,
@@ -282,6 +285,7 @@
 				82507E8D290EF19D00837CD3 /* GoogleService-Info.plist in Resources */,
 				A58476A528FC665A007AC1E7 /* Assets.xcassets in Resources */,
 				A58476A028FC665A007AC1E7 /* Main.storyboard in Resources */,
+				A5FB633E293E724900BE2901 /* README.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
