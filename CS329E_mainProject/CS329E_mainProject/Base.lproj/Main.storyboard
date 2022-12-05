@@ -539,7 +539,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
-                                <rect key="frame" x="154" y="654" width="85" height="35"/>
+                                <rect key="frame" x="154" y="639" width="85" height="35"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -563,7 +563,7 @@
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="leading" secondItem="JL1-Uz-ZSZ" secondAttribute="leading" id="RJK-l6-AkY"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="top" secondItem="C7E-5R-1NA" secondAttribute="bottom" constant="20" id="Vaq-Um-ZBT"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="trailing" secondItem="C7E-5R-1NA" secondAttribute="trailing" id="Vnk-wx-rxN"/>
-                            <constraint firstItem="giX-BB-Bw4" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="50" id="eq5-IX-vEc"/>
+                            <constraint firstItem="giX-BB-Bw4" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="35" id="eq5-IX-vEc"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="leading" secondItem="C7E-5R-1NA" secondAttribute="leading" id="h8m-J1-Mwf"/>
                             <constraint firstItem="JL1-Uz-ZSZ" firstAttribute="top" secondItem="yqA-ew-j3z" secondAttribute="bottom" constant="25" id="jwb-Qd-V6E"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="odY-h9-T0N"/>
@@ -1189,6 +1189,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2Y-fD-uog">
+                                <rect key="frame" x="111" y="684" width="171" height="35"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DELETE ACCOUNT"/>
+                                <connections>
+                                    <action selector="deleteAccountButtonPressed:" destination="VQE-bg-tNz" eventType="touchUpInside" id="p6A-Cx-fhf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wmJ-9b-WQR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1197,6 +1206,8 @@
                             <constraint firstItem="pr2-vR-aFV" firstAttribute="centerY" secondItem="CR7-CL-V1D" secondAttribute="centerY" id="2Co-yU-NML"/>
                             <constraint firstItem="1Hr-LE-ccn" firstAttribute="leading" secondItem="hZB-ex-opy" secondAttribute="trailing" constant="10" id="76q-mc-VgG"/>
                             <constraint firstItem="1Hr-LE-ccn" firstAttribute="centerY" secondItem="hZB-ex-opy" secondAttribute="centerY" id="BGh-dX-5Ea"/>
+                            <constraint firstItem="wmJ-9b-WQR" firstAttribute="bottom" secondItem="U2Y-fD-uog" secondAttribute="bottom" constant="50" id="Cbh-cf-1Hx"/>
+                            <constraint firstItem="U2Y-fD-uog" firstAttribute="centerX" secondItem="sqS-zv-ECn" secondAttribute="centerX" id="Cse-y8-IQY"/>
                             <constraint firstItem="3Ua-dU-fjq" firstAttribute="leading" secondItem="gpd-xj-Nf4" secondAttribute="leading" id="Evz-hR-Soe"/>
                             <constraint firstItem="ULL-CA-qGc" firstAttribute="centerY" secondItem="3Ua-dU-fjq" secondAttribute="centerY" id="IrL-OR-gNg"/>
                             <constraint firstItem="hZB-ex-opy" firstAttribute="leading" secondItem="3Ua-dU-fjq" secondAttribute="leading" id="J7E-hd-4UW"/>
@@ -1219,6 +1230,7 @@
                     <connections>
                         <outlet property="birthdayEditor" destination="hZB-ex-opy" id="vF9-R5-PJG"/>
                         <outlet property="birthdayLabel" destination="1Hr-LE-ccn" id="lsS-W1-Fiw"/>
+                        <outlet property="deleteAccountButton" destination="U2Y-fD-uog" id="0An-K8-wkl"/>
                         <outlet property="editMessageLabel" destination="hyv-J2-0t2" id="rZC-Y0-O4Q"/>
                         <outlet property="emailEditor" destination="3Ua-dU-fjq" id="EXQ-JO-3ha"/>
                         <outlet property="emailLabel" destination="ULL-CA-qGc" id="qGU-e1-QLm"/>

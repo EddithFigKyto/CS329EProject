@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PersonalInformationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -25,6 +26,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var editMessageLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     
+    @IBOutlet weak var deleteAccountButton: UIButton!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
@@ -66,6 +68,8 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
+        
+        deleteAccountButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
     }
     
@@ -193,6 +197,37 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         picker.dismiss(animated: true, completion: nil)
     }
     
+    
+    
+    @IBAction func deleteAccountButtonPressed(_ sender: Any) {
+        
+        let controller = UIAlertController(
+            title: "Are you sure you want to permanently delete your account?",
+            message: "This action cannot be reversed.",
+            preferredStyle: .alert)
+        controller.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel))
+        controller.addAction(UIAlertAction(
+            title: "Delete Account",
+            style: .destructive,
+            handler: {
+                (paramAction:UIAlertAction!) in
+                let user = Auth.auth().currentUser
+                
+                user?.delete()
+                if let storyboard = self.storyboard{
+                    let vc = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: false, completion: nil)
+                }
+                    
+                }
+            ))
+        present(controller, animated: true)
+    
+        }
+ 
     
     // changes navigation bar image to the app logo and formats it to be centered on the top of the screen
     func addNavBarImage() {
