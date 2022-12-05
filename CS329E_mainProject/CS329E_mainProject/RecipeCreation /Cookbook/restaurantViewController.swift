@@ -21,6 +21,9 @@ class restaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        addNavBarImage()
+        
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
@@ -40,6 +43,16 @@ class restaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.setRegion(region, animated: true)
+    }
+    
+    // logo formatting function
+    func addNavBarImage() {
+        
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
 
 }

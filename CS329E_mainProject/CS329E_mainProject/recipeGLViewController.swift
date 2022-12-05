@@ -19,6 +19,9 @@ class recipeGLViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addNavBarImage()
+        
         ingridientLabel.text = itemName
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,5 +45,15 @@ class recipeGLViewController: UIViewController, UITableViewDelegate, UITableView
         if segue.identifier == "recipeSegue1" {
             let destination = segue.destination as? ScrollRecipeViewController
         }
+    }
+    
+    // logo formatting function
+    func addNavBarImage() {
+        
+        let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
+        let titleImageView = UIImageView(image: UIImage(named: "banner1"))
+        titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
+        titleView.addSubview(titleImageView)
+        navigationItem.titleView = titleView
     }
 }
