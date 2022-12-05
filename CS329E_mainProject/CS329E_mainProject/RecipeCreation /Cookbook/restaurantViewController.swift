@@ -26,8 +26,25 @@ class restaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
             latitude: 30.286494630162007,
             longitude: -97.73658237371653)
         
+        // pin title displays location to the user
+        pin.title = "Your Location"
+        
         // add pin of test location
         mapView.addAnnotation(pin)
+        
+        // example restaurant 1
+        var restaurant1 = MKPointAnnotation()
+        restaurant1.coordinate = CLLocationCoordinate2D(latitude: 30.285946037676595, longitude: -97.74210517359552)
+        restaurant1.title = "Sweet Green"
+        
+        mapView.addAnnotation(restaurant1)
+        
+        // example restaurant 2
+        var restaurant2 = MKPointAnnotation()
+        restaurant2.coordinate = CLLocationCoordinate2D(latitude: 30.286796263108872, longitude: -97.74119920734401)
+        restaurant2.title = "Chick-fil-a"
+        
+        mapView.addAnnotation(restaurant2)
         
     }
     
@@ -55,19 +72,21 @@ class restaurantViewController: UIViewController, MKMapViewDelegate, CLLocationM
     // for demonstration, if user selects Show My Location, map will zoom to test location
     @IBAction func showLocationPress(_ sender: Any) {
 
-            let center = CLLocationCoordinate2D(
-                latitude: 30.286494630162007,
-                longitude: -97.73658237371653)
+        // test location
+        let center = CLLocationCoordinate2D(latitude: 30.286494630162007, longitude: -97.73658237371653)
+        
+        // size of location view
+        let NSdistance = 1500.0   // meters
+        let EWdistance = 1500.0
+        
+        // create region of view for user
+        let region = MKCoordinateRegion(
+            center: center,
+            latitudinalMeters: NSdistance,
+            longitudinalMeters: EWdistance)
             
-        let NSdistance = 500.0   // meters
-        let EWdistance = 500.0
-            
-            let region = MKCoordinateRegion(
-                center: center,
-                latitudinalMeters: NSdistance,
-                longitudinalMeters: EWdistance)
-            
-            mapView.setRegion(region, animated: true)
+        // zoom in to region of view for user
+        mapView.setRegion(region, animated: true)
 
     }
     
