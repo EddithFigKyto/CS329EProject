@@ -194,7 +194,13 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             
             removeRecipe[0].saves -= 1
             
+            saves1 -= 1
+            
+            sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
+            
             userLikedRecipes.remove(at: removeIndex!)
+            
+            saveButton.title = "Save"
             
         }
         
@@ -215,6 +221,10 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
                     else {
                         userLikedRecipes.append(recipe)
                         recipe.saves += 1
+                        saves1 += 1
+                        sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
+                        saveButton.title = "Unsave"
+
                     }
                     
                 }
