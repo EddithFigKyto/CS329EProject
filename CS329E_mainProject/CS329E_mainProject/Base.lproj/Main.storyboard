@@ -538,16 +538,20 @@
                                     <action selector="privacyPolicyButtonSelected:" destination="vd4-iX-ohg" eventType="touchUpInside" id="gkr-Xv-3C0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
-                                <rect key="frame" x="153" y="751" width="85" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
+                                <rect key="frame" x="154" y="654" width="85" height="35"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="vd4-iX-ohg" eventType="touchUpInside" id="2dZ-9A-AiB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PJ0-z1-6YO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="giX-BB-Bw4" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="4PE-zm-Nrd"/>
                             <constraint firstItem="JL1-Uz-ZSZ" firstAttribute="leading" secondItem="PJ0-z1-6YO" secondAttribute="leading" constant="16" id="4dI-U9-chZ"/>
                             <constraint firstItem="C7E-5R-1NA" firstAttribute="trailing" secondItem="4VD-ON-YBK" secondAttribute="trailing" id="6Zv-4Q-qtc"/>
                             <constraint firstItem="PJ0-z1-6YO" firstAttribute="trailing" secondItem="JL1-Uz-ZSZ" secondAttribute="trailing" constant="16" id="9Wi-RH-Bue"/>
@@ -559,11 +563,10 @@
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="leading" secondItem="JL1-Uz-ZSZ" secondAttribute="leading" id="RJK-l6-AkY"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="top" secondItem="C7E-5R-1NA" secondAttribute="bottom" constant="20" id="Vaq-Um-ZBT"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="trailing" secondItem="C7E-5R-1NA" secondAttribute="trailing" id="Vnk-wx-rxN"/>
+                            <constraint firstItem="giX-BB-Bw4" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="50" id="eq5-IX-vEc"/>
                             <constraint firstItem="mHS-WD-EtK" firstAttribute="leading" secondItem="C7E-5R-1NA" secondAttribute="leading" id="h8m-J1-Mwf"/>
-                            <constraint firstItem="giX-BB-Bw4" firstAttribute="top" secondItem="mHS-WD-EtK" secondAttribute="bottom" constant="20" id="jAc-Dc-QMw"/>
                             <constraint firstItem="JL1-Uz-ZSZ" firstAttribute="top" secondItem="yqA-ew-j3z" secondAttribute="bottom" constant="25" id="jwb-Qd-V6E"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="odY-h9-T0N"/>
-                            <constraint firstItem="giX-BB-Bw4" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="p25-66-XrQ"/>
                             <constraint firstItem="Za7-sU-m96" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="tGB-zU-ZLD"/>
                             <constraint firstItem="yqA-ew-j3z" firstAttribute="centerX" secondItem="4su-8C-iG9" secondAttribute="centerX" id="wdj-bt-ODO"/>
                             <constraint firstItem="4VD-ON-YBK" firstAttribute="trailing" secondItem="JL1-Uz-ZSZ" secondAttribute="trailing" id="z2e-SI-90C"/>
@@ -1233,7 +1236,7 @@
         <!--Login View Controller-->
         <scene sceneID="cBa-Y6-cbt">
             <objects>
-                <viewController id="FQT-6I-1mK" customClass="loginViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="FQT-6I-1mK" customClass="loginViewController" customModule="CS329E_mainProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Hz-I9-acq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

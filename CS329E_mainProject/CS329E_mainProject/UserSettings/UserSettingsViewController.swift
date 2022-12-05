@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 //segue identifiers for VCs associated with each button on menu
 let personalInformationSegueIdentifier:String = "personalInformationSegue"
@@ -115,11 +116,21 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
             style: .default
             ))
         present(controller, animated: true)
+    }
+    
+    
+    @IBAction func logOutButtonPressed(_ sender: Any) {
         
-        
-        
-        
-        
+        do {
+            try Auth.auth().signOut()
+            if let storyboard = self.storyboard{
+                let vc = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false, completion: nil)
+                }
+        } catch {
+            print("Err")
+        }
     }
     
     
