@@ -31,6 +31,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        filteredRecipes = userLikedRecipes
         
         // logo format function
         addNavBarImage()
@@ -40,6 +41,12 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         favoritesTableView.dataSource = self
         favoritesTableView.delegate = self
 
+    }
+    
+    // the userLikedRecipes data needs to reload everytime the allCookbookRecipesVC appears
+    // this is to ensure that the list of recipes reflects new saves/unsaves
+    override func viewWillAppear(_ animated: Bool) {
+        filteredRecipes = userLikedRecipes
     }
     
     // row formatting
@@ -111,6 +118,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
             // send recipe info to Scroll View VC
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "ScrollRecipeViewController") as! ScrollRecipeViewController
             
+            vc.saveButton.title = "Unsave"
             vc.title1 = selectedRecipe.title
             vc.description1 = selectedRecipe.description[0]
             vc.ingredients1 = selectedRecipe.printIngredients

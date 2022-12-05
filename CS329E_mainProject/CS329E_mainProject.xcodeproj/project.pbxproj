@@ -166,9 +166,9 @@
 			children = (
 				A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */,
 				A59CFB3D2900DAF600FB3B05 /* customRecipeViewController.swift */,
+				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */,
 				A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */,
-				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A56635D12932D7B300E986A7 /* filterPopUpViewController.swift */,
 				A56635D5293335FA00E986A7 /* restaurantViewController.swift */,
 			);

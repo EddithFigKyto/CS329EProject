@@ -14,9 +14,7 @@ class CookbookViewController: UIViewController {
     @IBOutlet weak var cookbookLabel: UILabel!
     
     @IBOutlet weak var favoritesButton: UIButton!
-    
-    @IBOutlet weak var byIngredientButton: UIButton!
-    
+        
     @IBOutlet weak var randombutton: UIButton!
     
     @IBOutlet weak var restaurantsButton: UIButton!
@@ -25,12 +23,10 @@ class CookbookViewController: UIViewController {
         super.viewDidLoad()
         
         addNavBarImage()
-        //fetchRecipes()
         
         // set button and label fonts to user defaults
         cookbookLabel.font = UIFont(name: fontSet!, size: 18)
         favoritesButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        byIngredientButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         randombutton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         restaurantsButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
 

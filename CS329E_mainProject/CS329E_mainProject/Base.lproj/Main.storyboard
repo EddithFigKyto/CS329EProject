@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9bh-SM-NFK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kxc-Af-0DV">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -36,29 +36,8 @@
                                     <segue destination="RP3-sH-BiZ" kind="show" id="ehJ-cI-5Hj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l52-w1-VY8">
-                                <rect key="frame" x="16" y="320" width="358" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="By Ingredient  &gt;">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-bm-f69">
-                                <rect key="frame" x="16" y="367" width="358" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemCyanColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Randomize  &gt;">
-                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="eVN-ee-i5g" kind="show" identifier="cookbookRandomizeSegue" id="ItC-WT-d3M"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-dU-9FI">
-                                <rect key="frame" x="16" y="414" width="358" height="39"/>
+                                <rect key="frame" x="16" y="367" width="358" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
@@ -69,13 +48,24 @@
                                     <segue destination="M6n-7T-6hJ" kind="show" identifier="mapSegue" id="aoN-Lx-Erm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zN-bm-f69">
+                                <rect key="frame" x="16" y="320" width="358" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemCyanColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Randomize  &gt;">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="eVN-ee-i5g" kind="show" identifier="cookbookRandomizeSegue" id="ItC-WT-d3M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zg8-UH-g3f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="XOA-Iz-Eev"/>
                     <connections>
-                        <outlet property="byIngredientButton" destination="l52-w1-VY8" id="AKA-bP-LMj"/>
                         <outlet property="cookbookLabel" destination="6mI-cR-vmN" id="UoF-Eb-Mub"/>
                         <outlet property="favoritesButton" destination="ogk-Nu-3eV" id="b0k-aI-ch4"/>
                         <outlet property="randombutton" destination="2zN-bm-f69" id="ugJ-Ln-vFE"/>
@@ -418,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ga-Fv-94M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4599.2366412213742" y="861.26760563380287"/>
+            <point key="canvasLocation" x="4399" y="1037"/>
         </scene>
         <!--All Cookbook Recipes View Controller-->
         <scene sceneID="ogt-8Q-zAc">
@@ -489,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hjV-Hd-tpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3850" y="861"/>
+            <point key="canvasLocation" x="3607" y="1037"/>
         </scene>
         <!--User Settings View Controller-->
         <scene sceneID="byT-fS-h1f">
@@ -1476,7 +1466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNX-Cv-GJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3151.9083969465646" y="1842.9577464788733"/>
+            <point key="canvasLocation" x="2124" y="1843"/>
         </scene>
         <!--Greeting Animation View Controller-->
         <scene sceneID="kCr-nN-Bea">
@@ -2200,7 +2190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2m-E3-EWB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2337" y="1843"/>
+            <point key="canvasLocation" x="2940" y="1843"/>
         </scene>
         <!--Scroll Recipe View Controller-->
         <scene sceneID="xRr-mu-TRy">
@@ -2412,6 +2402,7 @@
                         <outlet property="imageView" destination="qfe-WM-QHk" id="x5K-wE-O03"/>
                         <outlet property="ingredientTableView" destination="riD-Uw-1kk" id="6yR-Tz-qvW"/>
                         <outlet property="sCLabel" destination="sFo-mM-7dS" id="i3r-S6-WDu"/>
+                        <outlet property="saveButton" destination="lig-hf-eD8" id="uEQ-Vq-P9P"/>
                         <outlet property="scrollView" destination="cuW-Bi-KwR" id="6Je-tT-AUg"/>
                         <outlet property="stackView" destination="fn3-9B-PCE" id="tnY-AW-Zaz"/>
                         <outlet property="stepsTableView" destination="RHn-rN-F1n" id="X5n-hV-8gF"/>

@@ -17,7 +17,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     
     //timer stuff
     var timerOn = false
-
+    
     
     //just like the variables in recipe class
     var saves1: Int = 0
@@ -40,7 +40,8 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     var tags1: String = ""
     var timersList1: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
     
-
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
@@ -79,7 +80,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
         
     }
-
+    
     
     // MARK: TableView
     
@@ -90,7 +91,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             return ingredients1.count
         }
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let row = indexPath.row
@@ -114,7 +115,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         }
         
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == ingredientTableView{
             tableView.deselectRow(at: indexPath, animated: true)
@@ -124,13 +125,13 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
                 }else{
                     cell.accessoryType = .none
                 }
-                    
-                }
+                
+            }
         }else{
             tableView.deselectRow(at: indexPath, animated: true)
-
+            
         }
-
+        
     }
     
     
@@ -172,32 +173,48 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         sender.setOn(false, animated: true)
     }
     
-
+    
     
     
     // MARK: Nav Banner
     
     @IBAction func saveButtonPress(_ sender: Any) {
-        var userLikedTitles = [String]()
         
-        for x in userLikedRecipes {
-            userLikedTitles.append(x.title)
+        if saveButton.title == "Unsave" {
+            var userLikedTitles = [String]()
+            
+            for x in userLikedRecipes {
+                userLikedTitles.append(x.title)
+            }
+            var removeIndex = userLikedTitles.firstIndex(of: title1)
+            
+            userLikedRecipes.remove(at: removeIndex!)
         }
         
-        for recipe in recipes {
+        else {
+            var userLikedTitles = [String]()
             
-            if recipe.title == title1 {
-                                
-                if userLikedTitles.contains(title1) {
-                    print("you already saved this recipe")
-                }
-                else {
-                    userLikedRecipes.append(recipe)
+            for x in userLikedRecipes {
+                userLikedTitles.append(x.title)
+            }
+            
+            for recipe in recipes {
+                
+                if recipe.title == title1 {
+                    
+                    if userLikedTitles.contains(title1) {
+                        print("you already saved this recipe")
+                    }
+                    else {
+                        userLikedRecipes.append(recipe)
+                    }
+                    
                 }
                 
             }
             
         }
+
     }
     
     
