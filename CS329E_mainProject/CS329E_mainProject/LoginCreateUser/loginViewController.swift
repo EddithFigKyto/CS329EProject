@@ -168,7 +168,8 @@ class loginViewController: UIViewController {
                 }
                 else {
                     self.statusLabel.text = "Account created!"
-                    userCustomizations.set(self.userTF.text!, forKey: "email")
+                    userCustomizations.set(self.userTF.text, forKey: "email")
+                    userCustomizations.set(true, forKey: "changed")
                     self.performSegue(withIdentifier: "createUserNextSegue", sender: nil)
                 }
         }
