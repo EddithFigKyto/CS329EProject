@@ -20,7 +20,7 @@ protocol filterProtocol{
 
 // holds the visible recipes in cookbook
 // will change if filters applied (see filter func)
-var filteredRecipes = userLikedRecipes
+var filteredRecipes = [Recipe]()
 
 class allCookbookRecipesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, filterProtocol {
 
@@ -31,7 +31,6 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filteredRecipes = userLikedRecipes
         
         // logo format function
         addNavBarImage()
@@ -47,6 +46,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     // this is to ensure that the list of recipes reflects new saves/unsaves
     override func viewWillAppear(_ animated: Bool) {
         filteredRecipes = userLikedRecipes
+        favoritesTableView.reloadData()
     }
     
     // row formatting
