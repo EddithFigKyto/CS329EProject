@@ -30,8 +30,9 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         setChosenColor()
         UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
-        UILabel.appearance(whenContainedInInstancesOf: [UIView.self]).font = UIFont(name: fontSet!, size: 18)
         
+        UILabel.appearance(whenContainedInInstancesOf: [UIView.self]).font = UIFont(name: fontSet!, size: 18)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
