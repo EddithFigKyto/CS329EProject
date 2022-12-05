@@ -13,6 +13,9 @@ import CoreMotion
 // this variable hold an optional UIImage to set profilePicture if changed
 public var picture: UIImage? = UIImage(named: "profileFiller2")
 
+public var chosenColor:UIColor? = UIColor.systemCyan
+
+
 class loginViewController: UIViewController {
     
     @IBOutlet weak var learn: UILabel!

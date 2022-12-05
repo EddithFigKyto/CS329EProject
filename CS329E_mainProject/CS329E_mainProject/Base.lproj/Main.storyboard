@@ -801,31 +801,31 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02g-Rr-sOi">
                                 <rect key="frame" x="71.666666666666671" y="419" width="51" height="31"/>
                                 <connections>
-                                    <action selector="pinkPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="7oF-iy-SZM"/>
+                                    <action selector="pinkPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="lo8-DX-PM9"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cib-h7-kIr">
                                 <rect key="frame" x="71.666666666666671" y="338" width="51" height="31"/>
                                 <connections>
-                                    <action selector="cyanPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="K00-Lu-l6B"/>
+                                    <action selector="cyanPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="K0k-Zd-ahO"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iA2-uE-dOf">
                                 <rect key="frame" x="71.666666666666671" y="500" width="51" height="31"/>
                                 <connections>
-                                    <action selector="blackPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="hNv-cS-1pe"/>
+                                    <action selector="blackPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="KHq-Ao-2Gh"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="34J-zA-GFS">
                                 <rect key="frame" x="71.666666666666671" y="581" width="51" height="31"/>
                                 <connections>
-                                    <action selector="purplePressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="3QW-e1-5lt"/>
+                                    <action selector="purplePressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="Lc9-2x-KnS"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAo-GX-9hN">
                                 <rect key="frame" x="71.666666666666671" y="662" width="51" height="31"/>
                                 <connections>
-                                    <action selector="greenPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="oEn-c2-BNj"/>
+                                    <action selector="greenPressed:" destination="O5H-jq-S8X" eventType="valueChanged" id="2O3-0v-Qgb"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJc-xX-JXR">
