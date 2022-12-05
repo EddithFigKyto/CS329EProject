@@ -188,7 +188,14 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             }
             var removeIndex = userLikedTitles.firstIndex(of: title1)
             
+            var removeRecipe = [Recipe]()
+            
+            removeRecipe.append(userLikedRecipes[removeIndex!])
+            
+            removeRecipe[0].saves -= 1
+            
             userLikedRecipes.remove(at: removeIndex!)
+            
         }
         
         else {
@@ -207,6 +214,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
                     }
                     else {
                         userLikedRecipes.append(recipe)
+                        recipe.saves += 1
                     }
                     
                 }

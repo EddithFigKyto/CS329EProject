@@ -55,7 +55,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let selectedRecipe = recipes[row]
         
-        
         cell.titleLabel.text = selectedRecipe.title
         cell.descriptionLabel.text = selectedRecipe.description[0]
         cell.picture.image = UIImage(named: "greek_salad")
@@ -113,6 +112,20 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        send data to next VC
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "ScrollRecipeViewController") as! ScrollRecipeViewController
         
+        // The following lines of code will change the Save button text to "Unsave" if the user has already saved the selected recipe
+        // changing this text changes the logic of pressing the Save/Unsave button to unsaving the recipe
+        var userLikedTitles = [String]()
+        
+        for x in userLikedRecipes {
+            userLikedTitles.append(x.title)
+        }
+        
+        if userLikedTitles.contains(selectedRecipe.title) {
+            vc.saveButton.title = "Unsave"
+        }
+        
+        
+        // the following code formats the scroll view content based on the recipe properties
         vc.title1 = selectedRecipe.title
         vc.description1 = selectedRecipe.description[0]
         vc.ingredients1 = selectedRecipe.printIngredients
@@ -125,7 +138,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         vc.cuisine1 = selectedRecipe.cuisine
         vc.time1 = selectedRecipe.time
         
-        
+        // pulls recipe image using its URL
         let imageURL = URL(string: selectedRecipe.recipeImage)!
         
         let session = URLSession(configuration: .default)
