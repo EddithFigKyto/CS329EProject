@@ -10,6 +10,9 @@ import FirebaseAuth
 import CoreMotion
 
 
+// this variable hold an optional UIImage to set profilePicture if changed
+public var picture: UIImage?
+
 class loginViewController: UIViewController {
     
     @IBOutlet weak var learn: UILabel!
@@ -27,6 +30,7 @@ class loginViewController: UIViewController {
     @IBOutlet weak var cpTextF: UITextField!
     
     let userDefaultInitializer = CustomDefaults()
+
     
     let queue = DispatchQueue(label: "myQueue")
     

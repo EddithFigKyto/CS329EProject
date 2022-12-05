@@ -12,7 +12,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var pageTitle: UILabel!
     
     var delegate:UIViewController!
-    var currentName:String = "" //HERE 
+    var currentName:String = ""
     var currentBirthday:String = "07/17/1999"
     var currentEmail:String = "princesspeach2002@aol.com"
     
@@ -25,8 +25,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var editMessageLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
     
-    // this variable hold an optional UIImage to set profilePicture if changed
-    var picture: UIImage?
+   
     
     
     
@@ -41,6 +40,14 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         // profile picture is always set to user settings profile picture - reflects any changes made by user
         profilePicture.image = picture
+        profilePicture.image = picture
+        profilePicture!.layer.frame = CGRectInset(profilePicture!.layer.frame, 0, 0)
+        profilePicture!.layer.borderColor = UIColor.gray.cgColor
+        profilePicture!.layer.cornerRadius = profilePicture!.frame.height/2
+        profilePicture!.layer.masksToBounds = true
+        profilePicture!.clipsToBounds = true
+        profilePicture!.layer.borderWidth = 0.5
+        profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
         
         pageTitle.font = UIFont(name: fontSet!, size: 22)
         
@@ -163,6 +170,8 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     // selection menu will disappear
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            
+            picture = image
             profilePicture.image = image
         
             profilePicture!.layer.frame = CGRectInset(profilePicture!.layer.frame, 0, 0)
