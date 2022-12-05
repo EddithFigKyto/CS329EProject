@@ -1966,8 +1966,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAd-GJ-Z5S">
-                                                    <rect key="frame" x="110" y="40" width="260" height="53"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAd-GJ-Z5S">
+                                                    <rect key="frame" x="110" y="25" width="260" height="68"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
@@ -2427,11 +2427,13 @@
                     <connections>
                         <outlet property="descripLabel" destination="uj6-qp-Vfp" id="5rT-St-m2d"/>
                         <outlet property="imageView" destination="qfe-WM-QHk" id="x5K-wE-O03"/>
+                        <outlet property="ingredLabel" destination="i43-GH-YMO" id="Auf-9I-OzE"/>
                         <outlet property="ingredientTableView" destination="riD-Uw-1kk" id="6yR-Tz-qvW"/>
                         <outlet property="sCLabel" destination="sFo-mM-7dS" id="i3r-S6-WDu"/>
                         <outlet property="saveButton" destination="lig-hf-eD8" id="uEQ-Vq-P9P"/>
                         <outlet property="scrollView" destination="cuW-Bi-KwR" id="6Je-tT-AUg"/>
                         <outlet property="stackView" destination="fn3-9B-PCE" id="tnY-AW-Zaz"/>
+                        <outlet property="stepsLabel" destination="1Wc-qB-YLj" id="Ac9-MB-1eI"/>
                         <outlet property="stepsTableView" destination="RHn-rN-F1n" id="X5n-hV-8gF"/>
                         <outlet property="tagsLabel" destination="VDk-fj-nw2" id="F1S-3S-eZP"/>
                         <outlet property="titleLabel" destination="PpP-fX-KpN" id="E87-47-j5M"/>

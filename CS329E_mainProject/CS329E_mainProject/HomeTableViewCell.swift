@@ -29,6 +29,8 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
+        descriptionLabel.numberOfLines = 0 
         // Initialization code
     }
 
