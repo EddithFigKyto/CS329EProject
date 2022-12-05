@@ -12,9 +12,9 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var pageTitle: UILabel!
     
     var delegate:UIViewController!
-    var currentName:String = ""
-    var currentBirthday:String = "07/17/1999"
-    var currentEmail:String = "princesspeach2002@aol.com"
+    var currentName:String = userCustomizations.string(forKey: "user name")!
+    var currentBirthday:String = userCustomizations.string(forKey: "birthday")!
+    var currentEmail:String = userCustomizations.string(forKey: "email")!
     
     
     //potentially not needed
@@ -24,9 +24,6 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var profilePictureEditor: UIButton!
     @IBOutlet weak var editMessageLabel: UILabel!
     @IBOutlet weak var profilePicture: UIImageView!
-    
-   
-    
     
     
     @IBOutlet weak var nameLabel: UILabel!

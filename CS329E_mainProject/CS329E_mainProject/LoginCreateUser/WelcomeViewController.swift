@@ -33,13 +33,14 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func enterButtonPressed(_ sender: Any) {
+    
         
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MM/dd/yyyy"
         let date = birthdayTextField.text!
 
         if dateFormatterGet.date(from: date) != nil {
-            userCustomizations.set(nameTextField.text!, forKey: "name")
+            userCustomizations.set(nameTextField.text!, forKey: "user name")
             userCustomizations.set(birthdayTextField.text!, forKey: "birthday")
             self.performSegue(withIdentifier: "profilePictureSegue", sender: self)
         } else {

@@ -25,7 +25,7 @@ protocol changeProfilePicture {
 class UserSettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, changeNameProtocol, changeProfilePicture{
     
     //variable to store the user's name
-    public var name = "Kyto"
+    public var name = userCustomizations.string(forKey: "user name")!
     
     //public let userSettings = CustomDefaults()
     
@@ -46,7 +46,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         addNavBarImage()
         
         //Set greeting to user's name and change font to Avenir Next, size 22
-        nameLabel.text = "Hello \(name)!"
+        nameLabel.text = "Hello \(name)"
         nameLabel.font = UIFont(name: fontSet!, size:22)
         
         //Change font of all buttons to Avenir Next, size 18
