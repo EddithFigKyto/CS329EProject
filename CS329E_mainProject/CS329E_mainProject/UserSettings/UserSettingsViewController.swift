@@ -104,6 +104,25 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
            
     }
     
+    
+    @IBAction func privacyPolicyButtonSelected(_ sender: Any) {
+        let controller = UIAlertController(
+            title: "Privacy Policy",
+            message: "Your data is totally safe! *wink wink*",
+            preferredStyle: .alert)
+        controller.addAction(UIAlertAction(
+            title: "Understood!",
+            style: .default
+            ))
+        present(controller, animated: true)
+        
+        
+        
+        
+        
+    }
+    
+    
     //function defined in protocol that updates the user's name if the user changes it. 
     func changeName(newName: String) {
         name = newName
@@ -122,6 +141,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         profilePicture!.layer.borderWidth = 0.5
         profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
     }
+
     
     func addNavBarImage() {
         

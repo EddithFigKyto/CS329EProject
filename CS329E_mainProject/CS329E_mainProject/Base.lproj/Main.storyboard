@@ -534,6 +534,9 @@
                                 <color key="tintColor" systemColor="systemCyanColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Privacy Policy  &gt;"/>
+                                <connections>
+                                    <action selector="privacyPolicyButtonSelected:" destination="vd4-iX-ohg" eventType="touchUpInside" id="gkr-Xv-3C0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giX-BB-Bw4">
                                 <rect key="frame" x="153" y="751" width="85" height="35"/>

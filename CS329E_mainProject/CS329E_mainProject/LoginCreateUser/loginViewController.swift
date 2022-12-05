@@ -11,7 +11,7 @@ import CoreMotion
 
 
 // this variable hold an optional UIImage to set profilePicture if changed
-public var picture: UIImage?
+public var picture: UIImage? = UIImage(named: "profileFiller2")
 
 class loginViewController: UIViewController {
     
