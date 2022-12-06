@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class groceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
