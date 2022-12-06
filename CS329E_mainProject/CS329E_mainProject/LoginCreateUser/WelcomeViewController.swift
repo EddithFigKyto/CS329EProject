@@ -27,6 +27,9 @@ class WelcomeViewController: UIViewController {
         enterYourNameLabel.font = UIFont(name: "Avenir Next", size: 18)
         enterYourBirthdayLabel.font = UIFont(name: "Avenir Next", size: 18)
         dateFormatLabel.font = UIFont(name: "Avenir Next", size: 18)
+        
+        nameTextField.delegate = self
+        birthdayTextField.delegate = self
     }
     
     @IBAction func enterButtonPressed(_ sender: Any) {
@@ -41,5 +44,16 @@ class WelcomeViewController: UIViewController {
         } else {
             birthdayFormatCheckerLabel.text! = "Birthday Entered Invalid"
         }
+    }
+    
+    // Called when 'return' key pressed
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+        
+    // Called when the user clicks on the view outside of the UITextField
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
