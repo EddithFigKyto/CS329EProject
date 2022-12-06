@@ -7,15 +7,14 @@
 
 import UIKit
 
-// to store diet filters
+// to store temporary diet filters
 var tempDietFilters = [Recipe.diet]()
-//var tempDietFilters = [Recipe.diet.vegan, Recipe.diet.vegetarian, Recipe.diet.halal, Recipe.diet.gluten_free, Recipe.diet.lactose_free, Recipe.diet.sugar_free, Recipe.diet.nut_free]
 
+// to store temporary dish filters
 var tempDishFilters = [Recipe.dishType]()
-//var tempDishFilters = [Recipe.dishType.main, Recipe.dishType.salad, Recipe.dishType.drinks, Recipe.dishType.side, Recipe.dishType.dessert]
 
 class filterPopUpViewController: UIViewController {
-    
+    // all of the follow label/switch pairs correspond to a switch elements that can filter the recipes in allCookbookRecipesVC
     @IBOutlet weak var vegetarianLabel: UILabel!
     @IBOutlet weak var vegetarianSwitch: UISwitch!
     
@@ -46,11 +45,13 @@ class filterPopUpViewController: UIViewController {
     @IBOutlet weak var dessertsLabel: UILabel!
     @IBOutlet weak var dessertsSwitch: UISwitch!
     
+    // allows allCookbookRecipesVC to be the delegate so the filter lists can be passed back to it
     var delegate: UIViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // implement user defaults font settings
         vegetarianLabel.font = UIFont(name: fontSet!, size: 18)
         veganLabel.font = UIFont(name: fontSet!, size: 18)
         glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
@@ -76,7 +77,7 @@ class filterPopUpViewController: UIViewController {
 
     }
     
-    // all switch functions either add or remove filters depending on whether switch is on/off
+    // all switch functions either add or remove filters from the corresponding filters array depending on whether switch is turned on or off, respectively
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
         if sender.isOn == true{
             if !tempDietFilters.contains(Recipe.diet.vegetarian)
@@ -213,16 +214,13 @@ class filterPopUpViewController: UIViewController {
     // once user applies the filter, the filteredRecipes array in allCookbookRecipesVC is changed to reflect filters
     @IBAction func applyFiltersPressed(_ sender: Any) {
         
-//        if tempDietFilters == [] {
-//            tempDietFilters = [Recipe.diet.gluten_free, Recipe.diet.lactose_free, Recipe.diet.sugar_free, Recipe.diet.vegan, Recipe.diet.vegetarian, Recipe.diet.nut_free, Recipe.diet.halal]
-//        }
-//
-//        if tempDishFilters == [] {
-//            tempDishFilters = [Recipe.dishType.main, Recipe.dishType.drinks, Recipe.dishType.salad, Recipe.dishType.side, Recipe.dishType.dessert]
-//        }
-        
+        // otherVC is the allCookbookRecipesVC
         let otherVC = delegate as! filterProtocol
+        
+        // user the filter function in allCookbookRecipesVC to change the filteredRecipes array that's displayed to the user
         otherVC.filter(tempDietFilters: tempDietFilters, tempDishFilters: tempDishFilters)
+        
+        // dismiss the filterPopUpVC
         self.dismiss(animated: true)
     }
     

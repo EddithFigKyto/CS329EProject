@@ -7,11 +7,17 @@
 
 import UIKit
 
+// this table view cell is structurally identical to the HomeTableViewCell
+// this cell is displayed on the allCookbookRecipesVC
 class RecipeTableViewCell: UITableViewCell {
     
-    
+    // label for recipe describtion
     @IBOutlet weak var recipeDescription: UILabel!
+    
+    // label for recipe title
     @IBOutlet weak var recipeTitle: UILabel!
+    
+    // imageView for the recipe image
     @IBOutlet weak var recipeImage: UIImageView!
     
     

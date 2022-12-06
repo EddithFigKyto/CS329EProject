@@ -25,7 +25,6 @@
 		A58476A528FC665A007AC1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58476A428FC665A007AC1E7 /* Assets.xcassets */; };
 		A58476A828FC665A007AC1E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58476A628FC665A007AC1E7 /* LaunchScreen.storyboard */; };
 		A58476B028FC672A007AC1E7 /* CookbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */; };
-		A59CFB3E2900DAF600FB3B05 /* customRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB3D2900DAF600FB3B05 /* customRecipeViewController.swift */; };
 		A59CFB402900DD9900FB3B05 /* allCookbookRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */; };
 		A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */; };
 		A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DEE7E92915829D00ECB92E /* Recipes.swift */; };
@@ -70,7 +69,6 @@
 		A58476A728FC665A007AC1E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58476A928FC665A007AC1E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookbookViewController.swift; sourceTree = "<group>"; };
-		A59CFB3D2900DAF600FB3B05 /* customRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customRecipeViewController.swift; sourceTree = "<group>"; };
 		A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allCookbookRecipesViewController.swift; sourceTree = "<group>"; };
 		A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomizeViewController.swift; sourceTree = "<group>"; };
 		A5DEE7E92915829D00ECB92E /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				A53E64C0292C4DD300CEFC0A /* RecipeTableViewCell.swift */,
-				A59CFB3D2900DAF600FB3B05 /* customRecipeViewController.swift */,
 				A58476AF28FC672A007AC1E7 /* CookbookViewController.swift */,
 				A59CFB412900DDBD00FB3B05 /* randomizeViewController.swift */,
 				A59CFB3F2900DD9900FB3B05 /* allCookbookRecipesViewController.swift */,
@@ -307,7 +304,6 @@
 				A584769B28FC665A007AC1E7 /* SceneDelegate.swift in Sources */,
 				A59CFB422900DDBD00FB3B05 /* randomizeViewController.swift in Sources */,
 				AE3794F628FF5B380075EBF6 /* DietViewController.swift in Sources */,
-				A59CFB3E2900DAF600FB3B05 /* customRecipeViewController.swift in Sources */,
 				A59CFB402900DD9900FB3B05 /* allCookbookRecipesViewController.swift in Sources */,
 				AE3794F828FF5B820075EBF6 /* UserSettingsViewController.swift in Sources */,
 				A5DEE7EA2915829D00ECB92E /* Recipes.swift in Sources */,

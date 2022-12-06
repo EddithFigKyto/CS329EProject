@@ -6,22 +6,25 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseFirestore
 
 class CookbookViewController: UIViewController {
 
+    // Cookbook VC Label
     @IBOutlet weak var cookbookLabel: UILabel!
     
+    // favoritesButton takes the user to a table view of the recipes they've saved
     @IBOutlet weak var favoritesButton: UIButton!
         
+    // randombutton takes the user to the recipe randomizer, which pulls a random recipe from the database
     @IBOutlet weak var randombutton: UIButton!
     
+    // restaurantsButton takes the user to restaurantsVC where they can find restaurants near them
     @IBOutlet weak var restaurantsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // add logo
         addNavBarImage()
         
         // set button and label fonts to user defaults
@@ -32,6 +35,7 @@ class CookbookViewController: UIViewController {
 
     }
     
+    // logo formatting function
     func addNavBarImage() {
         
         var titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
@@ -39,22 +43,6 @@ class CookbookViewController: UIViewController {
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
-    }
-    
-    
-    func fetchRecipes() {
-        
-        var db = Firestore.firestore()
-        
-        db.collection("Recipes").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    print(document.data())
-                }
-            }
-        }
     }
 
 }

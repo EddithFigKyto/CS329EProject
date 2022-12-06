@@ -26,13 +26,15 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
 
     // recipes visible via table view
     @IBOutlet weak var favoritesTableView: UITableView!
+    
+    // button leads to filters modal VC
     @IBOutlet weak var filtersButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // logo format function
+        // add logo
         addNavBarImage()
         
         
@@ -60,7 +62,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
     }
     
     // create cells
-    // not use of networking to aquire the recipe images
+    // use of networking to aquire the recipe images
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let cell = favoritesTableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath) as! RecipeTableViewCell
@@ -77,13 +79,13 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         // cell description fon to user default font
         cell.recipeDescription.font = UIFont(name: fontSet!, size: 18)
         
-        // set URL to the Recipe's image URL property
+        // pull the recipe's unique image address URL property
         let imageURL = URL(string: filteredRecipes[row].recipeImage)!
         
         // start session to prep app to access the URL address
         let session = URLSession(configuration: .default)
         
-        // Create a task for accessing the image
+        // create a task for accessing the image
         let task = session.dataTask(with: imageURL) {
             (data, response, error) in
             
@@ -94,6 +96,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
                 // ensure that we got a response code of 200 (which means "success")
                 guard httpResponse.statusCode == 200 else { return }
                 
+                // retrieve the image
                 if let receivedData = data {
                     DispatchQueue.main.async {
                         cell.recipeImage.image = UIImage(data: receivedData)
@@ -107,12 +110,16 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
         return cell
     }
     
-    //click on cell to segue to the recipeDisplayVC
+    // click on cell to segue to the ScrollRecipeVC
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
+            // identify selected cell
             favoritesTableView.deselectRow(at: indexPath, animated: true)
+            
+            // note cell index
             let row = indexPath.row
 
+            // use index to pull the recipe and access recipe info
             let selectedRecipe = userLikedRecipes[row]
             
             // send recipe info to Scroll View VC
@@ -131,11 +138,13 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
             vc.cuisine1 = selectedRecipe.cuisine
             vc.time1 = selectedRecipe.time
             
-            
+            // pull the recipe's unique image address URL property
             let imageURL = URL(string: selectedRecipe.recipeImage)!
             
+            // start session to prep app to access the URL address
             let session = URLSession(configuration: .default)
             
+            // create a task for accessing the image
             let task = session.dataTask(with: imageURL) {
                 (data, response, error) in
                 
@@ -146,6 +155,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
                     // ensure that we got a response code of 200 (which means "success")
                     guard httpResponse.statusCode == 200 else { return }
                     
+                    // retrieve the image
                     if let receivedData = data {
                         DispatchQueue.main.async {
                             vc.imageView.image = UIImage(data: receivedData)
@@ -216,6 +226,7 @@ class allCookbookRecipesViewController: UIViewController, UITableViewDataSource,
                 }
             }
         }
+        
         // must reload table view data to see changes
         favoritesTableView.reloadData()
     }
