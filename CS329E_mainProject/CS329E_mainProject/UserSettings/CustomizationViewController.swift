@@ -9,7 +9,6 @@ import UIKit
 
 class CustomizationViewController: UIViewController {
     
-    
     @IBOutlet weak var profilePicture: UIImageView!
     
     // this variable hold an optional UIImage to set profilePicture if changed
@@ -17,12 +16,9 @@ class CustomizationViewController: UIViewController {
     
     @IBOutlet weak var CustomizationTitleLabel: UILabel!
     
-    
     @IBOutlet weak var ColorSchemeLabel: UIButton!
     
     @IBOutlet weak var FontButtonLabel: UIButton!
-    
-    //@IBOutlet weak var NotificationSettingsButtonLabel: UIButton!
     
     var delegate:UIViewController!
     
@@ -46,30 +42,23 @@ class CustomizationViewController: UIViewController {
         
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        
         UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         CustomizationTitleLabel.font = UIFont(name: fontSet!, size: 18)
         FontButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         ColorSchemeLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        //NotificationSettingsButtonLabel.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
         
         UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
-        
     }
     
     func addNavBarImage() {
-        
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
 }

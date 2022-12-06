@@ -15,7 +15,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        tableView.register(homeCell.nib(), forCellReuseIdentifier: "homeCell")
         addNavBarImage()
         tableView.dataSource = self
         tableView.delegate = self
@@ -30,7 +29,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         setChosenColor()
         UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
-        
+
         UILabel.appearance(whenContainedInInstancesOf: [UIView.self]).font = UIFont(name: fontSet!, size: 18)
 
     }

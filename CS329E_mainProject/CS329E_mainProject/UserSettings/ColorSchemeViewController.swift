@@ -27,8 +27,6 @@ public func setChosenColor(){
     default:
         chosenColor = UIColor.systemCyan
     }
-    
-    
 }
 
 class ColorSchemeViewController: UIViewController {
@@ -41,7 +39,6 @@ class ColorSchemeViewController: UIViewController {
     
     @IBOutlet weak var pinkSwitch: UISwitch!
     @IBOutlet weak var pinkLabel: UILabel!
-    
     
     @IBOutlet weak var blackSwitch: UISwitch!
     @IBOutlet weak var blackLabel: UILabel!
@@ -81,7 +78,6 @@ class ColorSchemeViewController: UIViewController {
         
         colorSchemeTextDisplay.font = UIFont(name: fontSet!, size: 18)
         colorSchemeTextDisplay.textColor = chosenColor
-        
         
         cyanLabel.font = UIFont(name: fontSet!, size: 18)
         cyanLabel.textColor = UIColor.cyan
@@ -123,8 +119,6 @@ class ColorSchemeViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func pinkPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
@@ -139,7 +133,6 @@ class ColorSchemeViewController: UIViewController {
             viewWillAppear(true)
         }
     }
-        
         
     @IBAction func blackPressed(_ sender: UISwitch) {
         if sender.isOn == true{
@@ -165,10 +158,8 @@ class ColorSchemeViewController: UIViewController {
             greenSwitch.setOn(false, animated: true)
             viewWillAppear(true)
         }
-        
     }
     
-        
     @IBAction func greenPressed(_ sender: UISwitch) {
         
         if sender.isOn == true{
@@ -182,10 +173,4 @@ class ColorSchemeViewController: UIViewController {
             viewWillAppear(true)
         }
     }
-    
-    
-    
-    
-    
-
 }

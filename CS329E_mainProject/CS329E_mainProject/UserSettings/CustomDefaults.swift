@@ -43,6 +43,4 @@ class CustomDefaults{
             userCustomizations.set(true, forKey: uChangedKey)
         }
     }
-    
-    
 }

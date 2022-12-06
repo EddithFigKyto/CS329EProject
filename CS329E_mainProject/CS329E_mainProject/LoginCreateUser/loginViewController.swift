@@ -15,8 +15,7 @@ public var picture: UIImage? = UIImage(named: "profileFiller2")
 
 public var chosenColor:UIColor? = UIColor.systemCyan
 
-
-class loginViewController: UIViewController {
+class loginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var learn: UILabel!
     @IBOutlet weak var userTF: UITextField!
@@ -54,6 +53,10 @@ class loginViewController: UIViewController {
         logInButton.isHidden = false
         animationImage.isHidden = true
         passwordTF.isSecureTextEntry = true
+        
+        userTF.delegate = self
+        passwordTF.delegate = self
+        cpTextF.delegate = self
         
         //shake alert
         var xInPositiveDirection = 0.0
@@ -176,5 +179,16 @@ class loginViewController: UIViewController {
                     self.performSegue(withIdentifier: "createUserNextSegue", sender: nil)
                 }
         }
+    }
+    
+    // Called when 'return' key pressed
+    func textFieldShouldReturn(_ textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+        
+    // Called when the user clicks on the view outside of the UITextField
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

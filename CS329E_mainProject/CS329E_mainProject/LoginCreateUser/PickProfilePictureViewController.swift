@@ -15,30 +15,20 @@ class PickProfilePictureViewController: UIViewController, UIImagePickerControlle
     @IBOutlet weak var uploadButtonOutlet: UIButton!
     @IBOutlet weak var nextButtonOutlet: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         picture = UIImage(named: "profileFiller2")
         profilePictureImageView.image = picture
-        
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func uploadPhotoButtonPressed(_ sender: Any) {
-        
         let vc = UIImagePickerController()
         vc.sourceType = .photoLibrary
         vc.delegate = self
         vc.allowsEditing = true
         present(vc, animated: true)
     }
-    
-    @IBAction func nextButtonPressed(_ sender: Any) {
-    }
-    
-    
     
     // triggers the profile picture image view change to the selected photo from the gallery
     // selection menu will disappear
@@ -56,24 +46,12 @@ class PickProfilePictureViewController: UIViewController, UIImagePickerControlle
             profilePictureImageView!.layer.borderWidth = 0.5
             profilePictureImageView!.contentMode = UIView.ContentMode.scaleAspectFill
             
-
             picker.dismiss(animated: true)
         }
-        
     }
     
     // if the user selects "cancel" when choosing their profile picture, the image picker view will disappear
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }

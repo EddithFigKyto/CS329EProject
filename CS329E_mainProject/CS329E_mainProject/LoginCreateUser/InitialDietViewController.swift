@@ -9,7 +9,6 @@ import UIKit
 
 class InitialDietViewController: UIViewController {
     
-    
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var selectAllApplyLabel: UILabel!
     @IBOutlet weak var vegetarianLabel: UILabel!
@@ -26,7 +25,6 @@ class InitialDietViewController: UIViewController {
     
     var initialDietChoices:[String] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +35,6 @@ class InitialDietViewController: UIViewController {
         glutenFreeLabel.font = UIFont(name: "Avenir Next", size: 18)
         nutFreeLabel.font = UIFont(name: "Avenir Next", size: 18)
         halalLabel.font = UIFont(name: "Avenir Next", size: 18)
-        
     }
     
     @IBAction func vegetarianSelected(_ sender: UISwitch) {
@@ -116,8 +113,5 @@ class InitialDietViewController: UIViewController {
         
         userCustomizations.set(initialDietChoices, forKey: "diet")
         initialDietChoices = (userCustomizations.array(forKey: "diet") as? [String])!
-        
     }
-    
-
 }

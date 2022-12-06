@@ -16,9 +16,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
     var currentName:String = userCustomizations.string(forKey: "user name")!
     var currentBirthday:String = userCustomizations.string(forKey: "birthday")!
     var currentEmail:String = userCustomizations.string(forKey: "email")!
-    
-    
-    //potentially not needed
+
     @IBOutlet weak var nameEditor: UIButton!
     @IBOutlet weak var birthdayEditor: UIButton!
     @IBOutlet weak var emailEditor: UIButton!
@@ -55,23 +53,18 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         nameLabel.text = currentName
         nameLabel.font = UIFont(name: fontSet!, size: 16)
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
-        
     
         birthdayLabel.text = currentBirthday
         birthdayLabel.font = UIFont(name: fontSet!, size: 16)
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        
         emailLabel.text = currentEmail
         emailLabel.font = UIFont(name: fontSet!, size: 16)
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
         deleteAccountButton.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size: 18)
-        
-        //setChosenColor()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,19 +74,14 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         
         nameLabel.text = currentName
         nameEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
-        
 
         birthdayLabel.text = currentBirthday
         birthdayEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
-        
-
+    
         emailLabel.text = currentEmail
         emailEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
         
-        
         profilePictureEditor.configuration?.attributedTitle?.font = UIFont(name: fontSet!, size:18)
-        
-        //setChosenColor()
     }
     
     @IBAction func nameEditorPressed(_ sender: Any) {
@@ -121,16 +109,12 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
                     
                     let otherVC = self.delegate as! changeNameProtocol
                     otherVC.changeName(newName: self.currentName)
-                    
-                    
                 }
             }))
         present(controller, animated: true)
     }
     
-    
     @IBAction func birthdayButtonPressed(_ sender: Any) {
-        
         let controller = UIAlertController(
             title: "Edit Birthday:",
             message: "Enter Your Birthday : MM/DD/YYYY",
@@ -152,12 +136,10 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
                     let enteredText = textFields[0].text
                     self.currentBirthday = enteredText!
                     self.viewDidLoad()
-                    
                 }
             }))
         present(controller, animated: true)
     }
-    
     
     // button which allows the user to chnage thier profile picture from their local gallery
     @IBAction func profilePictureChange(_ sender: Any) {
@@ -167,7 +149,6 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         vc.allowsEditing = true
         present(vc, animated: true)
     }
-    
     
     // triggers the profile picture image view change to the selected photo from the gallery
     // selection menu will disappear
@@ -188,10 +169,8 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
             let otherVC = delegate as! changeProfilePicture
             otherVC.changeProfilePic(newPicture: profilePicture.image!)
             
-
             picker.dismiss(animated: true)
         }
-        
     }
     
     // if the user selects "cancel" when choosing their profile picture, the image picker view will disappear
@@ -199,10 +178,7 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
         picker.dismiss(animated: true, completion: nil)
     }
     
-    
-    
     @IBAction func deleteAccountButtonPressed(_ sender: Any) {
-        
         let controller = UIAlertController(
             title: "Are you sure you want to permanently delete your account?",
             message: "This action cannot be reversed.",
@@ -223,24 +199,16 @@ class PersonalInformationViewController: UIViewController, UIImagePickerControll
                     vc.modalPresentationStyle = .fullScreen
                     self.present(vc, animated: false, completion: nil)
                 }
-                    
-                }
-            ))
+            }))
         present(controller, animated: true)
-    
         }
  
-    
     // changes navigation bar image to the app logo and formats it to be centered on the top of the screen
     func addNavBarImage() {
-        
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
-
-
 }

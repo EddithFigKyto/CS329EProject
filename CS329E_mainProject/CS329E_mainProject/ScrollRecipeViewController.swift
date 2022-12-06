@@ -41,6 +41,12 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
     var timersList1: [Int] = []  //in seconds // length is same as stepList // 0 means no timer
     
     
+    //labels
+    
+    @IBOutlet weak var ingredLabel: UILabel!
+    @IBOutlet weak var stepsLabel: UILabel!
+    
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -78,7 +84,9 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         
         //saves1,creator1, servingsize1,cusine1, time1
         sCLabel.text = "Saves: \(saves1) | Creator: \(creator1)"
-        
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
+        ingredLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
+        stepsLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
     }
     
     

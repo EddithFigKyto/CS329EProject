@@ -37,11 +37,9 @@ class FontPickerViewController: UIViewController {
         AmericanTypewriterLabel.font = UIFont(name: "American Typewriter", size: 18)
         MenloRegularLabel.font = UIFont(name: "Menlo-Regular", size: 18)
         PapyrusLabel.font = UIFont(name: "Papyrus", size: 18)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         fontDisplay.font = UIFont(name: fontSet!, size: 20)
         
         let index = font.firstIndex(of: fontSet!)
@@ -49,11 +47,9 @@ class FontPickerViewController: UIViewController {
         AmericanTypewriterSwitch.setOn(1 == index, animated: true)
         MenloRegularSwitch.setOn(2 == index, animated: true)
         PapyrusSwitch.setOn(3 == index, animated: true)
-        
     }
     
     @IBAction func AvenirNextPicked(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             userCustomizations.set(font[0], forKey: "font")
             fontSet = userCustomizations.string(forKey: "font")
@@ -76,7 +72,6 @@ class FontPickerViewController: UIViewController {
     }
     
     @IBAction func MenloRegularPicked(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             userCustomizations.set(font[2], forKey: "font")
             fontSet = userCustomizations.string(forKey: "font")
@@ -88,7 +83,6 @@ class FontPickerViewController: UIViewController {
     }
     
     @IBAction func PapyrusPicked(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             userCustomizations.set(font[3], forKey: "font")
             fontSet = userCustomizations.string(forKey: "font")
@@ -100,20 +94,10 @@ class FontPickerViewController: UIViewController {
     }
     
     func addNavBarImage() {
-        
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
 }
-    
-    
-    
-    
-    
-
-    
-
