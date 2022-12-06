@@ -47,7 +47,8 @@ class Recipe {
          time: String,
          tags: [String],
          recipeImage: String,
-         timersList: [Int]
+         timersList: [Int],
+         saves : Int
          //,
          //image: UIImage
     ) {
@@ -66,6 +67,7 @@ class Recipe {
         self.stepList = stepList
         self.recipeImage = recipeImage
         self.timersList = timersList
+        self.saves = saves
         //self.image = image
     }
     
