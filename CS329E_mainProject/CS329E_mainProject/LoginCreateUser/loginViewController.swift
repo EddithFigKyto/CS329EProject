@@ -17,6 +17,7 @@ public var chosenColor:UIColor? = UIColor.systemCyan
 
 class loginViewController: UIViewController, UITextFieldDelegate{
     
+    @IBOutlet weak var shakeLabel: UILabel!
     @IBOutlet weak var learn: UILabel!
     @IBOutlet weak var userTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -111,6 +112,7 @@ class loginViewController: UIViewController, UITextFieldDelegate{
         performSegue(withIdentifier: "learnMoreSegue", sender: self)
     }
     
+    //segmented controller add two options: lon in / sign up
     @IBAction func segControl(_ sender: Any) {
         switch segControl.selectedSegmentIndex {
         case 0:
@@ -144,6 +146,7 @@ class loginViewController: UIViewController, UITextFieldDelegate{
                 self.learn.isHidden = true
                 self.logInButton.isHidden = true
                 self.imageTop.isHidden = true
+                self.shakeLabel.isHidden = true 
                 self.animationImage.isHidden = false
                 
                 self.queue.async {

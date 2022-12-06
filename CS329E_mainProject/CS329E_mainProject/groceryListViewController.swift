@@ -11,10 +11,9 @@ import CoreMotion
 class groceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     @IBOutlet weak var tableView: UITableView!
-    var items = [String]()
     
-    //create variables for core motion
-
+    //create arrays of grocery items
+    var items = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +22,9 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
        
         addNavBarImage()
-
-        // Do any additional setup after loading the view.
     }
     
+    //present alert to add grocery items
     @IBAction func addItem(_ sender: Any) {
         let controller = UIAlertController(
             title: "Grocery list",
@@ -69,10 +67,11 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
+    //disselect item 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    //segue to view controller with recipes that have item
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "glSegue",
            let destination = segue.destination as? recipeGLViewController,
