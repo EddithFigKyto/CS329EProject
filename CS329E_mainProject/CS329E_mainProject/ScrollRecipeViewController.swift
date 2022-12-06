@@ -107,6 +107,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             let step = stepList1[row]
             cell.textLabel?.text = step
             cell.textLabel?.numberOfLines = 0
+            
             let time = timersList1[row]
             if time != 0 { //always seconds
                 let mySwitch = UISwitch()
@@ -142,49 +143,56 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
         
     }
     
-    
+    //MARK: Did Change Switch
     
     @objc func didChangeSwitch(_ sender: UISwitch){
-        var countdown = timersList1[sender.tag] - 1 // for notification time
-        let q = DispatchQueue.global(qos: .background)
-        
-        //if the app gets closed a notification will be sent
-        let content = UNMutableNotificationContent()
-        content.title = title1
-        content.subtitle = "Time's Up!"
-        content.body = "It's time to proceed to the next step!"
-        content.sound = UNNotificationSound.defaultCritical
-        // create trigger
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(countdown), repeats: false)
-        // combine it all into a request
-        let request = UNNotificationRequest(identifier: "myNotification", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request)
-        
-        //if the app is open the entire time
-        //we need to know when to turn the button off
-        //so an additional timer is needed
-        timerOn = sender.isOn
-        q.async{ [self] in
-            while timerOn {
-                if countdown == 0{
-                    DispatchQueue.main.sync{ //main thread
-                        sender.setOn(false, animated: true)
+        if sender.isOn{
+            print(sender.isOn)
+            print("buttonPressed")
+            //sender.setOn(true, animated: true)
+            var countdown = timersList1[sender.tag] - 1 // for notification time
+            let q = DispatchQueue.global(qos: .background)
+            
+            //if the app gets closed a notification will be sent
+            let content = UNMutableNotificationContent()
+            content.title = title1
+            content.subtitle = "Time's Up!"
+            content.body = "It's time to proceed to the next step!"
+            content.sound = UNNotificationSound.defaultCritical
+            // create trigger
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(countdown), repeats: false)
+            // combine it all into a request
+            let request = UNNotificationRequest(identifier: "myNotification", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request)
+            
+            //if the app is open the entire time
+            //we need to know when to turn the button off
+            //so an additional timer is needed
+            timerOn = sender.isOn
+            q.async{ [self] in
+                while timerOn {
+                    if countdown == 0{
+                        DispatchQueue.main.sync{ //main thread
+                            sender.setOn(false, animated: true)
+                        }
+                        timerOn = false
+                    }else{
+                        sleep(1)
+                        print(countdown)
+                        countdown -= 1
                     }
-                    timerOn = false
-                }else{
-                    sleep(1)
-                    print(countdown)
-                    countdown -= 1
                 }
             }
+            //sender.setOn(false, animated: true)
         }
-        sender.setOn(false, animated: true)
     }
     
     
     
     
-    // MARK: Nav Banner
+    
+    //MARK: saveButton
+    
     
     @IBAction func saveButtonPress(_ sender: Any) {
         
@@ -243,7 +251,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
 
     }
     
-    
+    // MARK: Nav Banner
     func addNavBarImage() {
         
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
