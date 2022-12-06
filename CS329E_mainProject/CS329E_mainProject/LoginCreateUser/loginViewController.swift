@@ -112,6 +112,7 @@ class loginViewController: UIViewController, UITextFieldDelegate{
         performSegue(withIdentifier: "learnMoreSegue", sender: self)
     }
     
+    //segmented controller add two options: lon in / sign up
     @IBAction func segControl(_ sender: Any) {
         switch segControl.selectedSegmentIndex {
         case 0:

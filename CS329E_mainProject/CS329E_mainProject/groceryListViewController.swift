@@ -11,11 +11,11 @@ import CoreMotion
 class groceryListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     @IBOutlet weak var tableView: UITableView!
+    
+    //create arrays of grocery items
     var items = [String]()
     
-    //create variables for core motion
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +27,7 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
     }
     
+    //present alert to add grocery items
     @IBAction func addItem(_ sender: Any) {
         let controller = UIAlertController(
             title: "Grocery list",
