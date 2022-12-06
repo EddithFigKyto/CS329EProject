@@ -23,10 +23,8 @@ class GreetingAnimationViewController: UIViewController {
             withDuration: 3.0,
             animations: {
                 self.initialGreetingImage.alpha = 1.0
-        }
-        )
+        })
     }
-
 }
 
 

@@ -9,7 +9,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var birthdayTextField: UITextField!
     
@@ -28,13 +27,9 @@ class WelcomeViewController: UIViewController {
         enterYourNameLabel.font = UIFont(name: "Avenir Next", size: 18)
         enterYourBirthdayLabel.font = UIFont(name: "Avenir Next", size: 18)
         dateFormatLabel.font = UIFont(name: "Avenir Next", size: 18)
-        
-    
     }
     
     @IBAction func enterButtonPressed(_ sender: Any) {
-    
-        
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "MM/dd/yyyy"
         let date = birthdayTextField.text!
@@ -46,7 +41,5 @@ class WelcomeViewController: UIViewController {
         } else {
             birthdayFormatCheckerLabel.text! = "Birthday Entered Invalid"
         }
-        
     }
-    
 }

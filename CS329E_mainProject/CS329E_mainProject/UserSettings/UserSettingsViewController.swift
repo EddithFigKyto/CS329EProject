@@ -28,10 +28,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
     //variable to store the user's name
     public var name = userCustomizations.string(forKey: "user name")!
     
-    //public let userSettings = CustomDefaults()
-    
     //Outlets for labels and buttons on the VC
-
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var personalInformationLabel: UIButton!
@@ -102,9 +99,7 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
             // if user changes profile picture, the change will be reflected on this VC
             nextVC.picture = profilePicture.image
         }
-           
     }
-    
     
     @IBAction func privacyPolicyButtonSelected(_ sender: Any) {
         let controller = UIAlertController(
@@ -117,7 +112,6 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
             ))
         present(controller, animated: true)
     }
-    
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
         
@@ -132,7 +126,6 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
             print("Err")
         }
     }
-    
     
     //function defined in protocol that updates the user's name if the user changes it. 
     func changeName(newName: String) {
@@ -152,16 +145,12 @@ class UserSettingsViewController: UIViewController, UIImagePickerControllerDeleg
         profilePicture!.layer.borderWidth = 0.5
         profilePicture!.contentMode = UIView.ContentMode.scaleAspectFill
     }
-
     
     func addNavBarImage() {
-        
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
-    
-    
 }

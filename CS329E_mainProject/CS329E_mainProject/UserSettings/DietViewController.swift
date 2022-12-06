@@ -9,8 +9,6 @@ import UIKit
 
 public var dietPreferences = userCustomizations.array(forKey: "diet") as? [String]
 
-//let diet = ["vegetarian", "vegan", "gluten-free", "nut-free", "halal"]
-
 class DietViewController: UIViewController {
 
     @IBOutlet weak var pageTitle: UILabel!
@@ -33,9 +31,7 @@ class DietViewController: UIViewController {
     @IBOutlet weak var halalLabel: UILabel!
     @IBOutlet weak var halalSwitch: UISwitch!
     
-    
     @IBOutlet weak var profilePicture: UIImageView!
-    
     
     // this variable hold an optional UIImage to set profilePicture if changed
     var picture: UIImage?
@@ -66,10 +62,6 @@ class DietViewController: UIViewController {
         glutenFreeLabel.font = UIFont(name: fontSet!, size: 18)
         nutFreeLabel.font = UIFont(name: fontSet!, size: 18)
         halalLabel.font = UIFont(name: fontSet!, size: 18)
-
-        
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +84,6 @@ class DietViewController: UIViewController {
     }
     
     @IBAction func vegetarianPressed(_ sender: UISwitch) {
-        //dirtyBit = 1
         if sender.isOn == true{
             if !dietPreferences!.contains("vegetarian")
             {
@@ -105,11 +96,9 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-
     }
     
     @IBAction func veganPressed(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             if !dietPreferences!.contains("vegan")
             {
@@ -122,13 +111,9 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-        
-
-
     }
     
     @IBAction func glutenFreePressed(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             if !dietPreferences!.contains("gluten-free")
             {
@@ -141,13 +126,9 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-        
- 
-        
     }
     
     @IBAction func nutFreePressed(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             if !dietPreferences!.contains("nut-free")
             {
@@ -160,14 +141,9 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-        
-        
- 
-
     }
     
     @IBAction func halalPressed(_ sender: UISwitch) {
-        
         if sender.isOn == true{
             if !dietPreferences!.contains("halal")
             {
@@ -180,13 +156,9 @@ class DietViewController: UIViewController {
         
         userCustomizations.set(dietPreferences, forKey: "diet")
         dietPreferences = (userCustomizations.array(forKey: "diet") as? [String])!
-        
-
-        
     }
     
     func addNavBarImage() {
-        
         let titleView = UIView(frame: CGRectMake(0, 0, 130, 40))
         let titleImageView = UIImageView(image: UIImage(named: "banner1"))
         titleImageView.frame = CGRectMake(0, 0, titleView.frame.width, titleView.frame.height)
