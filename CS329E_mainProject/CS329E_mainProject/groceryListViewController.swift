@@ -14,19 +14,14 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
     var items = [String]()
     
     //create variables for core motion
-    let manager = CMMotionManager()
-    
-    var xInPositiveDirection = 0.0
-    var xInNegativeDirection = 0.0
-    var shakeCount = 0
-    var tempVariable = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        shakePhone()
+       
         addNavBarImage()
 
         // Do any additional setup after loading the view.
@@ -85,38 +80,5 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
             destination.itemName = items[itemIndex]
         }
     }
-    func shakePhone() {
-        manager.deviceMotionUpdateInterval = 0.02
-        
-        manager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: {
-            (data, error) in
-            if data!.userAcceleration.x > 1.0 || data!.userAcceleration.x < -1.0 {
-                if data!.userAcceleration.x > 1.0 {
-                    self.xInPositiveDirection = data!.userAcceleration.x
-                }
-                if data!.userAcceleration.x < -1.0 {
-                    self.xInNegativeDirection = data!.userAcceleration.x
-                }
-                if self.xInPositiveDirection != 0.0 && self.xInNegativeDirection != 0.0 {
-                    self.shakeCount = self.shakeCount + 1
-                    self.xInPositiveDirection = 0.0
-                    self.xInNegativeDirection = 0.0
-                }
-                
-                if self.shakeCount > 5 {
-                    self.tempVariable = self.tempVariable + 1
-                    let controller = UIAlertController(title: "Did something go wrong?", message: "Report a probem", preferredStyle: .alert)
-                    controller.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-                    controller.addTextField(configurationHandler: {
-                        (textField:UITextField!) in
-                        textField.placeholder = "Type here"
-                    })
-                    controller.addAction(UIAlertAction(title: "Report", style: .default))
-                    self.present(controller, animated: true)
-                    self.shakeCount = 0
-                }
-                
-            }
-        })
-    }
 }
+
