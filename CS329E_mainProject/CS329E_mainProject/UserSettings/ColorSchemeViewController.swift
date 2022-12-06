@@ -7,10 +7,13 @@
 
 import UIKit
 
+// make the selected color of font a public string that can be accessed from anywhere
 public var colorSet = userCustomizations.string(forKey: "color")
 
+// array that stores the strings of color options for indexing purposes
 let colors = ["cyan", "pink", "black", "purple", "green"]
 
+// function that sets the chosenColor for the app
 public func setChosenColor(){
     
     switch userCustomizations.string(forKey: "color") {

@@ -11,7 +11,7 @@ public let userCustomizations = UserDefaults.standard
 
 class CustomDefaults{
     
-    //keys for defaults
+    // keys for defaults
     let uNameKey = "user name"
     let uBirthdayKey = "birthday"
     let uEmailKey = "email"
@@ -29,7 +29,7 @@ class CustomDefaults{
     let color = "cyan"
     let changed:Bool = false
     
-    //method that creates the UserDefaults and sets the initial values of each key
+    // method that creates the UserDefaults and sets the initial values of each key
     func setUp()
     {
         if !userCustomizations.bool(forKey: uChangedKey){

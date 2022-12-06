@@ -93,19 +93,12 @@ class loginViewController: UIViewController, UITextFieldDelegate{
                     self.present(controller, animated: true)
                     shakeCount = 0
                 }
-                
-            }
-        })
+            }})
     
- 
-
         //swipe right
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleRight(recognizer:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
-        
-        
-        
     }
     @IBAction func handleRight(recognizer: UISwipeGestureRecognizer) {
         performSegue(withIdentifier: "learnMoreSegue", sender: self)
