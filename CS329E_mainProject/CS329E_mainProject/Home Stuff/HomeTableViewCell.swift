@@ -30,14 +30,13 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
-        descriptionLabel.numberOfLines = 0 
-        // Initialization code
+        descriptionLabel.numberOfLines = 0 //unlimited lines
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

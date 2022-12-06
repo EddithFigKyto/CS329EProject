@@ -8,23 +8,20 @@
 
 import UIKit
 
+//text cell in table view creation
 class glTextCell:UITableViewCell {
-    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeDescription: UILabel!
 }
 
-
 class recipeGLViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
- 
     @IBOutlet weak var ingridientLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
  
     var itemName:String = ""
     var filteredRecipes2:[Recipe] = []
        
-
  override func viewDidLoad() {
      super.viewDidLoad()
      addNavBarImage()
@@ -33,6 +30,7 @@ class recipeGLViewController: UIViewController, UITableViewDataSource, UITableVi
      ingridientLabel.text = itemName
      ingridientLabel.font = UIFont(name: "Avenir Next", size: 30)
      
+     //filter recipes: check if grocery item is in ingredients list
      for recipe in recipes {
                  for item in recipe.printIngredients {
                      if item.lowercased().contains(itemName) {
@@ -132,7 +130,6 @@ class recipeGLViewController: UIViewController, UITableViewDataSource, UITableVi
          vc.saveButton.title = "Unsave"
      }
      
-     
      // the following code formats the scroll view content based on the recipe properties
      vc.title1 = selectedRecipe.title
      vc.description1 = selectedRecipe.description[0]
@@ -172,15 +169,10 @@ class recipeGLViewController: UIViewController, UITableViewDataSource, UITableVi
      
      // the following segues to the next screen while pushing the appropriate cell data
      self.navigationController?.pushViewController(vc, animated: true)
- 
      
  }
  
- 
- 
  // MARK: ALGORITHM STUFF
- 
- 
  var saveSortedRecipes : [Recipe] = [] //recipes in ascending order by saves
  var savesList : [Int] = [] //in same order as recipes
  var savesAscending : [Int] = [] //sorted in ascending order
@@ -202,34 +194,7 @@ class recipeGLViewController: UIViewController, UITableViewDataSource, UITableVi
                  }
              }
          }
-         
-         
-         //        var sortedRecipes: [Recipe] = []
-         //        let diet = userCustomizations.array(forKey: "diet")
-         //        print("diet")
-         //        print(diet)
-         
-         //        print(isHalal)
-         //        print(isVegan)
-         //        print(isVege)
-         //        print(isGF)
-         //        print(isNF)
-         
-         //        if diet!.contains(where: "vegetarian"){
-         //            print("YES")
-         //        }
-         //
-         //        for recipe in recipes{
-         //            let recDiet = recipe.dietaryRestr
-         //            print(recDiet)
-         //            print(diet.customMirror.subjectType)
-         //
-         //
-         //
-         //        }
      }
-     
-     
  }
 
 }

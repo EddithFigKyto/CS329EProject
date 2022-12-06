@@ -21,6 +21,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
      addNavBarImage()
      tableView.dataSource = self
      tableView.delegate = self
+     
      //request permissions for notifcations
      UNUserNotificationCenter.current().requestAuthorization(options:[.alert,.badge,.sound]) {
          granted, error in
@@ -30,6 +31,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
              print(error.localizedDescription)
          }
      }
+     
      //Customization
      setChosenColor()
      UIButton.appearance(whenContainedInInstancesOf: [UIView.self]).tintColor = chosenColor
@@ -176,7 +178,7 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
  
  
  
- // MARK: ALGORITHM STUFF
+ // MARK: Sorting STUFF
  
  
  var saveSortedRecipes : [Recipe] = [] //recipes in ascending order by saves
@@ -200,34 +202,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                  }
              }
          }
-         
-         
-         //        var sortedRecipes: [Recipe] = []
-         //        let diet = userCustomizations.array(forKey: "diet")
-         //        print("diet")
-         //        print(diet)
-         
-         //        print(isHalal)
-         //        print(isVegan)
-         //        print(isVege)
-         //        print(isGF)
-         //        print(isNF)
-         
-         //        if diet!.contains(where: "vegetarian"){
-         //            print("YES")
-         //        }
-         //
-         //        for recipe in recipes{
-         //            let recDiet = recipe.dietaryRestr
-         //            print(recDiet)
-         //            print(diet.customMirror.subjectType)
-         //
-         //
-         //
-         //        }
      }
-     
-     
  }
-
 }

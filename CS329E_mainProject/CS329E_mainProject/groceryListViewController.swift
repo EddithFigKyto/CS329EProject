@@ -15,7 +15,6 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
     //create arrays of grocery items
     var items = [String]()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +22,6 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
        
         addNavBarImage()
-
-        // Do any additional setup after loading the view.
     }
     
     //present alert to add grocery items
@@ -70,10 +67,11 @@ class groceryListViewController: UIViewController, UITableViewDelegate, UITableV
         titleView.addSubview(titleImageView)
         navigationItem.titleView = titleView
     }
+    //disselect item 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    //segue to view controller with recipes that have item
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "glSegue",
            let destination = segue.destination as? recipeGLViewController,

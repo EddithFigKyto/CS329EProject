@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//THIS IDEA WAS NOT IMPLEMENTED 
 class RecipeCreationVC: UIViewController {
 
     override func viewDidLoad() {
@@ -14,19 +14,7 @@ class RecipeCreationVC: UIViewController {
 
     }
     
-    // title, time
-    // description, ingredients, steps, servings, cuisine (skip),
-    //diet, dish type,
-    //tags
-    
-    //if you didnt enter something an alert should come up 
-    
-//unit conversion!!!
-    
-    //parese through steps to get minute or hours! 
-    
-    
-  
+
 
 
 }
