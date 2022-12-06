@@ -202,7 +202,7 @@ class ScrollRecipeViewController: UIViewController, UIScrollViewDelegate, UITabl
             for x in userLikedRecipes {
                 userLikedTitles.append(x.title)
             }
-            var removeIndex = userLikedTitles.firstIndex(of: title1)
+            let removeIndex = userLikedTitles.firstIndex(of: title1)
             
             var removeRecipe = [Recipe]()
             
